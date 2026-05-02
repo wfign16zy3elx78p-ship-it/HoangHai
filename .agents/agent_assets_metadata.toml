@@ -306,3 +306,39 @@ id = "in5ptXmzk4JvDmcyRwRKr"
 uri = "file://artifacts/byd-eu/public/images/atto3-connect-01.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "CU7koFUMBZ8M3ymxziocb"
+uri = "file://artifacts/byd-eu/public/images/seal-hero-new.png"
+type = "image"
+title = "BYD SEAL hero driving shot"
+
+[[generated]]
+id = "Z1vV-lEVUjKeRO3tflaYQ"
+uri = "file://artifacts/byd-eu/public/images/seal-design-01.png"
+type = "image"
+title = "BYD SEAL design side profile"
+
+[[generated]]
+id = "KT9lzgTUY07t7NtJrWGF_"
+uri = "file://artifacts/byd-eu/public/images/seal-interior-new.png"
+type = "image"
+title = "BYD SEAL interior cockpit"
+
+[[generated]]
+id = "A1K_6KUn_NvPxN_zpaPP0"
+uri = "file://artifacts/byd-eu/public/images/seal-battery-01.png"
+type = "image"
+title = "BYD SEAL Blade Battery cell-to-body"
+
+[[generated]]
+id = "6N91PS5PX-CDle3CgWSth"
+uri = "file://artifacts/byd-eu/public/images/seal-performance-01.png"
+type = "image"
+title = "BYD SEAL performance track night"
+
+[[generated]]
+id = "WDvdWbe2x7vlvAWUM42Lg"
+uri = "file://artifacts/byd-eu/public/images/seal-dilink-01.png"
+type = "image"
+title = "BYD SEAL DiLink touchscreen"

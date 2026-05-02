@@ -152,7 +152,7 @@
     "name": "BYD SEAL",
     "tagline": "All-Electric Performance Saloon",
     "description": "A bold expression of BYD's Ocean Aesthetics design philosophy — where performance meets elegance in a stunning electric saloon.",
-    "heroImg": "/images/seal.webp",
+    "heroImg": "/images/seal-hero-new.png",
     "heroVideo": null,
     "color": "#0f3460",
     "stats": [
@@ -186,35 +186,35 @@
         "title": "Ocean Aesthetics",
         "subtitle": "Design Inspired by the Sea",
         "desc": "The SEAL's flowing lines draw inspiration from the ocean, embodying fluidity and grace. Every curve is sculpted with purpose, achieving a drag coefficient of just 0.219 Cd.",
-        "img": "/images/seal.webp",
+        "img": "/images/seal-design-01.png",
         "imgRight": false
       },
       {
         "title": "iTAC Technology",
         "subtitle": "Intelligent Traction Control",
         "desc": "BYD's patented Intelligent Torque Adaptation Control technology actively distributes torque between axles in as little as 10ms — 100x faster than traditional systems.",
-        "img": "/images/seal-interior-01.png",
+        "img": "/images/seal-interior-new.png",
         "imgRight": true
       },
       {
         "title": "Cell-to-Body",
         "subtitle": "Structural Innovation",
         "desc": "The Blade Battery is integrated directly into the vehicle's floor, forming part of the structural body. This lowers the centre of gravity, improves rigidity, and maximises cabin space.",
-        "img": "/images/seal-tech-01.png",
+        "img": "/images/seal-battery-01.png",
         "imgRight": false
       },
       {
         "title": "Instant electric performance",
         "subtitle": "0–100 km/h in 3.8 s",
         "desc": "The SEAL's dual-motor AWD system delivers 390kW with iTAC torque vectoring responding in just 10ms — putting you in complete control on every corner.",
-        "img": "/images/seal-dynamic-01.png",
+        "img": "/images/seal-performance-01.png",
         "imgRight": true
       },
       {
         "title": "DiLink Smart Cockpit",
         "subtitle": "Dynaudio & OTA Connected",
         "desc": "The 15.6-inch rotating DiLink display, Dynaudio 12-speaker system, and continuous OTA updates keep the SEAL at the forefront of the electric saloon segment.",
-        "img": "/images/seal-connect-01.png",
+        "img": "/images/seal-dilink-01.png",
         "imgRight": false
       }
     ],
