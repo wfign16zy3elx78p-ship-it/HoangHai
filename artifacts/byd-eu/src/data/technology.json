@@ -3,24 +3,24 @@
     "id": 1,
     "img": "/images/1.webp",
     "title": "BYD Blade Battery",
-    "desc": "The BYD Blade Battery redefines safety in electric vehicles. With an innovative cell-to-pack design, it passes the nail penetration test without fire or explosion — a feat no other lithium battery has achieved.",
+    "desc": "Pin Blade BYD định nghĩa lại an toàn trong xe điện. Với thiết kế cell-to-pack đột phá, pin vượt qua thử nghiệm đâm đinh mà không bốc cháy hay phát nổ — điều mà chưa có loại pin lithium nào khác làm được.",
     "link": "/eu/technology/byd-blade-battery",
-    "linkText": "LEARN MORE"
+    "linkText": "TÌM HIỂU THÊM"
   },
   {
     "id": 2,
     "img": "/images/2.webp",
     "title": "BYD e-Platform 3.0",
-    "desc": "BYD e-Platform 3.0 is a comprehensive electric vehicle architecture that integrates an 8-in-1 electric powertrain, delivering higher efficiency, longer range and faster charging.",
+    "desc": "BYD e-Platform 3.0 là kiến trúc xe điện toàn diện tích hợp hệ truyền động điện 8-trong-1, mang lại hiệu quả cao hơn, phạm vi vận hành xa hơn và sạc nhanh hơn.",
     "link": "/eu/technology/byd-e-platform-3",
-    "linkText": "LEARN MORE"
+    "linkText": "TÌM HIỂU THÊM"
   },
   {
     "id": 3,
     "img": "/images/3.webp",
     "title": "BYD Super DM",
-    "desc": "BYD Super DM plug-in hybrid technology delivers exceptional fuel efficiency and outstanding electric-only range, combining the best of both worlds for a revolutionary driving experience.",
+    "desc": "Công nghệ hybrid sạc điện BYD Super DM mang lại hiệu quả nhiên liệu vượt trội và phạm vi chạy thuần điện xuất sắc, kết hợp những ưu điểm tốt nhất của cả hai hệ động lực.",
     "link": "/eu/technology/byd-super-dm-plug-in-hybrid-technology",
-    "linkText": "LEARN MORE"
+    "linkText": "TÌM HIỂU THÊM"
   }
 ]

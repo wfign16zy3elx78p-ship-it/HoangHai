@@ -180,8 +180,8 @@ function SpecsSection({ specs }: { specs: CarData["specs"] }) {
   return (
     <section id="specs" className="border-t border-white/5 py-16 md:py-24 px-4 sm:px-8 md:px-16" style={{ background: "#060606" }}>
       <div ref={ref} style={{ opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(30px)", transition: "opacity 0.8s ease, transform 0.8s ease" }}>
-        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-4">Technical Data</p>
-        <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-10">Specifications</h2>
+        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-4">Dữ Liệu Kỹ Thuật</p>
+        <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-10">Thông Số Kỹ Thuật</h2>
         <div className="flex overflow-x-auto no-scrollbar gap-1 mb-10 pb-1">
           {tabs.map((tab) => (
             <button
@@ -232,12 +232,12 @@ function buildSections(car: CarData) {
   const v2l = tech.find(r => r.label.toLowerCase().includes("v2l"))?.value ?? "";
   const sound = tech.find(r => r.label.toLowerCase().includes("sound"))?.value ?? "";
 
-  const ANCHORS = ["Design", "Performance", "Technology", "Specs", "Configure"];
+  const ANCHORS = ["Thiết Kế", "Hiệu Suất", "Công Nghệ", "Thông Số", "Đặt Hàng"];
 
   /* ─ Design section ─ */
   const design = {
-    chapterLabel: "Design",
-    chapterTitle: f[0]?.title ?? "Purposeful beauty",
+    chapterLabel: "Thiết Kế",
+    chapterTitle: f[0]?.title ?? "Vẻ Đẹp Có Chủ Đích",
     chapterBody: f[0]?.desc ?? car.description,
     chapterImg: f[0]?.img,
     featureRows: [
@@ -248,27 +248,27 @@ function buildSections(car: CarData) {
 
   /* ─ Performance section ─ */
   const performanceBody = isHybrid
-    ? `With ${power} of combined system power, the ${car.name} sprints from 0–100 km/h in ${sprint} and achieves a top speed of ${topSpeed}. BYD's Super DM hybrid system seamlessly blends electric and petrol power for an exhilarating yet efficient drive.`
-    : `With ${power} of electric power and ${sprint} 0–100 km/h acceleration, the ${car.name} delivers a dynamic driving experience. The responsive electric motor provides instant torque for effortless overtaking and spirited performance at any speed.`;
+    ? `Với ${power} tổng công suất hệ thống, ${car.name} tăng tốc từ 0–100 km/h trong ${sprint} và đạt tốc độ tối đa ${topSpeed}. Hệ thống hybrid Super DM của BYD chuyển đổi mượt mà giữa điện và xăng để có trải nghiệm lái phấn khích và tiết kiệm nhiên liệu.`
+    : `Với ${power} công suất điện và khả năng tăng tốc 0–100 km/h trong ${sprint}, ${car.name} mang đến trải nghiệm lái đầy năng động. Mô-tơ điện phản hồi tức thì, không chần chừ, cho phép vượt xe dễ dàng và lái xe tự tin ở mọi tốc độ.`;
 
   const performance = {
-    chapterLabel: "Performance",
-    chapterTitle: isHybrid ? "Super DM power on demand" : "Instant electric performance",
+    chapterLabel: "Hiệu Suất",
+    chapterTitle: isHybrid ? "Sức mạnh Super DM theo yêu cầu" : "Hiệu suất điện tức thì",
     chapterBody: performanceBody,
     chapterImg: f[3]?.img ?? f[1]?.img ?? f[0]?.img,
     p7Cards: [
       {
-        title: isHybrid ? "Super DM hybrid system" : "Instant torque",
+        title: isHybrid ? "Hệ thống hybrid Super DM" : "Mô-men xoắn tức thì",
         body: isHybrid
-          ? `The fifth-generation Super DM system delivers seamless transitions between electric and petrol power, maintaining peak efficiency throughout. Total system output reaches ${power} for a responsive driving experience.`
-          : `Electric motors deliver power instantaneously — no hesitation, no lag. The ${car.name}'s ${power} motor responds to every input with precision, making every drive engaging and confidence-inspiring.`,
+          ? `Hệ thống Super DM thế hệ thứ năm chuyển đổi liền mạch giữa điện và xăng, duy trì hiệu quả tối đa suốt hành trình. Tổng công suất hệ thống đạt ${power} cho trải nghiệm lái phản hồi tức thì.`
+          : `Mô-tơ điện cung cấp công suất ngay lập tức — không chần chừ, không trễ. Mô-tơ ${power} của ${car.name} phản hồi mọi thao tác với độ chính xác cao, giúp mỗi chuyến đi đều thú vị và tự tin.`,
         img: f[3]?.img ?? f[1]?.img,
       },
       {
-        title: isHybrid ? `${range_} combined range` : `${range_} WLTP range`,
+        title: isHybrid ? `${range_} phạm vi kết hợp` : `${range_} phạm vi WLTP`,
         body: isHybrid
-          ? `With over ${battery ?? "15 kWh"} of battery capacity for pure EV driving and a petrol engine for extended journeys, the ${car.name} covers over ${range_} of total range — effectively eliminating range anxiety.`
-          : `The ${battery} Blade Battery powers the ${car.name} for up to ${range_} on a single charge. Rapid DC charging at ${dcCharge} means you spend less time plugged in and more time on the road.`,
+          ? `Với hơn ${battery ?? "15 kWh"} dung lượng pin cho chế độ thuần điện và động cơ xăng cho những hành trình dài, ${car.name} đạt phạm vi tổng hơn ${range_} — thực sự xóa bỏ lo lắng về cạn pin.`
+          : `Pin Blade ${battery} cung cấp năng lượng cho ${car.name} lên đến ${range_} mỗi lần sạc đầy. Sạc DC nhanh ${dcCharge} giúp bạn tốn ít thời gian cắm sạc hơn và nhiều thời gian trên đường hơn.`,
         img: f[1]?.img,
       },
     ],
@@ -276,26 +276,26 @@ function buildSections(car: CarData) {
 
   /* ─ Technology section ─ */
   const technology = {
-    chapterLabel: "Technology",
-    chapterTitle: "Intelligent by design",
-    chapterBody: `The ${car.name} is equipped with BYD's latest DiLink technology platform — a fully connected, continually evolving digital ecosystem that makes every journey smarter. From voice control to over-the-air updates, technology works invisibly to enhance your life.`,
+    chapterLabel: "Công Nghệ",
+    chapterTitle: "Thông minh từ thiết kế",
+    chapterBody: `${car.name} được trang bị nền tảng công nghệ DiLink mới nhất của BYD — một hệ sinh thái kỹ thuật số kết nối hoàn toàn và không ngừng phát triển, giúp mỗi hành trình thông minh hơn. Từ điều khiển giọng nói đến cập nhật qua mạng, công nghệ hoạt động tự động để nâng cao cuộc sống của bạn.`,
     chapterImg: f[4]?.img ?? f[2]?.img ?? f[1]?.img,
     cardGrid: [
       {
-        title: `${display} infotainment`,
-        body: `The ${display} display brings the DiLink ecosystem to life — responsive, intuitive, and packed with features including Android Auto, Apple CarPlay, voice control, and real-time navigation.`,
+        title: `Màn hình giải trí ${display}`,
+        body: `Màn hình ${display} đưa hệ sinh thái DiLink vào cuộc sống — phản hồi nhanh, trực quan và đầy tính năng bao gồm Android Auto, Apple CarPlay, điều khiển giọng nói và dẫn đường thời gian thực.`,
         img: f[4]?.img ?? car.heroImg,
       },
       {
-        title: `${dipilot} driver assistance`,
-        body: `DiPilot driver assistance brings peace of mind to every journey. Adaptive cruise control, lane-keeping assistance, automatic emergency braking, and 360° cameras work together seamlessly.`,
+        title: `Hỗ trợ lái xe ${dipilot}`,
+        body: `Hệ thống hỗ trợ lái xe DiPilot mang lại sự an tâm cho mọi hành trình. Kiểm soát hành trình thích ứng, hỗ trợ giữ làn đường, phanh khẩn cấp tự động và camera 360° hoạt động phối hợp liền mạch.`,
         img: f[2]?.img ?? f[1]?.img,
       },
       {
-        title: v2l && v2l !== "No" ? `V2L — ${v2l} power export` : `${sound} audio system`,
+        title: v2l && v2l !== "No" ? `V2L — Xuất điện ${v2l}` : `Hệ thống âm thanh ${sound}`,
         body: v2l && v2l !== "No"
-          ? `Vehicle-to-Load (V2L) capability lets the ${car.name} power external devices and appliances — from camping equipment to emergency power needs. Your car becomes a portable power station.`
-          : `The premium ${sound} audio system fills the cabin with rich, detailed sound. Carefully tuned for the acoustic properties of the ${car.name}'s interior, it creates an immersive listening experience.`,
+          ? `Tính năng Vehicle-to-Load (V2L) cho phép ${car.name} cấp điện cho các thiết bị ngoài — từ thiết bị cắm trại đến nhu cầu điện khẩn cấp. Xe của bạn trở thành trạm điện di động.`
+          : `Hệ thống âm thanh cao cấp ${sound} lấp đầy khoang lái bằng âm thanh phong phú và chi tiết. Được tinh chỉnh cho đặc tính âm học của nội thất ${car.name}, tạo ra trải nghiệm nghe nhạc đắm chìm.`,
         img: car.heroImg,
       },
     ],
@@ -334,8 +334,8 @@ export default function GenericCarPage({ slug }: { slug: string }) {
       <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
         <Header />
         <div className="text-center mt-32">
-          <p className="text-white/40 text-sm mb-4">Model not found</p>
-          <button onClick={() => navigate("/")} className="text-white underline text-sm">← Back to models</button>
+          <p className="text-white/40 text-sm mb-4">Không tìm thấy dòng xe này</p>
+          <button onClick={() => navigate("/")} className="text-white underline text-sm">← Tất Cả Dòng Xe</button>
         </div>
         <Footer />
       </div>
@@ -387,7 +387,7 @@ export default function GenericCarPage({ slug }: { slug: string }) {
             backdropFilter: "blur(12px)",
           }}
         >
-          {isHybrid ? "PLUG-IN HYBRID" : "ALL ELECTRIC"}
+          {isHybrid ? "HYBRID SẠC ĐIỆN" : "THUẦN ĐIỆN"}
         </div>
 
         {/* Back button */}
@@ -397,7 +397,7 @@ export default function GenericCarPage({ slug }: { slug: string }) {
           style={{ background: "rgba(255,255,255,0.08)", backdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.15)" }}
         >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round"><path d="M15 19l-7-7 7-7" /></svg>
-          All Models
+          Tất Cả Dòng Xe
         </button>
 
         {/* Bottom hero content */}
@@ -434,7 +434,7 @@ export default function GenericCarPage({ slug }: { slug: string }) {
 
         {/* Scroll cue */}
         <div className="hidden sm:flex absolute bottom-6 right-8 md:right-16 flex-col items-center gap-1.5 opacity-30">
-          <span className="text-[9px] tracking-[0.32em] uppercase font-bold">Scroll</span>
+          <span className="text-[9px] tracking-[0.32em] uppercase font-bold">Cuộn</span>
           <div className="w-px h-8 bg-white/70" />
         </div>
       </section>
@@ -516,19 +516,19 @@ export default function GenericCarPage({ slug }: { slug: string }) {
 
       {/* ═══ CONFIGURE CTA ═══ */}
       <section id="configure" className="px-6 md:px-16 py-16 md:py-24 text-center border-t border-white/6" style={{ background: "#050505" }}>
-        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-4">Ready to Drive</p>
+        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-4">Sẵn Sàng Trải Nghiệm</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-3">{car.name}</h2>
         <p className="text-sm text-white/40 mb-10 max-w-xs mx-auto">{car.tagline}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button className="w-full sm:w-auto px-10 py-4 text-[11px] font-bold tracking-[0.18em] uppercase bg-white text-black border-none cursor-pointer transition-colors hover:bg-white/85">
-            Configure Now
+            Đặt Hàng Ngay
           </button>
           <button
             className="w-full sm:w-auto px-10 py-4 text-[11px] font-bold tracking-[0.18em] uppercase bg-transparent text-white cursor-pointer transition-colors hover:bg-white/8"
             style={{ border: "1px solid rgba(255,255,255,0.3)" }}
             onClick={() => navigate(`/test-drive?model=${car.slug}`)}
           >
-            Book a Test Drive
+            Đặt Lịch Lái Thử
           </button>
         </div>
       </section>

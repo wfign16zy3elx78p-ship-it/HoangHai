@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const footerLinks = [
   {
-    title: "Models",
+    title: "Dòng Xe",
     links: [
       { text: "BYD HAN", href: "/eu/electric-cars/han" },
       { text: "BYD SEAL", href: "/eu/electric-cars/seal" },
@@ -20,34 +20,34 @@ const footerLinks = [
     ],
   },
   {
-    title: "About BYD",
+    title: "Về BYD",
     links: [
-      { text: "About BYD", href: "/eu/about-byd" },
+      { text: "Về BYD", href: "/eu/about-byd" },
       { text: "Media HUB", href: "https://media.byd.com/eu?lang=eng" },
-      { text: "News", href: "/eu/news-list" },
-      { text: "Blogs", href: "/eu/blog" },
-      { text: "Image Bank", href: "/eu/image-bank" },
-      { text: "Dealer Admittance Portal", href: "/eu/dealer-admittance" },
+      { text: "Tin Tức", href: "/eu/news-list" },
+      { text: "Blog", href: "/eu/blog" },
+      { text: "Thư Viện Ảnh", href: "/eu/image-bank" },
+      { text: "Cổng Đại Lý", href: "/eu/dealer-admittance" },
     ],
   },
   {
-    title: "Technology",
+    title: "Công Nghệ",
     links: [
       { text: "BYD Blade Battery", href: "/eu/technology/byd-blade-battery" },
       { text: "BYD Super DM", href: "/eu/technology/byd-super-dm-plug-in-hybrid-technology" },
       { text: "BYD e-Platform 3.0", href: "/eu/technology/byd-e-platform-3" },
-      { text: "What is a NEV?", href: "/eu/electric-cars/what-is-a-nev" },
+      { text: "NEV là gì?", href: "/eu/electric-cars/what-is-a-nev" },
     ],
   },
   {
-    title: "Ownership",
+    title: "Sở Hữu Xe",
     links: [
-      { text: "BYD Service", href: "/eu/ownership.html" },
-      { text: "Service Maintenance", href: "/eu/service-maintenance" },
-      { text: "BYD Assistance", href: "/eu/ownership/roadside-assistance" },
-      { text: "App & Community", href: "/eu/ownership/app-community" },
-      { text: "Privacy & Data", href: "/eu/ownership/how-byd-protects-your-privacy-data" },
-      { text: "FAQ", href: "/eu/ownership/faq" },
+      { text: "Dịch Vụ BYD", href: "/eu/ownership.html" },
+      { text: "Bảo Dưỡng", href: "/eu/service-maintenance" },
+      { text: "Hỗ Trợ BYD", href: "/eu/ownership/roadside-assistance" },
+      { text: "App & Cộng Đồng", href: "/eu/ownership/app-community" },
+      { text: "Quyền Riêng Tư & Dữ Liệu", href: "/eu/ownership/how-byd-protects-your-privacy-data" },
+      { text: "Câu Hỏi Thường Gặp", href: "/eu/ownership/faq" },
     ],
   },
 ];
@@ -62,12 +62,12 @@ const socialLinks = [
 ];
 
 const legalLinks = [
-  { text: "Privacy Policy", href: "/eu/privacy" },
-  { text: "Terms of Use", href: "/eu/terms-of-use" },
+  { text: "Chính Sách Bảo Mật", href: "/eu/privacy" },
+  { text: "Điều Khoản Sử Dụng", href: "/eu/terms-of-use" },
   { text: "Cookie", href: "/eu/cookie" },
-  { text: "Contact", href: "/eu/contact-us" },
-  { text: "RMl & Dismantling Info", href: "https://eurmi.byd.com/home" },
-  { text: "Data Act Notice", href: "/eu/data-act-notice" },
+  { text: "Liên Hệ", href: "/eu/contact-us" },
+  { text: "Thông Tin Tháo Dỡ", href: "https://eurmi.byd.com/home" },
+  { text: "Thông Báo Đạo Luật Dữ Liệu", href: "/eu/data-act-notice" },
 ];
 
 export default function Footer() {
@@ -157,7 +157,7 @@ export default function Footer() {
 
         {/* Social */}
         <div className="flex items-center gap-3">
-          <span className="text-[10px] text-white/30 font-bold tracking-[0.2em] uppercase mr-1">Follow Us</span>
+          <span className="text-[10px] text-white/30 font-bold tracking-[0.2em] uppercase mr-1">Theo Dõi Chúng Tôi</span>
           {socialLinks.map((s) => (
             <a
               key={s.name}
@@ -192,7 +192,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
         <p className="text-[10px] tracking-[0.1em]" style={{ color: "rgba(255,255,255,0.2)" }}>
-          © BYD Europe B.V. All rights reserved.
+          © BYD Europe B.V. Bản quyền thuộc về BYD.
         </p>
       </div>
     </footer>

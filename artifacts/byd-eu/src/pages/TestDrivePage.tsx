@@ -8,7 +8,7 @@ const SHOWROOM = {
   name: "BYD Showroom",
   address: "123 Showroom Street",
   city: "Your City",
-  hours: "Mon – Sat: 8:00 AM – 6:00 PM",
+  hours: "Thứ Hai – Thứ Bảy: 8:00 – 18:00",
   phone: "+XX XXX XXX XXXX",
 };
 
@@ -29,8 +29,8 @@ const ALL_MODELS = [
 ];
 
 const TIME_SLOTS = [
-  "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM",
-  "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM",
+  "9:00 SA", "10:00 SA", "11:00 SA", "12:00 CH",
+  "14:00 CH", "15:00 CH", "16:00 CH", "17:00 CH",
 ];
 
 function generateRef() {
@@ -52,7 +52,7 @@ function getMaxDate() {
 function formatDate(dateStr: string) {
   if (!dateStr) return "";
   const d = new Date(dateStr + "T12:00:00");
-  return d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  return d.toLocaleDateString("vi-VN", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
 }
 
 interface FormData {
@@ -79,7 +79,7 @@ const EMPTY_FORM: FormData = {
 
 /* ─────────────────────── Step indicator ─────────────────────── */
 function StepIndicator({ step }: { step: number }) {
-  const steps = ["Your Car", "Your Details", "Confirmation"];
+  const steps = ["Dòng Xe", "Thông Tin", "Xác Nhận"];
   return (
     <div className="flex items-center justify-center mb-12 md:mb-16">
       {steps.map((label, i) => {
@@ -177,25 +177,25 @@ function Step1({
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-2">Step 1 of 2</p>
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Choose your car</h2>
-        <p className="text-sm text-white/40">Select the model you'd like to experience at our showroom.</p>
+        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-2">Bước 1 / 2</p>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Chọn dòng xe</h2>
+        <p className="text-sm text-white/40">Chọn dòng xe bạn muốn trải nghiệm tại showroom của chúng tôi.</p>
       </div>
 
-      <Field label="Model" error={errors.model}>
+      <Field label="Dòng Xe" error={errors.model}>
         <select
           className={selectCls}
           value={form.model}
           onChange={e => setForm({ ...form, model: e.target.value })}
           style={{ WebkitAppearance: "none", background: "rgba(255,255,255,0.04)" }}
         >
-          <option value="" disabled style={{ background: "#111" }}>Select a model</option>
-          <optgroup label="Electric Cars" style={{ background: "#111" }}>
+          <option value="" disabled style={{ background: "#111" }}>Chọn dòng xe</option>
+          <optgroup label="Xe Điện" style={{ background: "#111" }}>
             {ALL_MODELS.filter(m => !m.slug.includes("dm-i")).map(m => (
               <option key={m.slug} value={m.slug} style={{ background: "#111" }}>{m.name}</option>
             ))}
           </optgroup>
-          <optgroup label="Hybrid Cars" style={{ background: "#111" }}>
+          <optgroup label="Xe Hybrid" style={{ background: "#111" }}>
             {ALL_MODELS.filter(m => m.slug.includes("dm-i")).map(m => (
               <option key={m.slug} value={m.slug} style={{ background: "#111" }}>{m.name}</option>
             ))}
@@ -218,7 +218,7 @@ function Step1({
           <div>
             <p className="font-bold text-sm tracking-wide">{selected.name}</p>
             <p className="text-[11px] text-white/35 mt-0.5">
-              {isHybrid ? "Plug-in Hybrid" : "All-Electric"} · 45-minute test drive
+              {isHybrid ? "Hybrid Sạc Điện" : "Thuần Điện"} · Lái thử 45 phút
             </p>
           </div>
         </div>
@@ -226,7 +226,7 @@ function Step1({
 
       {/* Showroom info */}
       <div>
-        <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/25 mb-3">Location</p>
+        <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/25 mb-3">Địa Điểm</p>
         <ShowroomCard />
       </div>
 
@@ -235,7 +235,7 @@ function Step1({
           onClick={onNext}
           className="px-10 py-4 bg-white text-black text-[11px] font-bold tracking-[0.18em] uppercase transition-colors hover:bg-white/90 cursor-pointer border-none"
         >
-          Continue
+          Tiếp Tục
         </button>
       </div>
     </div>
@@ -249,44 +249,44 @@ function Step2({
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-2">Step 2 of 2</p>
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Your details</h2>
-        <p className="text-sm text-white/40">We'll confirm your test drive appointment by email or phone.</p>
+        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-2">Bước 2 / 2</p>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Thông tin của bạn</h2>
+        <p className="text-sm text-white/40">Chúng tôi sẽ xác nhận lịch hẹn qua email hoặc điện thoại.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <Field label="First Name" error={errors.firstName}>
+        <Field label="Họ" error={errors.firstName}>
           <input
             className={inputCls}
             type="text"
-            placeholder="First name"
+            placeholder="Họ"
             value={form.firstName}
             onChange={e => setForm({ ...form, firstName: e.target.value })}
           />
         </Field>
-        <Field label="Last Name" error={errors.lastName}>
+        <Field label="Tên" error={errors.lastName}>
           <input
             className={inputCls}
             type="text"
-            placeholder="Last name"
+            placeholder="Tên"
             value={form.lastName}
             onChange={e => setForm({ ...form, lastName: e.target.value })}
           />
         </Field>
-        <Field label="Email Address" error={errors.email}>
+        <Field label="Địa Chỉ Email" error={errors.email}>
           <input
             className={inputCls}
             type="email"
-            placeholder="your@email.com"
+            placeholder="ban@example.com"
             value={form.email}
             onChange={e => setForm({ ...form, email: e.target.value })}
           />
         </Field>
-        <Field label="Phone Number" error={errors.phone}>
+        <Field label="Số Điện Thoại" error={errors.phone}>
           <input
             className={inputCls}
             type="tel"
-            placeholder="+XX XXX XXX XXXX"
+            placeholder="+84 000 000 000"
             value={form.phone}
             onChange={e => setForm({ ...form, phone: e.target.value })}
           />
@@ -294,7 +294,7 @@ function Step2({
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <Field label="Preferred Date" error={errors.date}>
+        <Field label="Ngày Ưu Tiên" error={errors.date}>
           <input
             className={inputCls}
             type="date"
@@ -305,14 +305,14 @@ function Step2({
             style={{ colorScheme: "dark" }}
           />
         </Field>
-        <Field label="Preferred Time" error={errors.timeSlot}>
+        <Field label="Giờ Ưu Tiên" error={errors.timeSlot}>
           <select
             className={selectCls}
             value={form.timeSlot}
             onChange={e => setForm({ ...form, timeSlot: e.target.value })}
             style={{ WebkitAppearance: "none", background: "rgba(255,255,255,0.04)" }}
           >
-            <option value="" disabled style={{ background: "#111" }}>Select a time slot</option>
+            <option value="" disabled style={{ background: "#111" }}>Chọn khung giờ</option>
             {TIME_SLOTS.map(t => (
               <option key={t} value={t} style={{ background: "#111" }}>{t}</option>
             ))}
@@ -320,11 +320,11 @@ function Step2({
         </Field>
       </div>
 
-      <Field label="Notes (Optional)">
+      <Field label="Ghi Chú (Tùy Chọn)">
         <textarea
           className={inputCls + " resize-none"}
           rows={3}
-          placeholder="Any specific requirements or questions for our team..."
+          placeholder="Yêu cầu hoặc câu hỏi gì cho đội ngũ của chúng tôi..."
           value={form.notes}
           onChange={e => setForm({ ...form, notes: e.target.value })}
         />
@@ -335,13 +335,13 @@ function Step2({
           onClick={onBack}
           className="px-8 py-4 bg-transparent text-white/60 text-[11px] font-bold tracking-[0.18em] uppercase cursor-pointer transition-colors hover:text-white border border-white/15 hover:border-white/30"
         >
-          ← Back
+          ← Quay Lại
         </button>
         <button
           onClick={onNext}
           className="px-10 py-4 bg-white text-black text-[11px] font-bold tracking-[0.18em] uppercase transition-colors hover:bg-white/90 cursor-pointer border-none"
         >
-          Confirm Booking
+          Xác Nhận Đặt Lịch
         </button>
       </div>
     </div>
@@ -371,10 +371,10 @@ function Step3({ form, bookingRef, onDone }: { form: FormData; bookingRef: strin
       </div>
 
       <div>
-        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-3">Booking Confirmed</p>
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">See you at our showroom</h2>
+        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-3">Đặt Lịch Thành Công</p>
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">Hẹn gặp bạn tại showroom</h2>
         <p className="text-sm text-white/45 max-w-sm mx-auto">
-          We'll be in touch at <span className="text-white/70">{form.email}</span> or <span className="text-white/70">{form.phone}</span> to confirm the details.
+          Chúng tôi sẽ liên hệ tại <span className="text-white/70">{form.email}</span> hoặc <span className="text-white/70">{form.phone}</span> để xác nhận chi tiết lịch hẹn.
         </p>
       </div>
 
@@ -384,15 +384,15 @@ function Step3({ form, bookingRef, onDone }: { form: FormData; bookingRef: strin
         style={{ background: "rgba(255,255,255,0.03)" }}
       >
         <div className="px-6 py-4 flex items-center justify-between">
-          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/30">Booking Reference</span>
+          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/30">Mã Đặt Lịch</span>
           <span className="text-sm font-bold tracking-wider text-white">{bookingRef}</span>
         </div>
         {[
-          { label: "Name",     value: `${form.firstName} ${form.lastName}` },
-          { label: "Model",    value: modelName },
-          { label: "Location", value: `${SHOWROOM.name}, ${SHOWROOM.city}` },
-          { label: "Date",     value: formatDate(form.date) },
-          { label: "Time",     value: form.timeSlot },
+          { label: "Họ Tên",     value: `${form.firstName} ${form.lastName}` },
+          { label: "Dòng Xe",    value: modelName },
+          { label: "Địa Điểm",  value: `${SHOWROOM.name}, ${SHOWROOM.city}` },
+          { label: "Ngày",       value: formatDate(form.date) },
+          { label: "Giờ",        value: form.timeSlot },
         ].map(row => (
           <div key={row.label} className="px-6 py-3.5 flex items-center justify-between gap-4">
             <span className="text-[10px] font-bold tracking-[0.16em] uppercase text-white/25 flex-shrink-0">{row.label}</span>
@@ -406,13 +406,13 @@ function Step3({ form, bookingRef, onDone }: { form: FormData; bookingRef: strin
           onClick={onDone}
           className="px-10 py-4 bg-white text-black text-[11px] font-bold tracking-[0.18em] uppercase transition-colors hover:bg-white/90 cursor-pointer border-none"
         >
-          Back to Models
+          Về Trang Chủ
         </button>
         <button
           onClick={() => window.print()}
           className="px-10 py-4 bg-transparent text-white text-[11px] font-bold tracking-[0.18em] uppercase cursor-pointer transition-colors hover:bg-white/5 border border-white/15 hover:border-white/30"
         >
-          Print Confirmation
+          In Xác Nhận
         </button>
       </div>
     </div>
@@ -435,19 +435,19 @@ export default function TestDrivePage() {
 
   function validateStep1() {
     const e: Partial<Record<keyof FormData, string>> = {};
-    if (!form.model) e.model = "Please select a model";
+    if (!form.model) e.model = "Vui lòng chọn dòng xe";
     setErrors(e);
     return Object.keys(e).length === 0;
   }
 
   function validateStep2() {
     const e: Partial<Record<keyof FormData, string>> = {};
-    if (!form.firstName.trim()) e.firstName = "First name is required";
-    if (!form.lastName.trim()) e.lastName = "Last name is required";
-    if (!form.email.trim() || !/^[^@]+@[^@]+\.[^@]+$/.test(form.email)) e.email = "Please enter a valid email";
-    if (!form.phone.trim()) e.phone = "Phone number is required";
-    if (!form.date) e.date = "Please select a date";
-    if (!form.timeSlot) e.timeSlot = "Please select a time slot";
+    if (!form.firstName.trim()) e.firstName = "Vui lòng nhập họ";
+    if (!form.lastName.trim()) e.lastName = "Vui lòng nhập tên";
+    if (!form.email.trim() || !/^[^@]+@[^@]+\.[^@]+$/.test(form.email)) e.email = "Vui lòng nhập email hợp lệ";
+    if (!form.phone.trim()) e.phone = "Vui lòng nhập số điện thoại";
+    if (!form.date) e.date = "Vui lòng chọn ngày";
+    if (!form.timeSlot) e.timeSlot = "Vui lòng chọn khung giờ";
     setErrors(e);
     return Object.keys(e).length === 0;
   }
@@ -491,10 +491,10 @@ export default function TestDrivePage() {
           <div className="text-center mb-14">
             <p className="text-[10px] font-bold tracking-[0.32em] uppercase text-white/25 mb-4">{SHOWROOM.name}</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
-              Book a Test Drive
+              Đặt Lịch Lái Thử
             </h1>
             <p className="text-sm text-white/40 max-w-xs mx-auto">
-              Experience the future of driving — completely free, no obligation.
+              Trải nghiệm tương lai của việc lái xe — hoàn toàn miễn phí, không ràng buộc.
             </p>
           </div>
         )}
@@ -530,10 +530,10 @@ export default function TestDrivePage() {
         {step < 3 && (
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 mt-12">
             {[
-              "Free of charge",
-              "No obligation",
-              "45-min session",
-              "Cancel anytime",
+              "Hoàn toàn miễn phí",
+              "Không ràng buộc",
+              "Lái thử 45 phút",
+              "Hủy bất cứ lúc nào",
             ].map(t => (
               <div key={t} className="flex items-center gap-2">
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none">

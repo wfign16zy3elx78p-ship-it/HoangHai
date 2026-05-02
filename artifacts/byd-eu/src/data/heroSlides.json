@@ -4,10 +4,10 @@
     "imgPc": "/images/seal6-dm-i.webp",
     "video": "/images/bc-1-hero.mp4",
     "title": "BYD SEAL 6 DM-i",
-    "subtitle": "Plug-in Hybrid Car",
+    "subtitle": "Xe Hybrid Sạc Điện",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/car/seal-6-dm-i", "type": 1 },
-      { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
+      { "text": "KHÁM PHÁ", "link": "/car/seal-6-dm-i", "type": 1 },
+      { "text": "LÁI THỬ", "link": "/eu/test-drive", "type": 2 }
     ]
   },
   {
@@ -15,10 +15,10 @@
     "imgPc": "/images/BYD-SEALION-7.webp",
     "video": "",
     "title": "BYD SEALION 7",
-    "subtitle": "All-Electric Performance SUV",
+    "subtitle": "SUV Hiệu Suất Cao Thuần Điện",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/car/sealion-7", "type": 1 },
-      { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
+      { "text": "KHÁM PHÁ", "link": "/car/sealion-7", "type": 1 },
+      { "text": "LÁI THỬ", "link": "/eu/test-drive", "type": 2 }
     ]
   },
   {
@@ -26,10 +26,10 @@
     "imgPc": "/images/sealu.webp",
     "video": "/images/dolphin-surf.mp4",
     "title": "BYD DOLPHIN SURF",
-    "subtitle": "The New Electric Adventure Car",
+    "subtitle": "Xe Điện Phiêu Lưu Mới",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/car/dolphin-surf", "type": 1 },
-      { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
+      { "text": "KHÁM PHÁ", "link": "/car/dolphin-surf", "type": 1 },
+      { "text": "LÁI THỬ", "link": "/eu/test-drive", "type": 2 }
     ]
   },
   {
@@ -37,10 +37,10 @@
     "imgPc": "/images/Atto2dmi.webp",
     "video": "/images/atto2-dm-i.mp4",
     "title": "BYD ATTO 2 DM-i",
-    "subtitle": "Compact Hybrid City Car",
+    "subtitle": "Xe Hybrid Thành Thị Cỡ Nhỏ",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/car/atto-2-dm-i", "type": 1 },
-      { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
+      { "text": "KHÁM PHÁ", "link": "/car/atto-2-dm-i", "type": 1 },
+      { "text": "LÁI THỬ", "link": "/eu/test-drive", "type": 2 }
     ]
   }
 ]

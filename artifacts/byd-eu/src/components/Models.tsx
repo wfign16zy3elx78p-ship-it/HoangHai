@@ -23,10 +23,10 @@ export default function Models() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-3" style={{ color: "rgba(255,255,255,0.4)" }}>
-              Lineup
+              Dòng Sản Phẩm
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide uppercase">
-              Our Models
+              Các Dòng Xe
             </h2>
           </div>
 
@@ -53,7 +53,7 @@ export default function Models() {
                   transition: "all 0.3s cubic-bezier(0.4,0,0.2,1)",
                 }}
               >
-                {tab === "electric" ? "Electric Cars" : "Hybrid Cars"}
+                {tab === "electric" ? "Xe Điện" : "Xe Hybrid"}
               </button>
             ))}
           </div>
@@ -140,7 +140,7 @@ export default function Models() {
                     className="flex items-center gap-1.5 text-[10px] font-bold text-white/60 group-hover:text-white tracking-[0.15em] uppercase"
                     style={{ transition: "color 0.25s ease" }}
                   >
-                    EXPLORE MORE
+                    KHÁM PHÁ
                     <svg
                       className="w-3.5 h-3.5 group-hover:translate-x-1"
                       style={{ transition: "transform 0.25s ease" }}

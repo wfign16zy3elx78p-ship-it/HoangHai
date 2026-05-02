@@ -42,31 +42,31 @@ export default function ContactSection() {
           {/* Left: Info */}
           <div>
             <p className="text-[10px] font-bold tracking-[0.3em] uppercase mb-4" style={{ color: "rgba(255,255,255,0.35)" }}>
-              Contact Us
+              Liên Hệ
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide uppercase mb-6">
-              Get in Touch
+              Kết Nối Với Chúng Tôi
             </h2>
             <div className="shimmer-line mb-8" />
             <p className="text-white/40 text-sm leading-relaxed mb-12">
-              Whether you're interested in a test drive, want to find your nearest dealer, or have a question about our vehicles — we're here to help.
+              Dù bạn muốn đặt lịch lái thử, tìm showroom gần nhất, hay có câu hỏi về xe — chúng tôi luôn sẵn sàng hỗ trợ bạn.
             </p>
 
             <div className="space-y-4">
               {[
                 {
                   icon: "/images/dealerIcon2.svg",
-                  title: "Find a Dealer",
-                  desc: "Locate your nearest BYD showroom",
+                  title: "Tìm Showroom",
+                  desc: "Tìm showroom BYD gần bạn nhất",
                   link: "/eu/find-store",
-                  cta: "Find Store",
+                  cta: "Tìm Ngay",
                 },
                 {
                   icon: "/images/buttonIcon.svg",
-                  title: "Book a Test Drive",
-                  desc: "Experience BYD first-hand",
+                  title: "Đặt Lịch Lái Thử",
+                  desc: "Trải nghiệm BYD trực tiếp tại showroom",
                   link: "/test-drive",
-                  cta: "Book Now",
+                  cta: "Đặt Ngay",
                 },
               ].map((item) => (
                 <div
@@ -142,13 +142,13 @@ export default function ContactSection() {
                 >
                   <img src="/images/green-check-icon.png" alt="Success" className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-white tracking-wide mb-3">Thank you!</h3>
-                <p className="text-white/40 text-sm leading-relaxed">We've received your enquiry and will be in touch shortly.</p>
+                <h3 className="text-xl font-bold text-white tracking-wide mb-3">Cảm ơn bạn!</h3>
+                <p className="text-white/40 text-sm leading-relaxed">Chúng tôi đã nhận được yêu cầu và sẽ liên hệ với bạn sớm nhất.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  {[{ name: "firstName", label: "First Name" }, { name: "lastName", label: "Last Name" }].map((f) => (
+                  {[{ name: "firstName", label: "Họ" }, { name: "lastName", label: "Tên" }].map((f) => (
                     <div key={f.name}>
                       <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>{f.label} *</label>
                       <input
@@ -166,19 +166,19 @@ export default function ContactSection() {
 
                 <div>
                   <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Email *</label>
-                  <input type="email" name="email" required value={form.email} onChange={handleChange} placeholder="you@example.com" className={InputClass} />
+                  <input type="email" name="email" required value={form.email} onChange={handleChange} placeholder="ban@example.com" className={InputClass} />
                 </div>
 
                 <div>
-                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Phone</label>
-                  <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+44 000 000 0000" className={InputClass} />
+                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Điện Thoại</label>
+                  <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+84 000 000 000" className={InputClass} />
                 </div>
 
                 <div>
-                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Interested In</label>
+                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Quan Tâm Đến</label>
                   <select name="interest" value={form.interest} onChange={handleChange} className={InputClass}
                     style={{ appearance: "none", background: "rgba(255,255,255,0.05)", color: form.interest ? "#fff" : "rgba(255,255,255,0.35)" }}>
-                    <option value="" disabled>Select a model...</option>
+                    <option value="" disabled>Chọn dòng xe...</option>
                     {["BYD ATTO 3 EVO","BYD SEAL","BYD SEAL U","BYD SEALION 7","BYD HAN","BYD TANG","BYD DOLPHIN","BYD SEAL 6 DM-i","BYD SEAL U DM-i","BYD SEALION 5 DM-i"].map(m => (
                       <option key={m} value={m} style={{ background: "#111", color: "#fff" }}>{m}</option>
                     ))}
@@ -186,8 +186,8 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Message</label>
-                  <textarea name="message" value={form.message} onChange={handleChange} rows={3} placeholder="How can we help?" className={InputClass} style={{ resize: "none" }} />
+                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Tin Nhắn</label>
+                  <textarea name="message" value={form.message} onChange={handleChange} rows={3} placeholder="Chúng tôi có thể giúp gì cho bạn?" className={InputClass} style={{ resize: "none" }} />
                 </div>
 
                 <div className="flex items-start gap-3 p-4 rounded-xl" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
@@ -202,14 +202,14 @@ export default function ContactSection() {
                     style={{ accentColor: "white" }}
                   />
                   <label htmlFor="consent" className="text-[11px] text-white/40 leading-relaxed">
-                    I agree to BYD's{" "}
-                    <a href="/eu/privacy" className="text-white/70 underline hover:text-white" style={{ transition: "color 0.2s ease" }}>Privacy Policy</a>
-                    {" "}and consent to being contacted. *
+                    Tôi đồng ý với{" "}
+                    <a href="/eu/privacy" className="text-white/70 underline hover:text-white" style={{ transition: "color 0.2s ease" }}>Chính Sách Bảo Mật</a>
+                    {" "}của BYD và đồng ý được liên hệ. *
                   </label>
                 </div>
 
                 <button type="submit" className="btn-glass-primary w-full mt-2">
-                  Submit Enquiry
+                  Gửi Yêu Cầu
                 </button>
               </form>
             )}

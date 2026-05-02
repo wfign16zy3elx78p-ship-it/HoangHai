@@ -29,13 +29,13 @@ export default function Technology() {
             }}
           >
             <img src="/images/technology.svg" alt="" className="w-4 h-4 invert opacity-60" />
-            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/60">Technology</span>
+            <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/60">Công Nghệ</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide uppercase mb-4">
-            BYD Technology
+            Công Nghệ BYD
           </h2>
           <p className="text-white/40 text-sm max-w-md mx-auto leading-relaxed">
-            Pioneering innovation that puts safety, efficiency, and performance at the heart of every vehicle.
+            Đột phá công nghệ đặt an toàn, hiệu quả và hiệu suất vào trung tâm của mỗi chiếc xe.
           </p>
         </div>
 
@@ -176,7 +176,7 @@ export default function Technology() {
           >
             <div>
               <p className="text-[10px] tracking-[0.4em] uppercase text-white/40 mb-3 font-bold">Build Your Dreams</p>
-              <h3 className="text-3xl md:text-4xl font-bold text-white tracking-wide">Innovation for a Better World</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-white tracking-wide">Đổi Mới Vì Thế Giới Tốt Đẹp Hơn</h3>
             </div>
           </div>
         </div>

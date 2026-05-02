@@ -35,11 +35,11 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { label: "Electric Cars", key: "electric" },
-    { label: "Hybrid Cars", key: "hybrid" },
-    { label: "Technology", key: "technology" },
-    { label: "About BYD", key: "about" },
-    { label: "Ownership", key: "ownership" },
+    { label: "Xe Điện", key: "electric" },
+    { label: "Xe Hybrid", key: "hybrid" },
+    { label: "Công Nghệ", key: "technology" },
+    { label: "Về BYD", key: "about" },
+    { label: "Sở Hữu Xe", key: "ownership" },
   ];
 
   return (
@@ -122,7 +122,7 @@ export default function Header() {
               }}
             >
               <img src="/images/findStoreIconDark.svg" alt="Find Store" className="w-4 h-4 invert opacity-70 group-hover:opacity-100" style={{ transition: "opacity 0.25s ease" }} />
-              <span>Find Store</span>
+              <span>Tìm Showroom</span>
             </a>
           </div>
 
@@ -184,7 +184,7 @@ export default function Header() {
                     transition: "all 0.2s ease",
                   }}
                 >
-                  {tab === "electric" ? "Electric Cars" : "Hybrid Cars"}
+                  {tab === "electric" ? "Xe Điện" : "Xe Hybrid"}
                 </button>
               ))}
             </div>
@@ -253,7 +253,7 @@ export default function Header() {
               className="block text-xs font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white py-3 px-3 rounded-xl"
               style={{ transition: "all 0.2s ease" }}
             >
-              Find Store
+              Tìm Showroom
             </a>
           </div>
         </div>
