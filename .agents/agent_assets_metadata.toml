@@ -240,3 +240,9 @@ id = "ySEAarBMq4SS0klGpk-uX"
 uri = "file://artifacts/byd-eu/public/images/sealion-7-connectivity-02.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "7jf3UboKUrf1O1mUIUNdM"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-v2l-01.png"
+type = "image"
+title = "generated_image"
