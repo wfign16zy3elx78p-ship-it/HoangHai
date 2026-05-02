@@ -64,21 +64,22 @@ export default function Hero() {
         >
           {s.video ? (
             <>
-              {/* Video background */}
-              <video
-                ref={(el) => { videoRefs.current[i] = el; }}
-                src={s.video}
-                muted
-                playsInline
-                loop={false}
-                preload={i === 0 ? "auto" : "none"}
-                className="w-full h-full object-cover"
-              />
-              {/* Poster fallback while loading */}
+              {/* Poster image shown while video loads */}
               <img
                 src={s.imgPc}
                 alt={s.title}
-                className="absolute inset-0 w-full h-full object-cover -z-10"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {/* Video background on top — covers poster once ready */}
+              <video
+                ref={(el) => { videoRefs.current[i] = el; }}
+                src={s.video}
+                poster={s.imgPc}
+                muted
+                playsInline
+                loop={false}
+                preload={i === 0 ? "auto" : "metadata"}
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </>
           ) : (

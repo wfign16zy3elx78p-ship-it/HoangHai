@@ -1,28 +1,6 @@
 [
   {
     "id": 1,
-    "imgPc": "/images/atto3-evo.webp",
-    "video": null,
-    "title": "BYD ATTO 3 EVO",
-    "subtitle": "The All-New Electric Compact SUV",
-    "btnList": [
-      { "text": "EXPLORE MORE", "link": "/eu/electric-cars/atto-3-evo", "type": 1 },
-      { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
-    ]
-  },
-  {
-    "id": 2,
-    "imgPc": "/images/seal.webp",
-    "video": null,
-    "title": "BYD SEAL",
-    "subtitle": "The All-Electric Performance Saloon",
-    "btnList": [
-      { "text": "EXPLORE MORE", "link": "/eu/electric-cars/seal", "type": 1 },
-      { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
-    ]
-  },
-  {
-    "id": 3,
     "imgPc": "/images/seal6-dm-i.webp",
     "video": "/images/bc-1-hero.mp4",
     "title": "BYD SEAL 6 DM-i",
@@ -33,7 +11,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 2,
     "imgPc": "/images/seal6-dm-i-touring.webp",
     "video": "/images/hero-video-1.mp4",
     "title": "BYD SEAL 6 DM-i TOURING",
@@ -44,7 +22,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 3,
     "imgPc": "/images/sealu.webp",
     "video": "/images/dolphin-surf.mp4",
     "title": "BYD DOLPHIN SURF",
@@ -55,7 +33,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 4,
     "imgPc": "/images/Atto2dmi.webp",
     "video": "/images/atto2-dm-i.mp4",
     "title": "BYD ATTO 2 DM-i",
