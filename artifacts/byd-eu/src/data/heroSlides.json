@@ -1,16 +1,5 @@
 [
   {
-    "id": 0,
-    "imgPc": "/images/BYD-SEALION-7.webp",
-    "video": "",
-    "title": "BYD SEALION 7",
-    "subtitle": "All-Electric Performance SUV",
-    "btnList": [
-      { "text": "EXPLORE MORE", "link": "/car/sealion-7", "type": 1 },
-      { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
-    ]
-  },
-  {
     "id": 1,
     "imgPc": "/images/seal6-dm-i.webp",
     "video": "/images/bc-1-hero.mp4",
@@ -23,12 +12,12 @@
   },
   {
     "id": 2,
-    "imgPc": "/images/seal6-dm-i-touring.webp",
-    "video": "/images/hero-video-1.mp4",
-    "title": "BYD SEAL 6 DM-i TOURING",
-    "subtitle": "Plug-in Hybrid Estate",
+    "imgPc": "/images/BYD-SEALION-7.webp",
+    "video": "",
+    "title": "BYD SEALION 7",
+    "subtitle": "All-Electric Performance SUV",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/car/seal-6-dm-i-touring", "type": 1 },
+      { "text": "EXPLORE MORE", "link": "/car/sealion-7", "type": 1 },
       { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
     ]
   },
