@@ -102,6 +102,20 @@
         "desc": "The Blade Battery is integrated directly into the vehicle's floor, forming part of the structural body. This lowers the centre of gravity, improves rigidity, and maximises cabin space.",
         "img": "/images/seal-tech-01.png",
         "imgRight": false
+      },
+      {
+        "title": "Instant electric performance",
+        "subtitle": "0–100 km/h in 3.8 s",
+        "desc": "The SEAL's dual-motor AWD system delivers 390kW with iTAC torque vectoring responding in just 10ms — putting you in complete control on every corner.",
+        "img": "/images/seal-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "DiLink Smart Cockpit",
+        "subtitle": "Dynaudio & OTA Connected",
+        "desc": "The 15.6-inch rotating DiLink display, Dynaudio 12-speaker system, and continuous OTA updates keep the SEAL at the forefront of the electric saloon segment.",
+        "img": "/images/seal-connect-01.png",
+        "imgRight": false
       }
     ],
     "specs": {
@@ -169,6 +183,20 @@
         "subtitle": "Long-lasting Power",
         "desc": "The 71.8 kWh Blade Battery provides exceptional range and safety. Its cell-level thermal management ensures optimal performance in all weather conditions.",
         "img": "/images/seal-u-tech-01.png",
+        "imgRight": false
+      },
+      {
+        "title": "Confident family driving",
+        "subtitle": "160 kW electric power",
+        "desc": "The SEAL U's 160kW electric motor and precise DiPilot assistance deliver confident, refined performance for family journeys — with instant torque always on demand.",
+        "img": "/images/seal-u-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Smart family cockpit",
+        "subtitle": "DiLink & Panoramic Roof",
+        "desc": "A large touchscreen, panoramic roof, and BYD's DiLink ecosystem create a connected, spacious environment for every family member — whether commuting or exploring.",
+        "img": "/images/seal-u-connect-01.png",
         "imgRight": false
       }
     ],
@@ -238,6 +266,20 @@
         "desc": "With 521km of WLTP range and 150kW DC fast charging, the HAN eliminates range anxiety entirely. Charge from 10–80% in under 35 minutes.",
         "img": "/images/han-tech-01.png",
         "imgRight": false
+      },
+      {
+        "title": "Executive acceleration",
+        "subtitle": "0–100 km/h in 3.9 s",
+        "desc": "Twin motors produce 380kW and 700Nm of torque, propelling this executive saloon with sports car urgency while retaining the composure expected at the pinnacle of the segment.",
+        "img": "/images/han-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "DiLink & Dynaudio",
+        "subtitle": "Luxury Tech Cockpit",
+        "desc": "A 15.6-inch rotating DiLink display, Dynaudio 16-speaker premium audio, and over-the-air updates create an executive digital cockpit that evolves with you.",
+        "img": "/images/han-connect-01.png",
+        "imgRight": false
       }
     ],
     "specs": {
@@ -305,6 +347,20 @@
         "subtitle": "Five-Star Protection",
         "desc": "The TANG achieved 5-star ratings across all Euro NCAP categories. BYD's Blade Battery provides structural reinforcement while eliminating thermal runaway risk.",
         "img": "/images/tang-tech-01.png",
+        "imgRight": false
+      },
+      {
+        "title": "AWD performance",
+        "subtitle": "0–100 km/h in 4.6 s",
+        "desc": "Dual motors drive all four wheels with 380kW of combined power, delivering supercar acceleration in a 7-seat family SUV — without compromising composure or efficiency.",
+        "img": "/images/tang-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Premium 7-seat tech",
+        "subtitle": "DiLink & Panoramic Roof",
+        "desc": "A 15.6-inch rotating display, captain's chairs in every row, and BYD's DiPilot driver assistance suite bring premium technology to all seven passengers.",
+        "img": "/images/tang-connect-01.png",
         "imgRight": false
       }
     ],
@@ -374,6 +430,20 @@
         "desc": "A 12.8-inch rotating display, over-the-air updates, and the full DiLink 300 ecosystem bring smartphone-level intelligence to your everyday drive.",
         "img": "/images/BYD-DOLPIN.webp",
         "imgRight": false
+      },
+      {
+        "title": "Urban agility",
+        "subtitle": "Fun to drive",
+        "desc": "Nimble, responsive, and surprisingly quick — the DOLPHIN's 150kW motor delivers instant electric torque that makes every city journey feel like a joy ride.",
+        "img": "/images/dolphin-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Ocean-inspired cockpit",
+        "subtitle": "12.8\" Rotating DiLink",
+        "desc": "The 64-colour ambient lighting, 12.8-inch rotating DiLink display, and wave-inspired dashboard design create a playful, connected interior unlike anything else in its class.",
+        "img": "/images/dolphin-connect-01.png",
+        "imgRight": false
       }
     ],
     "specs": {
@@ -441,6 +511,20 @@
         "subtitle": "Practical & Connected",
         "desc": "A thoughtfully designed interior with versatile storage, a 10.1-inch infotainment display, and DiLink connectivity keeps you organised and entertained.",
         "img": "/images/BYD-DOLPHIN-SURF.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Adventure agility",
+        "subtitle": "160 kW all-terrain electric",
+        "desc": "Raised ride height and 160kW of instant electric torque give the DOLPHIN SURF the confidence to tackle weekend trails as effortlessly as city streets.",
+        "img": "/images/dolphin-surf-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Adventure-ready cabin",
+        "subtitle": "Practical meets connected",
+        "desc": "Robust storage solutions, roof rails for gear, and DiLink connectivity make the DOLPHIN SURF the perfect companion for those who live life on the go.",
+        "img": "/images/dolphin-surf-connect-01.png",
         "imgRight": false
       }
     ],
@@ -510,6 +594,20 @@
         "desc": "With up to 420km WLTP range, the ATTO 3 EVO covers your daily commute and weekend escapes with ease — and charges rapidly when you need to top up.",
         "img": "/images/BYD-ATTO3-EVO.webp",
         "imgRight": false
+      },
+      {
+        "title": "Sporty urban drive",
+        "subtitle": "150 kW instant torque",
+        "desc": "The ATTO 3 EVO's electric motor delivers instant torque for responsive city driving. With 0–100 km/h in 7.3 seconds, it brings genuine driving excitement to the compact SUV class.",
+        "img": "/images/atto3-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Sport & fitness interior",
+        "subtitle": "Unique elastic net design",
+        "desc": "Elastic net door panels, sporty steering wheel stitching, and a 12.8-inch rotating DiLink display reflect the ATTO 3 EVO's active lifestyle DNA inside and out.",
+        "img": "/images/atto3-connect-01.png",
+        "imgRight": false
       }
     ],
     "specs": {
@@ -577,6 +675,20 @@
         "subtitle": "Style & Space",
         "desc": "Premium exterior design with a spacious, well-equipped interior. The SEALION 5 DM-i doesn't compromise on luxury while delivering class-leading hybrid efficiency.",
         "img": "/images/BYD-SEALION5-DM-i.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Super DM performance",
+        "subtitle": "0–100 km/h in 5.9 s",
+        "desc": "259kW of combined system power launches the SEALION 5 DM-i with authority. The intelligent Super DM system seamlessly manages power delivery for thrilling yet efficient progress.",
+        "img": "/images/sealion5-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Hybrid intelligence",
+        "subtitle": "EV-first driving",
+        "desc": "The DiLink cockpit displays real-time energy flow between battery and engine, while DiPilot driver assistance keeps every journey safe and stress-free.",
+        "img": "/images/sealion5-connect-01.png",
         "imgRight": false
       }
     ],
@@ -646,6 +758,20 @@
         "desc": "DiLink 100 infotainment, DiPilot driver assistance, and over-the-air updates keep the SEAL U DM-i at the cutting edge throughout your ownership.",
         "img": "/images/seal-u-dmi-tech-01.png",
         "imgRight": false
+      },
+      {
+        "title": "Hybrid family performance",
+        "subtitle": "1,000+ km combined range",
+        "desc": "With 233kW of system power and over 1,000km of total range, the SEAL U DM-i handles school runs and long-distance road trips equally — without a second thought.",
+        "img": "/images/seal-u-dmi-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Family hybrid cockpit",
+        "subtitle": "DiLink & energy management",
+        "desc": "A large DiLink display shows live energy flow, charging status, and navigation — keeping the whole family informed and comfortable on every journey.",
+        "img": "/images/seal-u-dmi-connect-01.png",
+        "imgRight": false
       }
     ],
     "specs": {
@@ -713,6 +839,20 @@
         "subtitle": "Saloon Elegance",
         "desc": "The SEAL 6's flowing saloon silhouette and premium interior appointments create a refined environment that rivals dedicated luxury marques at a fraction of the cost.",
         "img": "/images/seal-6-dmi-tech-01.png",
+        "imgRight": false
+      },
+      {
+        "title": "Executive hybrid thrust",
+        "subtitle": "0–100 km/h in 5.4 s",
+        "desc": "316kW of combined power from the Super DM system propels this premium saloon with executive authority — fast enough to excite, refined enough to impress.",
+        "img": "/images/seal6-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Dynaudio cockpit",
+        "subtitle": "15.6\" Rotating & V2L",
+        "desc": "The 15.6-inch rotating DiLink display, Dynaudio 12-speaker system, and Vehicle-to-Load capability elevate the SEAL 6 DM-i into genuine luxury hybrid territory.",
+        "img": "/images/seal6-connect-01.png",
         "imgRight": false
       }
     ],
@@ -782,6 +922,20 @@
         "desc": "Heated and ventilated front seats, a panoramic sunroof, and premium Dynaudio sound system transform every journey into a first-class experience.",
         "img": "/images/seal-6-touring-tech-01.png",
         "imgRight": false
+      },
+      {
+        "title": "Estate hybrid performance",
+        "subtitle": "0–100 km/h in 5.4 s",
+        "desc": "316kW of Super DM power in a practical estate body — the SEAL 6 DM-i TOURING proves that family practicality and thrilling performance are not mutually exclusive.",
+        "img": "/images/seal6-touring-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Grand touring technology",
+        "subtitle": "Dynaudio & 120+ km EV range",
+        "desc": "The rotating DiLink display, Dynaudio audio system, and V2L capability make every long journey a premium experience — whether cruising on battery or engine power.",
+        "img": "/images/seal6-touring-connect-01.png",
+        "imgRight": false
       }
     ],
     "specs": {
@@ -849,6 +1003,20 @@
         "subtitle": "Smart & Stylish",
         "desc": "A clean, modern interior with a large central display, wireless phone charging, and multiple connectivity options keeps you comfortable and connected.",
         "img": "/images/atto2-tech-01.png",
+        "imgRight": false
+      },
+      {
+        "title": "Compact hybrid agility",
+        "subtitle": "195 kW Super DM power",
+        "desc": "195kW of combined system power gives the ATTO 2 DM-i surprising punch for a compact city car — pulling away from traffic with confident, instant electric torque.",
+        "img": "/images/atto2-dynamic-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "Smart city cockpit",
+        "subtitle": "12.8\" Rotating & V2L",
+        "desc": "The rotating 12.8-inch DiLink display, wireless charging, and V2L capability pack flagship technology into the ATTO 2 DM-i's compact footprint.",
+        "img": "/images/atto2-connect-01.png",
         "imgRight": false
       }
     ],

@@ -246,3 +246,63 @@ id = "7jf3UboKUrf1O1mUIUNdM"
 uri = "file://artifacts/byd-eu/public/images/sealion-7-v2l-01.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "H0fenImRCNwLxJQKbLnpJ"
+uri = "file://artifacts/byd-eu/public/images/seal-dynamic-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "FetES4LtA0AKCKSDzRlLh"
+uri = "file://artifacts/byd-eu/public/images/seal-connect-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "q0rJsRdKyrEXKA2Sbe59b"
+uri = "file://artifacts/byd-eu/public/images/han-dynamic-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "rS-vvj94GZzTSlguVywUk"
+uri = "file://artifacts/byd-eu/public/images/han-connect-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "3M_ISGd6bqDKQk1NxTMf4"
+uri = "file://artifacts/byd-eu/public/images/tang-dynamic-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "axZJKsb9Pa2wtVWJhRqH7"
+uri = "file://artifacts/byd-eu/public/images/tang-connect-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "YqSPL7-tbV-DFx-6COPCj"
+uri = "file://artifacts/byd-eu/public/images/dolphin-dynamic-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "niX5Qpi5gSJZvVlYkfG6M"
+uri = "file://artifacts/byd-eu/public/images/dolphin-connect-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "5GBoKivNnpVR3hq7OTFS4"
+uri = "file://artifacts/byd-eu/public/images/atto3-dynamic-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "in5ptXmzk4JvDmcyRwRKr"
+uri = "file://artifacts/byd-eu/public/images/atto3-connect-01.png"
+type = "image"
+title = "generated_image"
