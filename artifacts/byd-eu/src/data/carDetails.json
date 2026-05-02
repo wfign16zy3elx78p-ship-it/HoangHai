@@ -8,10 +8,30 @@
     "heroVideo": null,
     "color": "#1a4f9e",
     "stats": [
-      { "label": "Range", "value": 456, "unit": "km", "suffix": "" },
-      { "label": "0–100 km/h", "value": 4.5, "unit": "s", "suffix": "" },
-      { "label": "Max Power", "value": 390, "unit": "kW", "suffix": "" },
-      { "label": "Battery", "value": 82.56, "unit": "kWh", "suffix": "" }
+      {
+        "label": "Range",
+        "value": 456,
+        "unit": "km",
+        "suffix": ""
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 4.5,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Max Power",
+        "value": 390,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Battery",
+        "value": 82.56,
+        "unit": "kWh",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -38,32 +58,92 @@
     ],
     "specs": {
       "Performance": [
-        { "label": "Drive Type", "value": "AWD" },
-        { "label": "Motor Output", "value": "390 kW" },
-        { "label": "Max Torque", "value": "620 Nm" },
-        { "label": "0–100 km/h", "value": "4.5 s" },
-        { "label": "Top Speed", "value": "215 km/h" }
+        {
+          "label": "Drive Type",
+          "value": "AWD"
+        },
+        {
+          "label": "Motor Output",
+          "value": "390 kW"
+        },
+        {
+          "label": "Max Torque",
+          "value": "620 Nm"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "4.5 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "215 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "WLTP Range", "value": "456 km" },
-        { "label": "Battery Capacity", "value": "82.56 kWh" },
-        { "label": "DC Fast Charge", "value": "150 kW" },
-        { "label": "Charge 10–80%", "value": "< 30 min" },
-        { "label": "AC Charging", "value": "11 kW" }
+        {
+          "label": "WLTP Range",
+          "value": "456 km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "82.56 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "150 kW"
+        },
+        {
+          "label": "Charge 10–80%",
+          "value": "< 30 min"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,830 mm" },
-        { "label": "Width", "value": "1,925 mm" },
-        { "label": "Height", "value": "1,620 mm" },
-        { "label": "Wheelbase", "value": "2,930 mm" },
-        { "label": "Boot Space", "value": "520 L" }
+        {
+          "label": "Length",
+          "value": "4,830 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,925 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,620 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,930 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "520 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "15.6\" Rotating" },
-        { "label": "DiPilot", "value": "L2+ ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "3.3 kW" },
-        { "label": "Sound System", "value": "Dynaudio 12-spk" }
+        {
+          "label": "Display",
+          "value": "15.6\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2+ ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "3.3 kW"
+        },
+        {
+          "label": "Sound System",
+          "value": "Dynaudio 12-spk"
+        }
       ]
     }
   },
@@ -76,10 +156,30 @@
     "heroVideo": null,
     "color": "#0f3460",
     "stats": [
-      { "label": "Range", "value": 570, "unit": "km", "suffix": "" },
-      { "label": "0–100 km/h", "value": 3.8, "unit": "s", "suffix": "" },
-      { "label": "Max Power", "value": 390, "unit": "kW", "suffix": "" },
-      { "label": "Battery", "value": 82.56, "unit": "kWh", "suffix": "" }
+      {
+        "label": "Range",
+        "value": 570,
+        "unit": "km",
+        "suffix": ""
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 3.8,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Max Power",
+        "value": 390,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Battery",
+        "value": 82.56,
+        "unit": "kWh",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -120,32 +220,92 @@
     ],
     "specs": {
       "Performance": [
-        { "label": "Drive Type", "value": "AWD" },
-        { "label": "Motor Output", "value": "390 kW" },
-        { "label": "Max Torque", "value": "670 Nm" },
-        { "label": "0–100 km/h", "value": "3.8 s" },
-        { "label": "Top Speed", "value": "180 km/h" }
+        {
+          "label": "Drive Type",
+          "value": "AWD"
+        },
+        {
+          "label": "Motor Output",
+          "value": "390 kW"
+        },
+        {
+          "label": "Max Torque",
+          "value": "670 Nm"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "3.8 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "180 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "WLTP Range", "value": "570 km" },
-        { "label": "Battery Capacity", "value": "82.56 kWh" },
-        { "label": "DC Fast Charge", "value": "150 kW" },
-        { "label": "Charge 10–80%", "value": "< 30 min" },
-        { "label": "AC Charging", "value": "11 kW" }
+        {
+          "label": "WLTP Range",
+          "value": "570 km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "82.56 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "150 kW"
+        },
+        {
+          "label": "Charge 10–80%",
+          "value": "< 30 min"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,800 mm" },
-        { "label": "Width", "value": "1,875 mm" },
-        { "label": "Height", "value": "1,460 mm" },
-        { "label": "Wheelbase", "value": "2,920 mm" },
-        { "label": "Boot Space", "value": "400 L" }
+        {
+          "label": "Length",
+          "value": "4,800 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,875 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,460 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,920 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "400 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "15.6\" Rotating" },
-        { "label": "DiPilot", "value": "L2+ ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "3.3 kW" },
-        { "label": "Sound System", "value": "Dynaudio 12-spk" }
+        {
+          "label": "Display",
+          "value": "15.6\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2+ ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "3.3 kW"
+        },
+        {
+          "label": "Sound System",
+          "value": "Dynaudio 12-spk"
+        }
       ]
     }
   },
@@ -158,10 +318,30 @@
     "heroVideo": null,
     "color": "#16213e",
     "stats": [
-      { "label": "Range", "value": 420, "unit": "km", "suffix": "" },
-      { "label": "0–100 km/h", "value": 6.9, "unit": "s", "suffix": "" },
-      { "label": "Max Power", "value": 160, "unit": "kW", "suffix": "" },
-      { "label": "Battery", "value": 71.8, "unit": "kWh", "suffix": "" }
+      {
+        "label": "Range",
+        "value": 420,
+        "unit": "km",
+        "suffix": ""
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 6.9,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Max Power",
+        "value": 160,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Battery",
+        "value": 71.8,
+        "unit": "kWh",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -189,45 +369,105 @@
         "title": "Confident family driving",
         "subtitle": "160 kW electric power",
         "desc": "The SEAL U's 160kW electric motor and precise DiPilot assistance deliver confident, refined performance for family journeys — with instant torque always on demand.",
-        "img": "/images/seal-u-dynamic-01.png",
+        "img": "/images/seal-u-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Smart family cockpit",
         "subtitle": "DiLink & Panoramic Roof",
         "desc": "A large touchscreen, panoramic roof, and BYD's DiLink ecosystem create a connected, spacious environment for every family member — whether commuting or exploring.",
-        "img": "/images/seal-u-connect-01.png",
+        "img": "/images/seal-u-tech-01.png",
         "imgRight": false
       }
     ],
     "specs": {
       "Performance": [
-        { "label": "Drive Type", "value": "FWD" },
-        { "label": "Motor Output", "value": "160 kW" },
-        { "label": "Max Torque", "value": "310 Nm" },
-        { "label": "0–100 km/h", "value": "6.9 s" },
-        { "label": "Top Speed", "value": "175 km/h" }
+        {
+          "label": "Drive Type",
+          "value": "FWD"
+        },
+        {
+          "label": "Motor Output",
+          "value": "160 kW"
+        },
+        {
+          "label": "Max Torque",
+          "value": "310 Nm"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "6.9 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "175 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "WLTP Range", "value": "420 km" },
-        { "label": "Battery Capacity", "value": "71.8 kWh" },
-        { "label": "DC Fast Charge", "value": "100 kW" },
-        { "label": "Charge 10–80%", "value": "< 36 min" },
-        { "label": "AC Charging", "value": "11 kW" }
+        {
+          "label": "WLTP Range",
+          "value": "420 km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "71.8 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "100 kW"
+        },
+        {
+          "label": "Charge 10–80%",
+          "value": "< 36 min"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,785 mm" },
-        { "label": "Width", "value": "1,890 mm" },
-        { "label": "Height", "value": "1,668 mm" },
-        { "label": "Wheelbase", "value": "2,765 mm" },
-        { "label": "Boot Space", "value": "552 L" }
+        {
+          "label": "Length",
+          "value": "4,785 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,890 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,668 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,765 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "552 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "12.8\" Central" },
-        { "label": "DiPilot", "value": "L2 ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Available" },
-        { "label": "Sound System", "value": "8-speaker" }
+        {
+          "label": "Display",
+          "value": "12.8\" Central"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2 ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Available"
+        },
+        {
+          "label": "Sound System",
+          "value": "8-speaker"
+        }
       ]
     }
   },
@@ -240,10 +480,30 @@
     "heroVideo": null,
     "color": "#0a0a1a",
     "stats": [
-      { "label": "Range", "value": 521, "unit": "km", "suffix": "" },
-      { "label": "0–100 km/h", "value": 3.9, "unit": "s", "suffix": "" },
-      { "label": "Max Power", "value": 380, "unit": "kW", "suffix": "" },
-      { "label": "Battery", "value": 85.4, "unit": "kWh", "suffix": "" }
+      {
+        "label": "Range",
+        "value": 521,
+        "unit": "km",
+        "suffix": ""
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 3.9,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Max Power",
+        "value": 380,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Battery",
+        "value": 85.4,
+        "unit": "kWh",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -284,32 +544,92 @@
     ],
     "specs": {
       "Performance": [
-        { "label": "Drive Type", "value": "AWD" },
-        { "label": "Motor Output", "value": "380 kW" },
-        { "label": "Max Torque", "value": "700 Nm" },
-        { "label": "0–100 km/h", "value": "3.9 s" },
-        { "label": "Top Speed", "value": "180 km/h" }
+        {
+          "label": "Drive Type",
+          "value": "AWD"
+        },
+        {
+          "label": "Motor Output",
+          "value": "380 kW"
+        },
+        {
+          "label": "Max Torque",
+          "value": "700 Nm"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "3.9 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "180 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "WLTP Range", "value": "521 km" },
-        { "label": "Battery Capacity", "value": "85.4 kWh" },
-        { "label": "DC Fast Charge", "value": "150 kW" },
-        { "label": "Charge 10–80%", "value": "< 35 min" },
-        { "label": "AC Charging", "value": "11 kW" }
+        {
+          "label": "WLTP Range",
+          "value": "521 km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "85.4 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "150 kW"
+        },
+        {
+          "label": "Charge 10–80%",
+          "value": "< 35 min"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,995 mm" },
-        { "label": "Width", "value": "1,910 mm" },
-        { "label": "Height", "value": "1,495 mm" },
-        { "label": "Wheelbase", "value": "2,920 mm" },
-        { "label": "Boot Space", "value": "410 L" }
+        {
+          "label": "Length",
+          "value": "4,995 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,910 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,495 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,920 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "410 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "15.6\" Rotating" },
-        { "label": "DiPilot", "value": "L2+ ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Yes" },
-        { "label": "Sound System", "value": "Dynaudio 16-spk" }
+        {
+          "label": "Display",
+          "value": "15.6\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2+ ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Yes"
+        },
+        {
+          "label": "Sound System",
+          "value": "Dynaudio 16-spk"
+        }
       ]
     }
   },
@@ -322,10 +642,30 @@
     "heroVideo": null,
     "color": "#1a0a0a",
     "stats": [
-      { "label": "Range", "value": 400, "unit": "km", "suffix": "" },
-      { "label": "0–100 km/h", "value": 4.6, "unit": "s", "suffix": "" },
-      { "label": "Max Power", "value": 380, "unit": "kW", "suffix": "" },
-      { "label": "Seats", "value": 7, "unit": "", "suffix": "" }
+      {
+        "label": "Range",
+        "value": 400,
+        "unit": "km",
+        "suffix": ""
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 4.6,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Max Power",
+        "value": 380,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Seats",
+        "value": 7,
+        "unit": "",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -366,32 +706,92 @@
     ],
     "specs": {
       "Performance": [
-        { "label": "Drive Type", "value": "AWD" },
-        { "label": "Motor Output", "value": "380 kW" },
-        { "label": "Max Torque", "value": "680 Nm" },
-        { "label": "0–100 km/h", "value": "4.6 s" },
-        { "label": "Top Speed", "value": "180 km/h" }
+        {
+          "label": "Drive Type",
+          "value": "AWD"
+        },
+        {
+          "label": "Motor Output",
+          "value": "380 kW"
+        },
+        {
+          "label": "Max Torque",
+          "value": "680 Nm"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "4.6 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "180 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "WLTP Range", "value": "400 km" },
-        { "label": "Battery Capacity", "value": "108.8 kWh" },
-        { "label": "DC Fast Charge", "value": "170 kW" },
-        { "label": "Charge 10–80%", "value": "< 40 min" },
-        { "label": "AC Charging", "value": "11 kW" }
+        {
+          "label": "WLTP Range",
+          "value": "400 km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "108.8 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "170 kW"
+        },
+        {
+          "label": "Charge 10–80%",
+          "value": "< 40 min"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,970 mm" },
-        { "label": "Width", "value": "1,955 mm" },
-        { "label": "Height", "value": "1,745 mm" },
-        { "label": "Wheelbase", "value": "2,820 mm" },
-        { "label": "Seating", "value": "7 seats" }
+        {
+          "label": "Length",
+          "value": "4,970 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,955 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,745 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,820 mm"
+        },
+        {
+          "label": "Seating",
+          "value": "7 seats"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "12.8\" Central" },
-        { "label": "DiPilot", "value": "L2 ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Available" },
-        { "label": "Sound System", "value": "8-speaker" }
+        {
+          "label": "Display",
+          "value": "12.8\" Central"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2 ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Available"
+        },
+        {
+          "label": "Sound System",
+          "value": "8-speaker"
+        }
       ]
     }
   },
@@ -404,10 +804,30 @@
     "heroVideo": null,
     "color": "#004e92",
     "stats": [
-      { "label": "Range", "value": 427, "unit": "km", "suffix": "" },
-      { "label": "0–100 km/h", "value": 7.0, "unit": "s", "suffix": "" },
-      { "label": "Max Power", "value": 150, "unit": "kW", "suffix": "" },
-      { "label": "Battery", "value": 60.48, "unit": "kWh", "suffix": "" }
+      {
+        "label": "Range",
+        "value": 427,
+        "unit": "km",
+        "suffix": ""
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 7,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Max Power",
+        "value": 150,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Battery",
+        "value": 60.48,
+        "unit": "kWh",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -448,32 +868,92 @@
     ],
     "specs": {
       "Performance": [
-        { "label": "Drive Type", "value": "FWD" },
-        { "label": "Motor Output", "value": "150 kW" },
-        { "label": "Max Torque", "value": "310 Nm" },
-        { "label": "0–100 km/h", "value": "7.0 s" },
-        { "label": "Top Speed", "value": "160 km/h" }
+        {
+          "label": "Drive Type",
+          "value": "FWD"
+        },
+        {
+          "label": "Motor Output",
+          "value": "150 kW"
+        },
+        {
+          "label": "Max Torque",
+          "value": "310 Nm"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "7.0 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "160 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "WLTP Range", "value": "427 km" },
-        { "label": "Battery Capacity", "value": "60.48 kWh" },
-        { "label": "DC Fast Charge", "value": "88 kW" },
-        { "label": "Charge 30–80%", "value": "< 30 min" },
-        { "label": "AC Charging", "value": "7.2 kW" }
+        {
+          "label": "WLTP Range",
+          "value": "427 km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "60.48 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "88 kW"
+        },
+        {
+          "label": "Charge 30–80%",
+          "value": "< 30 min"
+        },
+        {
+          "label": "AC Charging",
+          "value": "7.2 kW"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,290 mm" },
-        { "label": "Width", "value": "1,770 mm" },
-        { "label": "Height", "value": "1,570 mm" },
-        { "label": "Wheelbase", "value": "2,700 mm" },
-        { "label": "Boot Space", "value": "345 L" }
+        {
+          "label": "Length",
+          "value": "4,290 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,770 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,570 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,700 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "345 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "12.8\" Rotating" },
-        { "label": "DiPilot", "value": "L2 ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "No" },
-        { "label": "Sound System", "value": "6-speaker" }
+        {
+          "label": "Display",
+          "value": "12.8\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2 ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "No"
+        },
+        {
+          "label": "Sound System",
+          "value": "6-speaker"
+        }
       ]
     }
   },
@@ -486,10 +966,30 @@
     "heroVideo": "/images/dolphin-surf.mp4",
     "color": "#00457c",
     "stats": [
-      { "label": "Range", "value": 420, "unit": "km", "suffix": "" },
-      { "label": "0–100 km/h", "value": 6.9, "unit": "s", "suffix": "" },
-      { "label": "Max Power", "value": 160, "unit": "kW", "suffix": "" },
-      { "label": "Battery", "value": 60.48, "unit": "kWh", "suffix": "" }
+      {
+        "label": "Range",
+        "value": 420,
+        "unit": "km",
+        "suffix": ""
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 6.9,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Max Power",
+        "value": 160,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Battery",
+        "value": 60.48,
+        "unit": "kWh",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -517,45 +1017,105 @@
         "title": "Adventure agility",
         "subtitle": "160 kW all-terrain electric",
         "desc": "Raised ride height and 160kW of instant electric torque give the DOLPHIN SURF the confidence to tackle weekend trails as effortlessly as city streets.",
-        "img": "/images/dolphin-surf-dynamic-01.png",
+        "img": "/images/dolphin-surf-lifestyle-01.png",
         "imgRight": true
       },
       {
         "title": "Adventure-ready cabin",
         "subtitle": "Practical meets connected",
         "desc": "Robust storage solutions, roof rails for gear, and DiLink connectivity make the DOLPHIN SURF the perfect companion for those who live life on the go.",
-        "img": "/images/dolphin-surf-connect-01.png",
+        "img": "/images/BYD-DOLPHIN-SURF.webp",
         "imgRight": false
       }
     ],
     "specs": {
       "Performance": [
-        { "label": "Drive Type", "value": "FWD" },
-        { "label": "Motor Output", "value": "160 kW" },
-        { "label": "Max Torque", "value": "310 Nm" },
-        { "label": "0–100 km/h", "value": "6.9 s" },
-        { "label": "Top Speed", "value": "160 km/h" }
+        {
+          "label": "Drive Type",
+          "value": "FWD"
+        },
+        {
+          "label": "Motor Output",
+          "value": "160 kW"
+        },
+        {
+          "label": "Max Torque",
+          "value": "310 Nm"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "6.9 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "160 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "WLTP Range", "value": "420 km" },
-        { "label": "Battery Capacity", "value": "60.48 kWh" },
-        { "label": "DC Fast Charge", "value": "88 kW" },
-        { "label": "Charge 30–80%", "value": "< 30 min" },
-        { "label": "AC Charging", "value": "11 kW" }
+        {
+          "label": "WLTP Range",
+          "value": "420 km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "60.48 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "88 kW"
+        },
+        {
+          "label": "Charge 30–80%",
+          "value": "< 30 min"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,150 mm" },
-        { "label": "Width", "value": "1,770 mm" },
-        { "label": "Height", "value": "1,630 mm" },
-        { "label": "Wheelbase", "value": "2,700 mm" },
-        { "label": "Boot Space", "value": "370 L" }
+        {
+          "label": "Length",
+          "value": "4,150 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,770 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,630 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,700 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "370 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "10.1\" Central" },
-        { "label": "DiPilot", "value": "L2 ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Available" },
-        { "label": "Sound System", "value": "6-speaker" }
+        {
+          "label": "Display",
+          "value": "10.1\" Central"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2 ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Available"
+        },
+        {
+          "label": "Sound System",
+          "value": "6-speaker"
+        }
       ]
     }
   },
@@ -568,10 +1128,30 @@
     "heroVideo": null,
     "color": "#1a3a5c",
     "stats": [
-      { "label": "Range", "value": 420, "unit": "km", "suffix": "" },
-      { "label": "0–100 km/h", "value": 7.3, "unit": "s", "suffix": "" },
-      { "label": "Max Power", "value": 150, "unit": "kW", "suffix": "" },
-      { "label": "Battery", "value": 60.48, "unit": "kWh", "suffix": "" }
+      {
+        "label": "Range",
+        "value": 420,
+        "unit": "km",
+        "suffix": ""
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 7.3,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Max Power",
+        "value": 150,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Battery",
+        "value": 60.48,
+        "unit": "kWh",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -612,32 +1192,92 @@
     ],
     "specs": {
       "Performance": [
-        { "label": "Drive Type", "value": "FWD" },
-        { "label": "Motor Output", "value": "150 kW" },
-        { "label": "Max Torque", "value": "310 Nm" },
-        { "label": "0–100 km/h", "value": "7.3 s" },
-        { "label": "Top Speed", "value": "160 km/h" }
+        {
+          "label": "Drive Type",
+          "value": "FWD"
+        },
+        {
+          "label": "Motor Output",
+          "value": "150 kW"
+        },
+        {
+          "label": "Max Torque",
+          "value": "310 Nm"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "7.3 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "160 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "WLTP Range", "value": "420 km" },
-        { "label": "Battery Capacity", "value": "60.48 kWh" },
-        { "label": "DC Fast Charge", "value": "88 kW" },
-        { "label": "Charge 30–80%", "value": "< 30 min" },
-        { "label": "AC Charging", "value": "11 kW" }
+        {
+          "label": "WLTP Range",
+          "value": "420 km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "60.48 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "88 kW"
+        },
+        {
+          "label": "Charge 30–80%",
+          "value": "< 30 min"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,455 mm" },
-        { "label": "Width", "value": "1,875 mm" },
-        { "label": "Height", "value": "1,615 mm" },
-        { "label": "Wheelbase", "value": "2,720 mm" },
-        { "label": "Boot Space", "value": "440 L" }
+        {
+          "label": "Length",
+          "value": "4,455 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,875 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,615 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,720 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "440 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "12.8\" Rotating" },
-        { "label": "DiPilot", "value": "L2 ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Available" },
-        { "label": "Sound System", "value": "8-speaker" }
+        {
+          "label": "Display",
+          "value": "12.8\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2 ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Available"
+        },
+        {
+          "label": "Sound System",
+          "value": "8-speaker"
+        }
       ]
     }
   },
@@ -650,10 +1290,30 @@
     "heroVideo": null,
     "color": "#1a2a1a",
     "stats": [
-      { "label": "EV Range", "value": 100, "unit": "km", "suffix": "+" },
-      { "label": "0–100 km/h", "value": 5.9, "unit": "s", "suffix": "" },
-      { "label": "Total Power", "value": 259, "unit": "kW", "suffix": "" },
-      { "label": "Fuel Cons.", "value": 5.9, "unit": "L/100km", "suffix": "" }
+      {
+        "label": "EV Range",
+        "value": 100,
+        "unit": "km",
+        "suffix": "+"
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 5.9,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Total Power",
+        "value": 259,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Fuel Cons.",
+        "value": 5.9,
+        "unit": "L/100km",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -681,45 +1341,105 @@
         "title": "Super DM performance",
         "subtitle": "0–100 km/h in 5.9 s",
         "desc": "259kW of combined system power launches the SEALION 5 DM-i with authority. The intelligent Super DM system seamlessly manages power delivery for thrilling yet efficient progress.",
-        "img": "/images/sealion5-dynamic-01.png",
+        "img": "/images/sealion5-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Hybrid intelligence",
         "subtitle": "EV-first driving",
         "desc": "The DiLink cockpit displays real-time energy flow between battery and engine, while DiPilot driver assistance keeps every journey safe and stress-free.",
-        "img": "/images/sealion5-connect-01.png",
+        "img": "/images/BYD-SEALION5-DM-i.png",
         "imgRight": false
       }
     ],
     "specs": {
       "Performance": [
-        { "label": "System Type", "value": "PHEV" },
-        { "label": "Total Power", "value": "259 kW" },
-        { "label": "Engine", "value": "1.5L Turbo" },
-        { "label": "0–100 km/h", "value": "5.9 s" },
-        { "label": "Top Speed", "value": "185 km/h" }
+        {
+          "label": "System Type",
+          "value": "PHEV"
+        },
+        {
+          "label": "Total Power",
+          "value": "259 kW"
+        },
+        {
+          "label": "Engine",
+          "value": "1.5L Turbo"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "5.9 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "185 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "EV Range (WLTP)", "value": "100+ km" },
-        { "label": "Battery Capacity", "value": "15.87 kWh" },
-        { "label": "DC Fast Charge", "value": "40 kW" },
-        { "label": "AC Charging", "value": "7.2 kW" },
-        { "label": "Fuel Consumption", "value": "5.9 L/100km" }
+        {
+          "label": "EV Range (WLTP)",
+          "value": "100+ km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "15.87 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "40 kW"
+        },
+        {
+          "label": "AC Charging",
+          "value": "7.2 kW"
+        },
+        {
+          "label": "Fuel Consumption",
+          "value": "5.9 L/100km"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,720 mm" },
-        { "label": "Width", "value": "1,900 mm" },
-        { "label": "Height", "value": "1,680 mm" },
-        { "label": "Wheelbase", "value": "2,765 mm" },
-        { "label": "Boot Space", "value": "450 L" }
+        {
+          "label": "Length",
+          "value": "4,720 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,900 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,680 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,765 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "450 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "15.6\" Rotating" },
-        { "label": "DiPilot", "value": "L2 ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Yes" },
-        { "label": "Sound System", "value": "8-speaker" }
+        {
+          "label": "Display",
+          "value": "15.6\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2 ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Yes"
+        },
+        {
+          "label": "Sound System",
+          "value": "8-speaker"
+        }
       ]
     }
   },
@@ -732,10 +1452,30 @@
     "heroVideo": null,
     "color": "#0a1a2a",
     "stats": [
-      { "label": "EV Range", "value": 100, "unit": "km", "suffix": "+" },
-      { "label": "0–100 km/h", "value": 6.9, "unit": "s", "suffix": "" },
-      { "label": "Total Power", "value": 233, "unit": "kW", "suffix": "" },
-      { "label": "Fuel Cons.", "value": 6.5, "unit": "L/100km", "suffix": "" }
+      {
+        "label": "EV Range",
+        "value": 100,
+        "unit": "km",
+        "suffix": "+"
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 6.9,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Total Power",
+        "value": 233,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Fuel Cons.",
+        "value": 6.5,
+        "unit": "L/100km",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -763,45 +1503,105 @@
         "title": "Hybrid family performance",
         "subtitle": "1,000+ km combined range",
         "desc": "With 233kW of system power and over 1,000km of total range, the SEAL U DM-i handles school runs and long-distance road trips equally — without a second thought.",
-        "img": "/images/seal-u-dmi-dynamic-01.png",
+        "img": "/images/seal-u-dmi-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Family hybrid cockpit",
         "subtitle": "DiLink & energy management",
         "desc": "A large DiLink display shows live energy flow, charging status, and navigation — keeping the whole family informed and comfortable on every journey.",
-        "img": "/images/seal-u-dmi-connect-01.png",
+        "img": "/images/seal-u-dmi-tech-01.png",
         "imgRight": false
       }
     ],
     "specs": {
       "Performance": [
-        { "label": "System Type", "value": "PHEV" },
-        { "label": "Total Power", "value": "233 kW" },
-        { "label": "Engine", "value": "1.5L NA" },
-        { "label": "0–100 km/h", "value": "6.9 s" },
-        { "label": "Top Speed", "value": "180 km/h" }
+        {
+          "label": "System Type",
+          "value": "PHEV"
+        },
+        {
+          "label": "Total Power",
+          "value": "233 kW"
+        },
+        {
+          "label": "Engine",
+          "value": "1.5L NA"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "6.9 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "180 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "EV Range (WLTP)", "value": "100+ km" },
-        { "label": "Battery Capacity", "value": "18.3 kWh" },
-        { "label": "DC Fast Charge", "value": "No" },
-        { "label": "AC Charging", "value": "7.2 kW" },
-        { "label": "Fuel Consumption", "value": "6.5 L/100km" }
+        {
+          "label": "EV Range (WLTP)",
+          "value": "100+ km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "18.3 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "No"
+        },
+        {
+          "label": "AC Charging",
+          "value": "7.2 kW"
+        },
+        {
+          "label": "Fuel Consumption",
+          "value": "6.5 L/100km"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,785 mm" },
-        { "label": "Width", "value": "1,890 mm" },
-        { "label": "Height", "value": "1,668 mm" },
-        { "label": "Wheelbase", "value": "2,765 mm" },
-        { "label": "Boot Space", "value": "435 L" }
+        {
+          "label": "Length",
+          "value": "4,785 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,890 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,668 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,765 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "435 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "12.8\" Central" },
-        { "label": "DiPilot", "value": "L2 ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Available" },
-        { "label": "Sound System", "value": "8-speaker" }
+        {
+          "label": "Display",
+          "value": "12.8\" Central"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2 ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Available"
+        },
+        {
+          "label": "Sound System",
+          "value": "8-speaker"
+        }
       ]
     }
   },
@@ -814,10 +1614,30 @@
     "heroVideo": "/images/bc-1-hero.mp4",
     "color": "#1a1a0a",
     "stats": [
-      { "label": "EV Range", "value": 120, "unit": "km", "suffix": "+" },
-      { "label": "0–100 km/h", "value": 5.4, "unit": "s", "suffix": "" },
-      { "label": "Total Power", "value": 316, "unit": "kW", "suffix": "" },
-      { "label": "Fuel Cons.", "value": 5.4, "unit": "L/100km", "suffix": "" }
+      {
+        "label": "EV Range",
+        "value": 120,
+        "unit": "km",
+        "suffix": "+"
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 5.4,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Total Power",
+        "value": 316,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Fuel Cons.",
+        "value": 5.4,
+        "unit": "L/100km",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -845,45 +1665,105 @@
         "title": "Executive hybrid thrust",
         "subtitle": "0–100 km/h in 5.4 s",
         "desc": "316kW of combined power from the Super DM system propels this premium saloon with executive authority — fast enough to excite, refined enough to impress.",
-        "img": "/images/seal6-dynamic-01.png",
+        "img": "/images/seal-6-dmi-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Dynaudio cockpit",
         "subtitle": "15.6\" Rotating & V2L",
         "desc": "The 15.6-inch rotating DiLink display, Dynaudio 12-speaker system, and Vehicle-to-Load capability elevate the SEAL 6 DM-i into genuine luxury hybrid territory.",
-        "img": "/images/seal6-connect-01.png",
+        "img": "/images/seal-6-dmi-tech-01.png",
         "imgRight": false
       }
     ],
     "specs": {
       "Performance": [
-        { "label": "System Type", "value": "PHEV" },
-        { "label": "Total Power", "value": "316 kW" },
-        { "label": "Engine", "value": "1.5L Turbo" },
-        { "label": "0–100 km/h", "value": "5.4 s" },
-        { "label": "Top Speed", "value": "185 km/h" }
+        {
+          "label": "System Type",
+          "value": "PHEV"
+        },
+        {
+          "label": "Total Power",
+          "value": "316 kW"
+        },
+        {
+          "label": "Engine",
+          "value": "1.5L Turbo"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "5.4 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "185 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "EV Range (WLTP)", "value": "120+ km" },
-        { "label": "Battery Capacity", "value": "21.4 kWh" },
-        { "label": "DC Fast Charge", "value": "50 kW" },
-        { "label": "AC Charging", "value": "11 kW" },
-        { "label": "Fuel Consumption", "value": "5.4 L/100km" }
+        {
+          "label": "EV Range (WLTP)",
+          "value": "120+ km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "21.4 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "50 kW"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        },
+        {
+          "label": "Fuel Consumption",
+          "value": "5.4 L/100km"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,830 mm" },
-        { "label": "Width", "value": "1,875 mm" },
-        { "label": "Height", "value": "1,460 mm" },
-        { "label": "Wheelbase", "value": "2,920 mm" },
-        { "label": "Boot Space", "value": "380 L" }
+        {
+          "label": "Length",
+          "value": "4,830 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,875 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,460 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,920 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "380 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "15.6\" Rotating" },
-        { "label": "DiPilot", "value": "L2+ ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Yes" },
-        { "label": "Sound System", "value": "Dynaudio 12-spk" }
+        {
+          "label": "Display",
+          "value": "15.6\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2+ ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Yes"
+        },
+        {
+          "label": "Sound System",
+          "value": "Dynaudio 12-spk"
+        }
       ]
     }
   },
@@ -896,10 +1776,30 @@
     "heroVideo": null,
     "color": "#1a1a1a",
     "stats": [
-      { "label": "EV Range", "value": 120, "unit": "km", "suffix": "+" },
-      { "label": "0–100 km/h", "value": 5.4, "unit": "s", "suffix": "" },
-      { "label": "Total Power", "value": 316, "unit": "kW", "suffix": "" },
-      { "label": "Boot Space", "value": 570, "unit": "L", "suffix": "" }
+      {
+        "label": "EV Range",
+        "value": 120,
+        "unit": "km",
+        "suffix": "+"
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 5.4,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Total Power",
+        "value": 316,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Boot Space",
+        "value": 570,
+        "unit": "L",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -927,45 +1827,105 @@
         "title": "Estate hybrid performance",
         "subtitle": "0–100 km/h in 5.4 s",
         "desc": "316kW of Super DM power in a practical estate body — the SEAL 6 DM-i TOURING proves that family practicality and thrilling performance are not mutually exclusive.",
-        "img": "/images/seal6-touring-dynamic-01.png",
+        "img": "/images/seal-6-touring-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Grand touring technology",
         "subtitle": "Dynaudio & 120+ km EV range",
         "desc": "The rotating DiLink display, Dynaudio audio system, and V2L capability make every long journey a premium experience — whether cruising on battery or engine power.",
-        "img": "/images/seal6-touring-connect-01.png",
+        "img": "/images/seal-6-touring-tech-01.png",
         "imgRight": false
       }
     ],
     "specs": {
       "Performance": [
-        { "label": "System Type", "value": "PHEV" },
-        { "label": "Total Power", "value": "316 kW" },
-        { "label": "Engine", "value": "1.5L Turbo" },
-        { "label": "0–100 km/h", "value": "5.4 s" },
-        { "label": "Top Speed", "value": "185 km/h" }
+        {
+          "label": "System Type",
+          "value": "PHEV"
+        },
+        {
+          "label": "Total Power",
+          "value": "316 kW"
+        },
+        {
+          "label": "Engine",
+          "value": "1.5L Turbo"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "5.4 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "185 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "EV Range (WLTP)", "value": "120+ km" },
-        { "label": "Battery Capacity", "value": "21.4 kWh" },
-        { "label": "DC Fast Charge", "value": "50 kW" },
-        { "label": "AC Charging", "value": "11 kW" },
-        { "label": "Fuel Consumption", "value": "5.4 L/100km" }
+        {
+          "label": "EV Range (WLTP)",
+          "value": "120+ km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "21.4 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "50 kW"
+        },
+        {
+          "label": "AC Charging",
+          "value": "11 kW"
+        },
+        {
+          "label": "Fuel Consumption",
+          "value": "5.4 L/100km"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,920 mm" },
-        { "label": "Width", "value": "1,875 mm" },
-        { "label": "Height", "value": "1,480 mm" },
-        { "label": "Wheelbase", "value": "2,920 mm" },
-        { "label": "Boot Space", "value": "570 L" }
+        {
+          "label": "Length",
+          "value": "4,920 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,875 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,480 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,920 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "570 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "15.6\" Rotating" },
-        { "label": "DiPilot", "value": "L2+ ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Yes" },
-        { "label": "Sound System", "value": "Dynaudio 12-spk" }
+        {
+          "label": "Display",
+          "value": "15.6\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2+ ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Yes"
+        },
+        {
+          "label": "Sound System",
+          "value": "Dynaudio 12-spk"
+        }
       ]
     }
   },
@@ -978,10 +1938,30 @@
     "heroVideo": "/images/atto2-dm-i.mp4",
     "color": "#1a0a2a",
     "stats": [
-      { "label": "EV Range", "value": 80, "unit": "km", "suffix": "+" },
-      { "label": "0–100 km/h", "value": 7.5, "unit": "s", "suffix": "" },
-      { "label": "Total Power", "value": 195, "unit": "kW", "suffix": "" },
-      { "label": "Fuel Cons.", "value": 4.9, "unit": "L/100km", "suffix": "" }
+      {
+        "label": "EV Range",
+        "value": 80,
+        "unit": "km",
+        "suffix": "+"
+      },
+      {
+        "label": "0–100 km/h",
+        "value": 7.5,
+        "unit": "s",
+        "suffix": ""
+      },
+      {
+        "label": "Total Power",
+        "value": 195,
+        "unit": "kW",
+        "suffix": ""
+      },
+      {
+        "label": "Fuel Cons.",
+        "value": 4.9,
+        "unit": "L/100km",
+        "suffix": ""
+      }
     ],
     "features": [
       {
@@ -1009,45 +1989,105 @@
         "title": "Compact hybrid agility",
         "subtitle": "195 kW Super DM power",
         "desc": "195kW of combined system power gives the ATTO 2 DM-i surprising punch for a compact city car — pulling away from traffic with confident, instant electric torque.",
-        "img": "/images/atto2-dynamic-01.png",
+        "img": "/images/atto2-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Smart city cockpit",
         "subtitle": "12.8\" Rotating & V2L",
         "desc": "The rotating 12.8-inch DiLink display, wireless charging, and V2L capability pack flagship technology into the ATTO 2 DM-i's compact footprint.",
-        "img": "/images/atto2-connect-01.png",
+        "img": "/images/atto2-tech-01.png",
         "imgRight": false
       }
     ],
     "specs": {
       "Performance": [
-        { "label": "System Type", "value": "PHEV" },
-        { "label": "Total Power", "value": "195 kW" },
-        { "label": "Engine", "value": "1.5L NA" },
-        { "label": "0–100 km/h", "value": "7.5 s" },
-        { "label": "Top Speed", "value": "170 km/h" }
+        {
+          "label": "System Type",
+          "value": "PHEV"
+        },
+        {
+          "label": "Total Power",
+          "value": "195 kW"
+        },
+        {
+          "label": "Engine",
+          "value": "1.5L NA"
+        },
+        {
+          "label": "0–100 km/h",
+          "value": "7.5 s"
+        },
+        {
+          "label": "Top Speed",
+          "value": "170 km/h"
+        }
       ],
       "Range & Charging": [
-        { "label": "EV Range (WLTP)", "value": "80+ km" },
-        { "label": "Battery Capacity", "value": "10.08 kWh" },
-        { "label": "DC Fast Charge", "value": "No" },
-        { "label": "AC Charging", "value": "6.6 kW" },
-        { "label": "Fuel Consumption", "value": "4.9 L/100km" }
+        {
+          "label": "EV Range (WLTP)",
+          "value": "80+ km"
+        },
+        {
+          "label": "Battery Capacity",
+          "value": "10.08 kWh"
+        },
+        {
+          "label": "DC Fast Charge",
+          "value": "No"
+        },
+        {
+          "label": "AC Charging",
+          "value": "6.6 kW"
+        },
+        {
+          "label": "Fuel Consumption",
+          "value": "4.9 L/100km"
+        }
       ],
       "Dimensions": [
-        { "label": "Length", "value": "4,310 mm" },
-        { "label": "Width", "value": "1,830 mm" },
-        { "label": "Height", "value": "1,625 mm" },
-        { "label": "Wheelbase", "value": "2,620 mm" },
-        { "label": "Boot Space", "value": "340 L" }
+        {
+          "label": "Length",
+          "value": "4,310 mm"
+        },
+        {
+          "label": "Width",
+          "value": "1,830 mm"
+        },
+        {
+          "label": "Height",
+          "value": "1,625 mm"
+        },
+        {
+          "label": "Wheelbase",
+          "value": "2,620 mm"
+        },
+        {
+          "label": "Boot Space",
+          "value": "340 L"
+        }
       ],
       "Technology": [
-        { "label": "Display", "value": "12.8\" Rotating" },
-        { "label": "DiPilot", "value": "L2 ADAS" },
-        { "label": "OTA Updates", "value": "Yes" },
-        { "label": "V2L", "value": "Available" },
-        { "label": "Sound System", "value": "6-speaker" }
+        {
+          "label": "Display",
+          "value": "12.8\" Rotating"
+        },
+        {
+          "label": "DiPilot",
+          "value": "L2 ADAS"
+        },
+        {
+          "label": "OTA Updates",
+          "value": "Yes"
+        },
+        {
+          "label": "V2L",
+          "value": "Available"
+        },
+        {
+          "label": "Sound System",
+          "value": "6-speaker"
+        }
       ]
     }
   }
