@@ -1,0 +1,19 @@
+{
+  "electric": [
+    { "name": "BYD ATTO 3 EVO", "desc": "All-Electric Compact SUV", "img": "/images/BYD-ATTO3-EVO.webp", "link": "/eu/electric-cars/atto-3-evo" },
+    { "name": "BYD SEAL", "desc": "All-Electric Performance Saloon", "img": "/images/BYD-SEAL.webp", "link": "/eu/electric-cars/seal" },
+    { "name": "BYD SEAL U", "desc": "All-Electric Versatile SUV", "img": "/images/BYD-SEAL-U.webp", "link": "/eu/electric-cars/seal-u" },
+    { "name": "BYD SEALION 7", "desc": "All-Electric Performance SUV", "img": "/images/BYD-SEALION-7.webp", "link": "/eu/electric-cars/sealion-7" },
+    { "name": "BYD HAN", "desc": "The All-Electric Executive Saloon", "img": "/images/BYD-HAN.webp", "link": "/eu/electric-cars/han" },
+    { "name": "BYD TANG", "desc": "The 7-Seater All-Electric Performance SUV", "img": "/images/BYD-TANG.webp", "link": "/eu/electric-cars/tang" },
+    { "name": "BYD DOLPHIN", "desc": "The Fun & Flexible Hatchback", "img": "/images/BYD-DOLPIN.webp", "link": "/eu/electric-cars/dolphin" },
+    { "name": "BYD DOLPHIN SURF", "desc": "The New Electric Adventure Car", "img": "/images/BYD-DOLPHIN-SURF.webp", "link": "/eu/electric-cars/dolphin-surf" }
+  ],
+  "hybrid": [
+    { "name": "BYD SEALION 5 DM-i", "desc": "Super Hybrid SUV", "img": "/images/BYD-SEALION5-DM-i.webp", "link": "/eu/hybrid-cars/sealion-5-dm-i" },
+    { "name": "BYD SEAL U DM-i", "desc": "The All-New Plug-In Hybrid SUV", "img": "/images/BYD-SEAL-U-DM-i.webp", "link": "/eu/hybrid-cars/seal-u-dm-i" },
+    { "name": "BYD SEAL 6 DM-i", "desc": "Plug-in Hybrid Car", "img": "/images/BYD-SEAL-6-DMi.webp", "link": "/eu/hybrid-cars/seal-6-dm-i" },
+    { "name": "BYD SEAL 6 DM-i TOURING", "desc": "Plug-in Hybrid Estate", "img": "/images/TOURING.webp", "link": "/eu/hybrid-cars/seal-6-dm-i-touring" },
+    { "name": "BYD ATTO 2 DM-i", "desc": "Compact Hybrid City Car", "img": "/images/BYD-ATTO2-DM-i.webp", "link": "/eu/hybrid-cars/atto-2-dm-i" }
+  ]
+}

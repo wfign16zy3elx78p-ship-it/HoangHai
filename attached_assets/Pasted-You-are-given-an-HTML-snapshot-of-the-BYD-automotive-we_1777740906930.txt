@@ -1,0 +1,152 @@
+You are given an HTML snapshot of the BYD automotive website (eu.html) along with its assets.
+
+Your task is to REBUILD the website using a modern stack while preserving the original UI layout and structure.
+
+---
+
+# 🧠 UNDERSTAND THE SOURCE (IMPORTANT)
+
+The original website is built using:
+
+* Vue.js + custom CMS system
+* Dynamic JSON data injected into components (e.g. swiperConfigs, techConfigs)
+* External services (Marketo, NewRelic, ConsentManager, Google Maps)
+
+You DO NOT need to recreate these systems.
+
+---
+
+# 🎯 GOAL
+
+* Clone the UI layout EXACTLY from the provided HTML
+* Preserve structure, spacing, and hierarchy
+* Rebuild using clean modern frontend stack
+* Replace dynamic CMS data with static/local JSON
+
+---
+
+# ⚙️ TARGET TECH STACK
+
+* Next.js (App Router)
+* React (Functional Components)
+* TailwindCSS
+* Optional: GSAP (for animation later)
+
+---
+
+# 🧱 IMPLEMENTATION REQUIREMENTS
+
+## 1. Component Structure
+
+Break the UI into reusable components:
+
+* Header.tsx
+* Hero.tsx
+* Models.tsx
+* Technology.tsx
+* Footer.tsx
+
+---
+
+## 2. Layout Accuracy (CRITICAL)
+
+* Match spacing EXACTLY
+* Match section heights
+* Match alignment and positioning
+* Match grid structure
+
+DO NOT redesign.
+
+---
+
+## 3. Data Handling
+
+Extract data from the HTML such as:
+
+* swiperConfigs (hero content)
+* vehicle models
+* technology items
+
+Convert them into local JSON files:
+
+Example:
+
+```json
+{
+  "models": [
+    { "name": "BYD ATTO 3", "image": "/images/atto3.png" }
+  ]
+}
+```
+
+---
+
+## 4. REMOVE UNUSED SYSTEMS
+
+DO NOT include:
+
+* Vue.js
+* CMS logic
+* External tracking scripts:
+
+  * Marketo
+  * NewRelic
+  * ConsentManager
+* Google Maps API
+
+---
+
+## 5. ASSET HANDLING
+
+* Move images into /public/images
+* Fix paths from:
+  /template/... → ./template/...
+* Ensure all assets load locally
+
+---
+
+## 6. STYLING
+
+* Use TailwindCSS for layout and spacing
+* Replicate original look using utility classes
+* Avoid inline styles
+
+---
+
+## 7. JAVASCRIPT CLEANUP
+
+* Remove broken scripts from original HTML
+* Do NOT reuse original JS files
+* Rebuild interactivity using React
+
+---
+
+## ❌ STRICT RULES
+
+* DO NOT change layout structure
+* DO NOT simplify sections
+* DO NOT redesign UI
+* DO NOT add animations yet
+* DO NOT use raw HTML dump
+
+---
+
+## ✅ OUTPUT
+
+* Fully working Next.js project
+* Clean component-based structure
+* Static data replacing CMS
+* Layout matching original UI (~95%)
+
+---
+
+## IMPORTANT
+
+Treat the provided HTML as the SOURCE OF TRUTH.
+
+You are NOT cloning the original tech stack.
+You are rebuilding the UI using a modern stack.
+
+---
+
+Return full working code.

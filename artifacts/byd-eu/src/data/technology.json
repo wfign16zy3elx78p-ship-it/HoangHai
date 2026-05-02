@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "/images/1.webp",
+    "title": "BYD Blade Battery",
+    "desc": "The BYD Blade Battery redefines safety in electric vehicles. With an innovative cell-to-pack design, it passes the nail penetration test without fire or explosion — a feat no other lithium battery has achieved.",
+    "link": "/eu/technology/byd-blade-battery",
+    "linkText": "LEARN MORE"
+  },
+  {
+    "id": 2,
+    "img": "/images/2.webp",
+    "title": "BYD e-Platform 3.0",
+    "desc": "BYD e-Platform 3.0 is a comprehensive electric vehicle architecture that integrates an 8-in-1 electric powertrain, delivering higher efficiency, longer range and faster charging.",
+    "link": "/eu/technology/byd-e-platform-3",
+    "linkText": "LEARN MORE"
+  },
+  {
+    "id": 3,
+    "img": "/images/3.webp",
+    "title": "BYD Super DM",
+    "desc": "BYD Super DM plug-in hybrid technology delivers exceptional fuel efficiency and outstanding electric-only range, combining the best of both worlds for a revolutionary driving experience.",
+    "link": "/eu/technology/byd-super-dm-plug-in-hybrid-technology",
+    "linkText": "LEARN MORE"
+  }
+]
