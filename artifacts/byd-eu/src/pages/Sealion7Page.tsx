@@ -4,16 +4,17 @@ import Footer from "../components/Footer";
 import { useRouter } from "../lib/router";
 
 /* ─── Placeholder / lazy image ─── */
-function Img({ src, alt, className, style }: { src?: string; alt: string; className?: string; style?: React.CSSProperties }) {
+function Img({ src, alt, className }: { src?: string; alt: string; className?: string }) {
   const [errored, setErrored] = useState(false);
   if (!src || errored) {
     return (
-      <div className={className} style={{ background: "linear-gradient(135deg,#181818 0%,#111 100%)", display: "flex", alignItems: "center", justifyContent: "center", ...style }}>
-        <span style={{ color: "rgba(255,255,255,0.14)", fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 700, textAlign: "center", padding: "0 20px" }}>{alt}</span>
+      <div className={`flex items-center justify-center ${className ?? ""}`}
+        style={{ background: "linear-gradient(135deg,#181818 0%,#111 100%)" }}>
+        <span className="text-white/10 text-[10px] tracking-widest uppercase font-bold text-center px-4">{alt}</span>
       </div>
     );
   }
-  return <img src={src} alt={alt} className={className} style={style} onError={() => setErrored(true)} />;
+  return <img src={src} alt={alt} className={className} onError={() => setErrored(true)} />;
 }
 
 /* ─── Animated counter ─── */
@@ -30,126 +31,138 @@ function Counter({ to, unit, running }: { to: string; unit: string; running: boo
     }, 1400 / steps);
     return () => clearInterval(id);
   }, [running, num]);
-  return <span>{num % 1 !== 0 ? val.toFixed(1) : val.toLocaleString()} <span style={{ fontSize: "0.52em", opacity: 0.55, fontWeight: 600 }}>{unit}</span></span>;
+  return (
+    <span>
+      {num % 1 !== 0 ? val.toFixed(1) : val.toLocaleString()}
+      <span className="text-[0.52em] opacity-50 font-semibold ml-1">{unit}</span>
+    </span>
+  );
 }
 
-/* ─── p2 Chapter (text left | image right) ─── */
-function Chapter({ id, label, title, body, imgSrc, imgAlt, extra }: {
-  id: string; label: string; title: string; body: string;
-  imgSrc?: string; imgAlt: string; extra?: React.ReactNode;
-}) {
+/* ─── Fade-in hook ─── */
+function useFadeIn(threshold = 0.08) {
   const ref = useRef<HTMLDivElement>(null);
   const [vis, setVis] = useState(false);
   useEffect(() => {
     const el = ref.current; if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold: 0.08 });
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold });
     obs.observe(el); return () => obs.disconnect();
   }, []);
+  return { ref, vis };
+}
+
+/* ─── Chapter (text | image) — stacks on mobile ─── */
+function Chapter({ id, label, title, body, imgSrc, imgAlt, extra, reverse }: {
+  id: string; label: string; title: string; body: string;
+  imgSrc?: string; imgAlt: string; extra?: React.ReactNode; reverse?: boolean;
+}) {
+  const { ref, vis } = useFadeIn();
   return (
-    <section id={id} style={{ background: "#0a0a0a" }}>
-      <div ref={ref} style={{ display: "flex", flexDirection: "row", minHeight: 640, opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(40px)", transition: "opacity 0.85s ease, transform 0.85s ease" }}>
-        <div style={{ flex: "0 0 40%", padding: "80px 64px", display: "flex", flexDirection: "column", justifyContent: "center", borderRight: "1px solid rgba(255,255,255,0.06)" }}>
-          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 20 }}>{label}</p>
-          <h2 style={{ fontSize: "clamp(22px,2.4vw,38px)", fontWeight: 800, lineHeight: 1.18, marginBottom: 28, color: "#fff" }}>{title}</h2>
-          <div style={{ width: 40, height: 2, background: "rgba(255,255,255,0.2)", marginBottom: 28 }} />
-          <p style={{ fontSize: 14, lineHeight: 1.85, color: "rgba(255,255,255,0.45)", maxWidth: 420 }}>{body}</p>
-          {extra}
+    <section id={id} className="border-t border-white/5" style={{ background: "#0a0a0a" }}>
+      <div
+        ref={ref}
+        className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} min-h-0 md:min-h-[600px]`}
+        style={{ opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(40px)", transition: "opacity 0.85s ease, transform 0.85s ease" }}
+      >
+        {/* Text side */}
+        <div className="flex flex-col justify-center px-6 py-12 md:px-16 lg:px-20 md:w-[40%] border-b md:border-b-0 md:border-r border-white/5">
+          <p className="text-[10px] font-bold tracking-[0.28em] uppercase text-white/35 mb-4">{label}</p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight mb-5 text-white">{title}</h2>
+          <div className="w-10 h-0.5 bg-white/20 mb-6" />
+          <p className="text-sm leading-relaxed text-white/45 max-w-md">{body}</p>
+          {extra && <div className="mt-8">{extra}</div>}
         </div>
-        <div style={{ flex: "0 0 60%", overflow: "hidden" }}>
-          <Img src={imgSrc} alt={imgAlt} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+        {/* Image side */}
+        <div className="w-full md:w-[60%] h-64 sm:h-80 md:h-auto overflow-hidden">
+          <Img src={imgSrc} alt={imgAlt} className="w-full h-full object-cover" />
         </div>
       </div>
     </section>
   );
 }
 
-/* ─── Alternating feature row ─── */
-function FeatureRow({ title, body, imgSrc, imgAlt, reverse }: { title: string; body: string; imgSrc?: string; imgAlt: string; reverse?: boolean }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [vis, setVis] = useState(false);
-  useEffect(() => {
-    const el = ref.current; if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold: 0.1 });
-    obs.observe(el); return () => obs.disconnect();
-  }, []);
+/* ─── Feature row — stacks on mobile ─── */
+function FeatureRow({ title, body, imgSrc, imgAlt, reverse }: {
+  title: string; body: string; imgSrc?: string; imgAlt: string; reverse?: boolean;
+}) {
+  const { ref, vis } = useFadeIn(0.1);
   return (
-    <div ref={ref} style={{ display: "flex", flexDirection: reverse ? "row-reverse" : "row", minHeight: 540, borderTop: "1px solid rgba(255,255,255,0.05)", background: "#0a0a0a", opacity: vis ? 1 : 0, transform: vis ? "none" : `translateX(${reverse ? 40 : -40}px)`, transition: "opacity 0.8s ease, transform 0.8s ease" }}>
-      <div style={{ flex: "0 0 55%", overflow: "hidden" }}>
-        <Img src={imgSrc} alt={imgAlt} style={{ objectFit: "cover", width: "100%", height: "100%", transition: "transform 0.7s ease" }} />
+    <div
+      ref={ref}
+      className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} min-h-0 md:min-h-[480px] border-t border-white/5`}
+      style={{ background: "#0a0a0a", opacity: vis ? 1 : 0, transform: vis ? "none" : `translateX(${reverse ? 40 : -40}px)`, transition: "opacity 0.8s ease, transform 0.8s ease" }}
+    >
+      <div className="w-full md:w-[55%] h-64 sm:h-80 md:h-auto overflow-hidden">
+        <Img src={imgSrc} alt={imgAlt} className="w-full h-full object-cover" />
       </div>
-      <div style={{ flex: "0 0 45%", padding: "72px 64px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-        <h3 style={{ fontSize: "clamp(18px,1.9vw,28px)", fontWeight: 700, color: "#fff", marginBottom: 20, lineHeight: 1.35 }}>{title}</h3>
-        <div style={{ width: 32, height: 2, background: "rgba(255,255,255,0.18)", marginBottom: 24 }} />
-        <p style={{ fontSize: 14, lineHeight: 1.85, color: "rgba(255,255,255,0.42)" }}>{body}</p>
+      <div className="flex flex-col justify-center px-6 py-10 md:px-14 lg:px-16 md:w-[45%]">
+        <h3 className="text-xl md:text-2xl font-bold text-white mb-4 leading-snug">{title}</h3>
+        <div className="w-8 h-0.5 bg-white/18 mb-5" />
+        <p className="text-sm leading-relaxed text-white/42">{body}</p>
       </div>
     </div>
   );
 }
 
-/* ─── Single card (for p3 grid) ─── */
-function CardItem({ title, body, imgSrc, delay, last }: { title: string; body: string; imgSrc?: string; delay: number; last: boolean }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [vis, setVis] = useState(false);
-  useEffect(() => {
-    const el = ref.current; if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold: 0.08 });
-    obs.observe(el); return () => obs.disconnect();
-  }, []);
+/* ─── Card item ─── */
+function CardItem({ title, body, imgSrc, delay }: { title: string; body: string; imgSrc?: string; delay: number }) {
+  const { ref, vis } = useFadeIn();
   return (
-    <div ref={ref} style={{ display: "flex", flexDirection: "column", borderRight: !last ? "1px solid rgba(255,255,255,0.05)" : "none", opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(30px)", transition: `opacity 0.7s ease ${delay}s, transform 0.7s ease ${delay}s` }}>
-      <div style={{ height: 340, overflow: "hidden" }}>
-        <Img src={imgSrc} alt={title} style={{ objectFit: "cover", width: "100%", height: "100%", transition: "transform 0.6s ease" }} />
+    <div
+      ref={ref}
+      className="flex flex-col border-t border-white/5 md:border-t-0 md:border-r last:border-r-0 last:border-t-0"
+      style={{ opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(30px)", transition: `opacity 0.7s ease ${delay}s, transform 0.7s ease ${delay}s` }}
+    >
+      <div className="h-52 sm:h-64 md:h-72 overflow-hidden">
+        <Img src={imgSrc} alt={title} className="w-full h-full object-cover" />
       </div>
-      <div style={{ padding: "36px 40px 44px" }}>
-        <h4 style={{ fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 16, lineHeight: 1.4 }}>{title}</h4>
-        <div style={{ width: 28, height: 2, background: "rgba(255,255,255,0.16)", marginBottom: 16 }} />
-        <p style={{ fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.40)" }}>{body}</p>
+      <div className="p-6 md:p-8">
+        <h4 className="text-base font-bold text-white mb-3 leading-snug">{title}</h4>
+        <div className="w-7 h-0.5 bg-white/16 mb-3" />
+        <p className="text-xs leading-relaxed text-white/40">{body}</p>
       </div>
     </div>
   );
 }
 
-/* ─── p3 card grid ─── */
+/* ─── Card grid (1-col mobile → 3-col desktop) ─── */
 function CardGrid({ items }: { items: { title: string; body: string; imgSrc?: string }[] }) {
-  const cols = Math.min(items.length, 3);
   return (
-    <div style={{ display: "grid", gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: 0, borderTop: "1px solid rgba(255,255,255,0.05)", background: "#0a0a0a" }}>
+    <div className="grid grid-cols-1 md:grid-cols-3 border-t border-white/5" style={{ background: "#0a0a0a" }}>
       {items.map((item, i) => (
-        <CardItem key={i} title={item.title} body={item.body} imgSrc={item.imgSrc} delay={i * 0.12} last={i === items.length - 1} />
+        <CardItem key={i} title={item.title} body={item.body} imgSrc={item.imgSrc} delay={i * 0.12} />
       ))}
     </div>
   );
 }
 
-/* ─── Single p7 card ─── */
-function P7CardItem({ title, body, imgSrc, delay, isFirst }: { title: string; body: string; imgSrc?: string; delay: number; isFirst: boolean }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [vis, setVis] = useState(false);
-  useEffect(() => {
-    const el = ref.current; if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold: 0.08 });
-    obs.observe(el); return () => obs.disconnect();
-  }, []);
+/* ─── P7 card item ─── */
+function P7CardItem({ title, body, imgSrc, delay }: { title: string; body: string; imgSrc?: string; delay: number }) {
+  const { ref, vis } = useFadeIn();
   return (
-    <div ref={ref} style={{ borderRight: isFirst ? "1px solid rgba(255,255,255,0.05)" : "none", opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(30px)", transition: `opacity 0.7s ease ${delay}s, transform 0.7s ease ${delay}s` }}>
-      <div style={{ height: 480, overflow: "hidden" }}>
-        <Img src={imgSrc} alt={title} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+    <div
+      ref={ref}
+      className="flex flex-col border-t border-white/5 md:border-t-0 md:border-r last:border-r-0"
+      style={{ opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(30px)", transition: `opacity 0.7s ease ${delay}s, transform 0.7s ease ${delay}s` }}
+    >
+      <div className="h-64 sm:h-80 md:h-[420px] overflow-hidden">
+        <Img src={imgSrc} alt={title} className="w-full h-full object-cover" />
       </div>
-      <div style={{ padding: "40px 52px 52px" }}>
-        <h3 style={{ fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 20, lineHeight: 1.35 }}>{title}</h3>
-        <div style={{ width: 32, height: 2, background: "rgba(255,255,255,0.16)", marginBottom: 20 }} />
-        <p style={{ fontSize: 14, lineHeight: 1.85, color: "rgba(255,255,255,0.40)" }}>{body}</p>
+      <div className="p-6 md:p-10 lg:p-12">
+        <h3 className="text-lg md:text-xl font-bold text-white mb-4 leading-snug">{title}</h3>
+        <div className="w-8 h-0.5 bg-white/16 mb-4" />
+        <p className="text-sm leading-relaxed text-white/40">{body}</p>
       </div>
     </div>
   );
 }
 
-/* ─── p7 two-column cards ─── */
+/* ─── P7 two-column cards (1-col mobile → 2-col desktop) ─── */
 function P7Cards({ items }: { items: { title: string; body: string; imgSrc?: string }[] }) {
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, borderTop: "1px solid rgba(255,255,255,0.05)", background: "#0a0a0a" }}>
+    <div className="grid grid-cols-1 md:grid-cols-2 border-t border-white/5" style={{ background: "#0a0a0a" }}>
       {items.map((item, i) => (
-        <P7CardItem key={i} title={item.title} body={item.body} imgSrc={item.imgSrc} delay={i * 0.15} isFirst={i === 0} />
+        <P7CardItem key={i} title={item.title} body={item.body} imgSrc={item.imgSrc} delay={i * 0.15} />
       ))}
     </div>
   );
@@ -175,7 +188,7 @@ export default function Sealion7Page() {
 
   useEffect(() => {
     const el = statsRef.current; if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setStatsVis(true); }, { threshold: 0.3 });
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setStatsVis(true); }, { threshold: 0.2 });
     obs.observe(el); return () => obs.disconnect();
   }, []);
 
@@ -183,7 +196,7 @@ export default function Sealion7Page() {
     const onScroll = () => {
       for (const a of [...ANCHORS].reverse()) {
         const el = document.getElementById(a.toLowerCase());
-        if (el && el.getBoundingClientRect().top <= 120) { setActiveAnchor(a); break; }
+        if (el && el.getBoundingClientRect().top <= 130) { setActiveAnchor(a); break; }
       }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -193,59 +206,90 @@ export default function Sealion7Page() {
   const scrollTo = (id: string) => document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div style={{ background: "#0a0a0a", color: "#fff", minHeight: "100vh", fontFamily: "Montserrat, sans-serif" }}>
+    <div className="bg-[#0a0a0a] text-white min-h-screen" style={{ fontFamily: "Montserrat, sans-serif" }}>
       <Header />
 
       {/* ═══ HERO ═══ */}
-      <section style={{ position: "relative", height: "100vh", minHeight: 640, overflow: "hidden", background: "#000" }}>
+      <section className="relative w-full h-screen min-h-[560px] overflow-hidden bg-black">
         <Img
-          src="/images/sealion-7-hero.jpg"
+          src="/images/BYD-SEALION-7.webp"
           alt="BYD SEALION 7"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transform: heroReady ? "scale(1)" : "scale(1.06)", transition: "transform 7s cubic-bezier(0.25,0.46,0.45,0.94)" }}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            transform: heroReady ? "scale(1)" : "scale(1.06)",
+            transition: "transform 7s cubic-bezier(0.25,0.46,0.45,0.94)",
+          } as React.CSSProperties}
         />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.28) 50%, transparent 80%)" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.35) 0%, transparent 60%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 55%, transparent 80%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.4) 0%, transparent 60%)" }} />
 
         {/* Back button */}
-        <button onClick={() => navigate("/")} style={{ position: "absolute", top: 96, left: 32, zIndex: 20, display: "flex", alignItems: "center", gap: 8, padding: "9px 18px", background: "rgba(255,255,255,0.08)", backdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 10, color: "#fff", fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", cursor: "pointer" }}>
+        <button
+          onClick={() => navigate("/")}
+          className="absolute top-20 md:top-24 left-4 md:left-8 z-20 flex items-center gap-2 px-4 py-2 rounded-lg text-[10px] font-bold tracking-[0.15em] uppercase text-white cursor-pointer"
+          style={{ background: "rgba(255,255,255,0.08)", backdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.15)" }}
+        >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round"><path d="M15 19l-7-7 7-7" /></svg>
           All Models
         </button>
 
         {/* Bottom content */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "0 60px 52px", opacity: heroReady ? 1 : 0, transform: heroReady ? "none" : "translateY(24px)", transition: "opacity 1s ease 0.2s, transform 1s ease 0.2s" }}>
-          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: 12 }}>Electric Performance SUV</p>
-          <h1 style={{ fontSize: "clamp(48px,6vw,90px)", fontWeight: 800, letterSpacing: "0.02em", lineHeight: 1, marginBottom: 40, textShadow: "0 4px 32px rgba(0,0,0,0.6)" }}>BYD SEALION 7</h1>
+        <div
+          className="absolute bottom-0 left-0 right-0 px-4 sm:px-8 md:px-16 pb-10 md:pb-14"
+          style={{ opacity: heroReady ? 1 : 0, transform: heroReady ? "none" : "translateY(24px)", transition: "opacity 1s ease 0.2s, transform 1s ease 0.2s" }}
+        >
+          <p className="text-[10px] font-bold tracking-[0.28em] uppercase text-white/50 mb-2 md:mb-3">Electric Performance SUV</p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight leading-none mb-6 md:mb-8"
+            style={{ textShadow: "0 4px 32px rgba(0,0,0,0.6)" }}>
+            BYD SEALION 7
+          </h1>
 
-          {/* 3-stat bar */}
-          <div ref={statsRef} style={{ display: "flex", maxWidth: 600, background: "rgba(0,0,0,0.52)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 4, overflow: "hidden" }}>
+          {/* Stats bar — horizontal scroll on mobile */}
+          <div
+            ref={statsRef}
+            className="flex w-full max-w-xl overflow-x-auto no-scrollbar rounded-sm"
+            style={{ background: "rgba(0,0,0,0.55)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.1)" }}
+          >
             {[
               { val: "23000", unit: "RPM", label: "Motor speed" },
               { val: "215", unit: "km/h", label: "Top speed" },
-              { val: "91.3", unit: "kWh", label: "Battery capacity" },
+              { val: "91.3", unit: "kWh", label: "Battery" },
             ].map((s, i) => (
-              <div key={i} style={{ flex: 1, padding: "20px 24px", borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none" }}>
-                <p style={{ fontSize: "clamp(20px,2vw,28px)", fontWeight: 800, marginBottom: 4 }}>
+              <div key={i} className="flex-1 min-w-[110px] px-4 sm:px-6 py-4 sm:py-5"
+                style={{ borderRight: i < 2 ? "1px solid rgba(255,255,255,0.1)" : "none" }}>
+                <p className="text-lg sm:text-xl md:text-2xl font-extrabold mb-1">
                   <Counter to={s.val} unit={s.unit} running={statsVis} />
                 </p>
-                <p style={{ fontSize: 10, fontWeight: 600, color: "rgba(255,255,255,0.45)", letterSpacing: "0.12em", textTransform: "uppercase" }}>{s.label}</p>
+                <p className="text-[9px] font-semibold text-white/45 tracking-[0.12em] uppercase">{s.label}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Scroll cue */}
-        <div style={{ position: "absolute", bottom: 28, right: 60, display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.32 }}>
-          <span style={{ fontSize: 9, letterSpacing: "0.32em", textTransform: "uppercase", fontWeight: 700 }}>Scroll</span>
-          <div style={{ width: 1, height: 32, background: "rgba(255,255,255,0.7)" }} />
+        {/* Scroll cue — hidden on small mobile */}
+        <div className="hidden sm:flex absolute bottom-6 right-8 md:right-16 flex-col items-center gap-1.5 opacity-30">
+          <span className="text-[9px] tracking-[0.32em] uppercase font-bold">Scroll</span>
+          <div className="w-px h-8 bg-white/70" />
         </div>
       </section>
 
       {/* ═══ STICKY ANCHOR NAV ═══ */}
-      <nav style={{ position: "sticky", top: 64, zIndex: 40, background: "rgba(10,10,10,0.93)", backdropFilter: "blur(20px)", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+      <nav className="sticky top-16 z-40 border-b border-white/7"
+        style={{ background: "rgba(10,10,10,0.94)", backdropFilter: "blur(20px)" }}>
+        <div className="flex overflow-x-auto no-scrollbar px-2 md:px-0 md:justify-center">
           {ANCHORS.map((a) => (
-            <button key={a} onClick={() => scrollTo(a)} style={{ padding: "16px 24px", fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: activeAnchor === a ? "#fff" : "rgba(255,255,255,0.35)", background: "transparent", border: "none", borderBottom: activeAnchor === a ? "2px solid #fff" : "2px solid transparent", cursor: "pointer", transition: "all 0.2s ease" }}>
+            <button
+              key={a}
+              onClick={() => scrollTo(a)}
+              className="flex-shrink-0 px-4 md:px-5 py-4 text-[10px] font-bold tracking-[0.16em] uppercase cursor-pointer transition-all duration-200"
+              style={{
+                color: activeAnchor === a ? "#fff" : "rgba(255,255,255,0.35)",
+                background: "transparent",
+                border: "none",
+                borderBottom: activeAnchor === a ? "2px solid #fff" : "2px solid transparent",
+                whiteSpace: "nowrap",
+              }}
+            >
               {a}
             </button>
           ))}
@@ -256,17 +300,17 @@ export default function Sealion7Page() {
       <div id="exterior">
         <Chapter
           id="exterior-chapter" label="Exterior" title="Ocean aesthetics with a dynamic edge"
-          body="Designed by BYD's Global Design Director, Wolfgang Egger, the BYD SEALION 7 is more than just an SUV — it's a lifestyle statement. Seamlessly blending ocean-inspired aesthetics with cutting-edge innovation, this SUV is crafted for those who live life at full charge. Its sleek, flowing lines and aerodynamic profile give the SEALION 7 a sporty, futuristic look that turns heads wherever you go."
+          body="Designed by BYD's Global Design Director, Wolfgang Egger, the BYD SEALION 7 is more than just an SUV — it's a lifestyle statement. Its sleek, flowing lines and aerodynamic profile give the SEALION 7 a sporty, futuristic look that turns heads wherever you go."
           imgSrc="/images/sealion-7-exterior-01.jpg" imgAlt="SEALION 7 Exterior"
         />
         <FeatureRow
           title="Dynamic water drop tail lamps"
-          body="The SEALION 7's futuristic tail lamps combine sleek linear light strips with water-drop-shaped dots, creating a sense of movement and energy. These design elements evoke the high-speed motion of water droplets, giving this electric SUV a modern aesthetic that stands out on the road."
+          body="The SEALION 7's futuristic tail lamps combine sleek linear light strips with water-drop-shaped dots, creating a sense of movement and energy that stands out on the road."
           imgSrc="/images/sealion-7-exterior-03.jpg" imgAlt="Tail Lamps"
         />
         <FeatureRow
           title="Intelligent and effortless tailgate"
-          body="With an electric tailgate that opens with just a simple foot gesture, the BYD SEALION 7 makes loading and unloading cargo seamless. The intelligent anti-pinch system and customisable stopping positions enhance both safety and convenience, making every day a little easier."
+          body="With an electric tailgate that opens with just a simple foot gesture, loading and unloading is seamless. The intelligent anti-pinch system and customisable stopping positions enhance both safety and convenience."
           imgSrc="/images/sealion-7-exterior-04.jpg" imgAlt="Electric Tailgate" reverse
         />
       </div>
@@ -274,32 +318,32 @@ export default function Sealion7Page() {
       {/* ═══ INTERIOR ═══ */}
       <div id="interior">
         <Chapter
-          id="interior-chapter" label="Interior" title="Reinventing the senses with a new level of aspiration"
-          body="Inspired by the dynamic flow and speed of sailboat racing, the BYD SEALION 7's interior embodies a sense of movement, suspension, and volume. This design creates a cohesive and immersive atmosphere, where every element feels like it is floating in harmony with the waves."
+          id="interior-chapter" label="Interior" title="Reinventing the senses"
+          body="Inspired by the dynamic flow and speed of sailboat racing, the BYD SEALION 7's interior embodies movement, suspension, and volume — creating a cohesive atmosphere where every element feels like it's floating in harmony with the waves."
           imgSrc="/images/sealion-7-interior-01.jpg" imgAlt="SEALION 7 Interior"
         />
         <FeatureRow
           title={`15.6" rotating centre screen`}
-          body={`Stay ahead of the curve with a 15.6" rotating touchscreen that adapts to your needs. Whether navigating through a busy city or winding down with your favourite playlist, this screen ensures you are always connected and in control.`}
+          body={`A 15.6" rotating touchscreen adapts to your every need. Whether navigating through a city or winding down with your favourite playlist, this screen keeps you always connected and in control.`}
           imgSrc="/images/sealion-7-interior-02.jpg" imgAlt="Rotating Screen"
         />
         <FeatureRow
           title="Unmatched comfort"
-          body="Sink into the premium quilted Nappa leather seats, designed with your comfort in mind. Surrounding you is soft vegan leather that covers over 80% of the interior, providing a tactile experience that elevates every journey."
+          body="Sink into premium quilted Nappa leather seats, surrounded by soft vegan leather covering over 80% of the interior — a tactile experience that elevates every journey."
           imgSrc="/images/sealion-7-interior-03.jpg" imgAlt="Interior Seats" reverse
         />
         <CardGrid items={[
-          { title: "Adaptive ambience", imgSrc: "/images/sealion-7-interior-04.jpg", body: "Create the perfect environment inside the car with 128-colour ambient lighting. Whether you need a calming space after a long day or an energising atmosphere for an early commute, the BYD SEALION 7 adapts to your every mood." },
-          { title: "Head-up display", imgSrc: "/images/sealion-7-interior-08.jpg", body: "The BYD SEALION 7's advanced HUD makes every drive simpler and safer by projecting essential driving information directly onto the windshield, keeping your eyes on the road at all times." },
-          { title: "Panoramic sunroof", imgSrc: "/images/sealion-7-interior-09.jpg", body: "The panoramic sunroof fills the cabin with natural light, creating a sense of openness and wonder. The electric sunshade effortlessly provides shade and comfort, allowing you to enjoy the view without compromise." },
+          { title: "Adaptive ambience", imgSrc: "/images/sealion-7-interior-04.jpg", body: "128-colour ambient lighting creates the perfect environment — calming after a long day or energising for an early commute." },
+          { title: "Head-up display", imgSrc: "/images/sealion-7-interior-08.jpg", body: "Essential driving information projected directly onto the windshield, keeping your eyes on the road at all times." },
+          { title: "Panoramic sunroof", imgSrc: "/images/sealion-7-interior-09.jpg", body: "The panoramic sunroof fills the cabin with natural light — an electric sunshade provides shade and comfort without compromise." },
         ]} />
       </div>
 
       {/* ═══ CHARGING ═══ */}
       <div id="charging">
         <Chapter
-          id="charging-chapter" label="Charging" title="Fast and Efficient"
-          body="Stay on the go with rapid DC charging up to 230 kW — the BYD SEALION 7 Excellence AWD version charges from 10% to 80% in just 24 minutes. Perfect for those with busy schedules, this feature ensures you spend less time waiting and more time living life to the fullest."
+          id="charging-chapter" label="Charging" title="Fast and efficient charging"
+          body="Stay on the go with rapid DC charging up to 230 kW — the SEALION 7 Excellence AWD charges from 10% to 80% in just 24 minutes. Spend less time waiting and more time living."
           imgSrc="/images/sealion-7-charging-01.jpg" imgAlt="SEALION 7 Charging"
         />
       </div>
@@ -308,7 +352,7 @@ export default function Sealion7Page() {
       <div id="performance">
         <Chapter
           id="performance-chapter" label="Performance" title="Drive with purpose"
-          body="Feel the thrill of high-performance driving with the electric motor reaching an impressive 23,000 RPM. The AWD version sprints from 0-100 km/h in just 4.5 seconds. With a top speed of 215 km/h, the SEALION 7 combines power, speed, and precision for an exhilarating drive."
+          body="Feel the thrill of high-performance driving with an electric motor reaching 23,000 RPM. The AWD version sprints from 0–100 km/h in just 4.5 seconds with a top speed of 215 km/h."
           imgSrc="/images/sealion-7-performance-01.jpg" imgAlt="SEALION 7 Performance"
         />
       </div>
@@ -317,49 +361,39 @@ export default function Sealion7Page() {
       <div id="technology">
         <Chapter
           id="technology-chapter" label="Technology" title="BYD Blade Battery"
-          body="BYD has been a pioneering name in the battery industry for more than 29 years. Our latest game-changing Blade Battery has passed a series of extreme tests in rigorous conditions making it one of the world's safest batteries."
+          body="BYD has been a pioneering name in the battery industry for more than 29 years. Our latest game-changing Blade Battery has passed a series of extreme tests in rigorous conditions — making it one of the world's safest batteries."
           imgSrc="/images/sealion-7-battery-01.jpg" imgAlt="BYD Blade Battery"
           extra={
-            <a href="#" style={{ marginTop: 32, display: "inline-block", padding: "12px 28px", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", background: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "#fff", cursor: "pointer", textDecoration: "none", transition: "all 0.25s ease" }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.1)"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}
-            >Learn More</a>
+            <a href="#" className="inline-block px-6 py-3 text-[10px] font-bold tracking-[0.18em] uppercase text-white border border-white/30 transition-all duration-200 hover:bg-white/10">
+              Learn More
+            </a>
           }
         />
         <CardGrid items={[
-          { title: "CTB Cell-to-Body Technology", imgSrc: "/images/sealion-7-tech-02.jpg", body: "BYD's innovative CTB technology integrates the Blade Battery directly into the vehicle's structure, providing unparalleled strength and rigidity. The Blade Battery is more than an energy source — it is also a structural component capable of withstanding significant force." },
-          { title: "World's first 8-in-1 electric powertrain", imgSrc: "/images/sealion-7-tech-03.jpg", body: "BYD integrates 8 key components — VCU, BMS, MCU, PDU, DC-DC controller, on-board charger, drive motor and transmission — producing the world's first mass-produced 8-in-1 electric powertrain, optimising space and energy efficiency." },
-          { title: "High efficiency heat pump", imgSrc: "/images/sealion-7-tech-01.jpg", body: "An advanced energy-saving heat pump system comes as standard. Reliably operating in a broad range of temperatures, it highly utilises residual heat from the surroundings, powertrain, and batteries to enhance efficiency and increase driving range in cold weather." },
+          { title: "CTB Cell-to-Body Technology", imgSrc: "/images/sealion-7-tech-02.jpg", body: "BYD's innovative CTB technology integrates the Blade Battery directly into the vehicle's structure, providing unparalleled strength and rigidity." },
+          { title: "World's first 8-in-1 powertrain", imgSrc: "/images/sealion-7-tech-03.jpg", body: "BYD integrates 8 key components into the world's first mass-produced 8-in-1 electric powertrain, optimising space and energy efficiency." },
+          { title: "High efficiency heat pump", imgSrc: "/images/sealion-7-tech-01.jpg", body: "Advanced energy-saving heat pump reliably operates in a broad range of temperatures, enhancing efficiency and increasing driving range in cold weather." },
         ]} />
       </div>
 
-      {/* ═══ SAFETY / iTAC ═══ */}
+      {/* ═══ SAFETY ═══ */}
       <div id="safety">
-        <div style={{ display: "flex", minHeight: 540, borderTop: "1px solid rgba(255,255,255,0.05)", background: "#0a0a0a" }}>
-          <div style={{ flex: "0 0 42%", padding: "80px 64px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 20 }}>Safety</p>
-            <h2 style={{ fontSize: "clamp(18px,2vw,30px)", fontWeight: 700, color: "#fff", marginBottom: 20, lineHeight: 1.35 }}>iTAC — intelligence Torque Adaption Control System</h2>
-            <div style={{ width: 36, height: 2, background: "rgba(255,255,255,0.18)", marginBottom: 24 }} />
-            <p style={{ fontSize: 14, lineHeight: 1.85, color: "rgba(255,255,255,0.42)", maxWidth: 420 }}>The BYD SEALION 7 features the latest iTAC technology. Rather than simply reducing power, iTAC intelligently allocates drive torque, efficiently minimises or eliminates skidding, and elevates handling comfort for a smooth and secure driving experience in all conditions.</p>
-          </div>
-          <div style={{ flex: "0 0 58%", overflow: "hidden" }}>
-            <Img src="/images/sealion-7-itac.jpg" alt="iTAC System" style={{ objectFit: "cover", width: "100%", height: "100%" }} />
-          </div>
-        </div>
+        <Chapter
+          id="safety-chapter" label="Safety" title="iTAC — intelligence Torque Adaption Control"
+          body="Rather than simply reducing power, iTAC intelligently allocates drive torque, efficiently minimises or eliminates skidding, and elevates handling comfort for a smooth and secure driving experience in all conditions."
+          imgSrc="/images/sealion-7-itac.jpg" imgAlt="iTAC System"
+        />
         <P7Cards items={[
-          { title: "Advanced suspension system", imgSrc: "/images/sealion-7-innovation-01.jpg", body: "The BYD SEALION 7 features a front double-wishbone and rear multi-link suspension setup, along with FSD shock absorbers. This advanced system adjusts in real-time to deliver a smooth, stable ride, minimising body roll and enhancing stability across all road conditions." },
-          { title: "Intelligent driving assistance", imgSrc: "/images/sealion-7-innovation-02.jpg", body: "With BYD's state-of-the-art ADAS and 360 degree panoramic cameras, driving this electric SUV becomes a stress-free experience. The system continuously monitors surroundings, adjusting to changing conditions and providing support wherever needed." },
+          { title: "Advanced suspension system", imgSrc: "/images/sealion-7-innovation-01.jpg", body: "Front double-wishbone and rear multi-link suspension with FSD shock absorbers adjust in real-time to deliver a smooth, stable ride across all road conditions." },
+          { title: "Intelligent driving assistance", imgSrc: "/images/sealion-7-innovation-02.jpg", body: "BYD's state-of-the-art ADAS and 360° panoramic cameras monitor surroundings continuously, making every drive a stress-free experience." },
         ]} />
       </div>
 
       {/* ═══ CONNECTIVITY ═══ */}
       <div id="connectivity">
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.05)", padding: "60px 64px 0", background: "#0a0a0a" }}>
-          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)" }}>Connectivity</p>
-        </div>
         <P7Cards items={[
-          { title: "Connectivity that keeps you ahead", imgSrc: "/images/sealion-7-connectivity-01.jpg", body: "Stay connected on the go with the intelligent cockpit. From four-zone voice control to seamless integration with Android Auto and Apple CarPlay, every feature is designed to keep you effortlessly connected. OTA updates ensure your vehicle is always running the latest software." },
-          { title: "Total control, anywhere you are", imgSrc: "/images/sealion-7-connectivity-02.jpg", body: "Skip the traditional car keys with the NFC-enabled card or BYD app — unlock your car with just a tap. Remote A/C control lets you pre-condition the cabin from your smartphone, and scheduled charging ensures the SEALION 7 is always ready when you are." },
+          { title: "Connectivity that keeps you ahead", imgSrc: "/images/sealion-7-connectivity-01.jpg", body: "From four-zone voice control to Android Auto and Apple CarPlay integration, every feature keeps you effortlessly connected. OTA updates ensure your vehicle always runs the latest software." },
+          { title: "Total control, anywhere", imgSrc: "/images/sealion-7-connectivity-02.jpg", body: "NFC card or BYD app lets you unlock your car with a tap. Remote A/C and scheduled charging from your smartphone — the SEALION 7 is always ready when you are." },
         ]} />
       </div>
 
@@ -367,25 +401,24 @@ export default function Sealion7Page() {
       <div id="v2l">
         <Chapter
           id="v2l-chapter" label="V2L" title="Power on demand"
-          body="Empower your adventures with the BYD SEALION 7's Vehicle-to-Load (V2L) functionality. Whether camping, relaxing, or needing an emergency power source, the SEALION 7 can supply energy to your devices and appliances, transforming your vehicle into a reliable power station wherever you go."
+          body="Vehicle-to-Load (V2L) functionality empowers your adventures. Whether camping or in an emergency, the SEALION 7 supplies energy to your devices and appliances — transforming your vehicle into a reliable power station."
           imgSrc="/images/sealion-7-v2l-01.jpg" imgAlt="SEALION 7 V2L"
         />
       </div>
 
       {/* ═══ ORDER CTA ═══ */}
-      <section style={{ padding: "100px 64px", textAlign: "center", background: "#050505", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-        <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 20 }}>Ready to Drive</p>
-        <h2 style={{ fontSize: "clamp(36px,5vw,72px)", fontWeight: 800, letterSpacing: "0.02em", marginBottom: 16 }}>BYD SEALION 7</h2>
-        <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", marginBottom: 48, maxWidth: 400, margin: "0 auto 48px" }}>Electric Performance SUV — Up to 502 km range</p>
-        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <button style={{ padding: "16px 40px", fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", background: "#fff", color: "#000", border: "none", cursor: "pointer", transition: "background 0.2s" }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#ddd"; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#fff"; }}
-          >Configure Now</button>
-          <button style={{ padding: "16px 40px", fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.3)", cursor: "pointer", transition: "background 0.2s" }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.08)"; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}
-          >Book a Test Drive</button>
+      <section className="px-6 md:px-16 py-16 md:py-24 text-center border-t border-white/6" style={{ background: "#050505" }}>
+        <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-4">Ready to Drive</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-3">BYD SEALION 7</h2>
+        <p className="text-sm text-white/40 mb-10 max-w-xs mx-auto">Electric Performance SUV — Up to 502 km range</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <button className="w-full sm:w-auto px-10 py-4 text-[11px] font-bold tracking-[0.18em] uppercase bg-white text-black border-none cursor-pointer transition-colors hover:bg-white/85">
+            Configure Now
+          </button>
+          <button className="w-full sm:w-auto px-10 py-4 text-[11px] font-bold tracking-[0.18em] uppercase bg-transparent text-white cursor-pointer transition-colors hover:bg-white/8"
+            style={{ border: "1px solid rgba(255,255,255,0.3)" }}>
+            Book a Test Drive
+          </button>
         </div>
       </section>
 
