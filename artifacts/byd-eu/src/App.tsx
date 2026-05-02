@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import GenericCarPage from "@/pages/GenericCarPage";
 import Sealion7Page from "@/pages/Sealion7Page";
+import TestDrivePage from "@/pages/TestDrivePage";
 
 function HomePage() {
   return (
@@ -25,6 +26,8 @@ function HomePage() {
 
 function App() {
   const { path } = useRouter();
+
+  if (path === "/test-drive") return <TestDrivePage />;
 
   const carMatch = matchPath("/car/:slug", path);
   if (carMatch) {

@@ -415,8 +415,11 @@ export default function Sealion7Page() {
           <button className="w-full sm:w-auto px-10 py-4 text-[11px] font-bold tracking-[0.18em] uppercase bg-white text-black border-none cursor-pointer transition-colors hover:bg-white/85">
             Configure Now
           </button>
-          <button className="w-full sm:w-auto px-10 py-4 text-[11px] font-bold tracking-[0.18em] uppercase bg-transparent text-white cursor-pointer transition-colors hover:bg-white/8"
-            style={{ border: "1px solid rgba(255,255,255,0.3)" }}>
+          <button
+            className="w-full sm:w-auto px-10 py-4 text-[11px] font-bold tracking-[0.18em] uppercase bg-transparent text-white cursor-pointer transition-colors hover:bg-white/8"
+            style={{ border: "1px solid rgba(255,255,255,0.3)" }}
+            onClick={() => { window.history.pushState(null, "", "/test-drive?model=sealion-7"); window.dispatchEvent(new Event("byd-spa-navigate")); window.scrollTo(0, 0); }}
+          >
             Book a Test Drive
           </button>
         </div>

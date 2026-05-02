@@ -526,6 +526,7 @@ export default function GenericCarPage({ slug }: { slug: string }) {
           <button
             className="w-full sm:w-auto px-10 py-4 text-[11px] font-bold tracking-[0.18em] uppercase bg-transparent text-white cursor-pointer transition-colors hover:bg-white/8"
             style={{ border: "1px solid rgba(255,255,255,0.3)" }}
+            onClick={() => navigate(`/test-drive?model=${car.slug}`)}
           >
             Book a Test Drive
           </button>

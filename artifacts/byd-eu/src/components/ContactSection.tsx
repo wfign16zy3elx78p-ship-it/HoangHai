@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useRouter } from "@/lib/router";
 
 export default function ContactSection() {
+  const { navigate } = useRouter();
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     firstName: "", lastName: "", email: "",
@@ -63,7 +65,7 @@ export default function ContactSection() {
                   icon: "/images/buttonIcon.svg",
                   title: "Book a Test Drive",
                   desc: "Experience BYD first-hand",
-                  link: "/eu/test-drive",
+                  link: "/test-drive",
                   cta: "Book Now",
                 },
               ].map((item) => (
@@ -105,16 +107,16 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-xs font-bold text-white tracking-[0.1em] uppercase mb-1">{item.title}</h4>
                     <p className="text-white/40 text-xs mb-3">{item.desc}</p>
-                    <a
-                      href={item.link}
-                      className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white group-hover:text-white/80"
+                    <button
+                      onClick={() => item.link.startsWith("/test-drive") || item.link.startsWith("/") ? navigate(item.link) : undefined}
+                      className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white group-hover:text-white/80 bg-transparent border-none cursor-pointer p-0"
                       style={{ transition: "color 0.2s ease" }}
                     >
                       {item.cta}
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </div>
               ))}
