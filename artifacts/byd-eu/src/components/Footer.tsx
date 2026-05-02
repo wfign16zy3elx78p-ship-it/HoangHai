@@ -46,8 +46,8 @@ const footerLinks = [
       { text: "Service Maintenance", href: "/eu/service-maintenance" },
       { text: "BYD Assistance", href: "/eu/ownership/roadside-assistance" },
       { text: "App & Community", href: "/eu/ownership/app-community" },
-      { text: "How BYD Protects Your Privacy and Data", href: "/eu/ownership/how-byd-protects-your-privacy-data" },
-      { text: "Frequently Asked Questions", href: "/eu/ownership/faq" },
+      { text: "Privacy & Data", href: "/eu/ownership/how-byd-protects-your-privacy-data" },
+      { text: "FAQ", href: "/eu/ownership/faq" },
     ],
   },
 ];
@@ -73,25 +73,27 @@ const legalLinks = [
 export default function Footer() {
   const [expanded, setExpanded] = useState<string | null>(null);
 
-  const toggle = (title: string) => {
-    setExpanded(expanded === title ? null : title);
-  };
-
   return (
-    <footer className="bg-[#1b1b1b] text-white">
-      {/* Main Links */}
-      <div className="max-w-[1440px] mx-auto px-6 py-12">
-        {/* Desktop Grid */}
-        <div className="hidden md:grid grid-cols-4 gap-8">
+    <footer style={{ background: "#030303", borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+      {/* Main links */}
+      <div className="max-w-[1440px] mx-auto px-6 py-16">
+        {/* Desktop grid */}
+        <div className="hidden md:grid grid-cols-4 gap-10">
           {footerLinks.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-bold tracking-[0.2em] uppercase mb-5 text-white">{col.title}</h4>
+              <h4
+                className="text-[10px] font-bold tracking-[0.25em] uppercase mb-6"
+                style={{ color: "rgba(255,255,255,0.5)" }}
+              >
+                {col.title}
+              </h4>
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.text}>
                     <a
                       href={link.href}
-                      className="text-sm text-gray-400 hover:text-white transition-colors leading-relaxed"
+                      className="text-xs text-white/35 hover:text-white/80"
+                      style={{ transition: "color 0.2s ease", lineHeight: 1.6 }}
                     >
                       {link.text}
                     </a>
@@ -102,26 +104,27 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Mobile Accordions */}
+        {/* Mobile accordions */}
         <div className="md:hidden space-y-0">
           {footerLinks.map((col) => (
-            <div key={col.title} className="border-t border-white/10">
+            <div key={col.title} style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
               <button
-                onClick={() => toggle(col.title)}
+                onClick={() => setExpanded(expanded === col.title ? null : col.title)}
                 className="flex items-center justify-between w-full py-4 text-left"
               >
-                <span className="text-sm font-bold tracking-[0.2em] uppercase">{col.title}</span>
+                <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-white/50">{col.title}</span>
                 <img
                   src="/images/add.svg"
                   alt="expand"
-                  className={`w-4 h-4 invert transition-transform ${expanded === col.title ? "rotate-45" : ""}`}
+                  className="w-3.5 h-3.5 invert opacity-40"
+                  style={{ transform: expanded === col.title ? "rotate(45deg)" : "none", transition: "transform 0.25s ease" }}
                 />
               </button>
               {expanded === col.title && (
                 <ul className="pb-4 space-y-3">
                   {col.links.map((link) => (
                     <li key={link.text}>
-                      <a href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                      <a href={link.href} className="text-xs text-white/35 hover:text-white/80" style={{ transition: "color 0.2s ease" }}>
                         {link.text}
                       </a>
                     </li>
@@ -133,37 +136,64 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-[1440px] mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Legal Links */}
-          <div className="flex flex-wrap gap-x-5 gap-y-2 justify-center md:justify-start">
-            {legalLinks.map((link) => (
-              <a
-                key={link.text}
-                href={link.href}
-                className="text-xs text-gray-400 hover:text-white transition-colors"
-              >
-                {link.text}
-              </a>
-            ))}
-          </div>
+      {/* Shimmer divider */}
+      <div className="shimmer-line" />
 
-          {/* Social */}
-          <div className="flex items-center gap-4">
-            <span className="text-xs text-gray-400 font-bold tracking-widest uppercase">Follow Us</span>
-            {socialLinks.map((s) => (
-              <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-                <img src={s.icon} alt={s.name} className="w-5 h-5 invert" />
-              </a>
-            ))}
-          </div>
+      {/* Bottom bar */}
+      <div className="max-w-[1440px] mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-5">
+        {/* Legal */}
+        <div className="flex flex-wrap gap-x-5 gap-y-2 justify-center md:justify-start">
+          {legalLinks.map((link) => (
+            <a
+              key={link.text}
+              href={link.href}
+              className="text-[10px] text-white/30 hover:text-white/70"
+              style={{ transition: "color 0.2s ease" }}
+            >
+              {link.text}
+            </a>
+          ))}
+        </div>
+
+        {/* Social */}
+        <div className="flex items-center gap-3">
+          <span className="text-[10px] text-white/30 font-bold tracking-[0.2em] uppercase mr-1">Follow Us</span>
+          {socialLinks.map((s) => (
+            <a
+              key={s.name}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 flex items-center justify-center rounded-lg"
+              style={{
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                transition: "all 0.25s ease",
+              }}
+              onMouseEnter={(e) => {
+                const el = e.currentTarget as HTMLElement;
+                el.style.background = "rgba(255,255,255,0.12)";
+                el.style.borderColor = "rgba(255,255,255,0.2)";
+                el.style.boxShadow = "0 4px 12px rgba(255,255,255,0.08)";
+              }}
+              onMouseLeave={(e) => {
+                const el = e.currentTarget as HTMLElement;
+                el.style.background = "rgba(255,255,255,0.05)";
+                el.style.borderColor = "rgba(255,255,255,0.08)";
+                el.style.boxShadow = "none";
+              }}
+            >
+              <img src={s.icon} alt={s.name} className="w-3.5 h-3.5 invert opacity-50 hover:opacity-80" style={{ transition: "opacity 0.2s ease" }} />
+            </a>
+          ))}
         </div>
       </div>
 
       {/* Copyright */}
-      <div className="bg-black/30 py-4 text-center">
-        <p className="text-xs text-gray-500">© BYD Europe B.V. All rights reserved.</p>
+      <div className="py-4 text-center" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+        <p className="text-[10px] tracking-[0.1em]" style={{ color: "rgba(255,255,255,0.2)" }}>
+          © BYD Europe B.V. All rights reserved.
+        </p>
       </div>
     </footer>
   );

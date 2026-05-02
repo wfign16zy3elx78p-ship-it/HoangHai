@@ -3,22 +3,16 @@ import { useState } from "react";
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    interest: "",
-    message: "",
-    consent: false,
+    firstName: "", lastName: "", email: "",
+    phone: "", interest: "", message: "", consent: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-    if (type === "checkbox") {
-      setForm((prev) => ({ ...prev, [name]: (e.target as HTMLInputElement).checked }));
-    } else {
-      setForm((prev) => ({ ...prev, [name]: value }));
-    }
+    setForm((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,135 +20,175 @@ export default function ContactSection() {
     setSubmitted(true);
   };
 
+  const InputClass = "input-glass";
+  const LabelClass = "block text-[10px] font-bold tracking-[0.2em] uppercase mb-2";
+
   return (
-    <section className="py-20 bg-[#f5f5f5]">
-      <div className="max-w-[1440px] mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <section className="py-24 relative overflow-hidden" style={{ background: "linear-gradient(180deg, #050505 0%, #080808 100%)" }}>
+      {/* Ambient glow */}
+      <div
+        className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse, rgba(255,255,255,0.02) 0%, transparent 70%)",
+          filter: "blur(60px)",
+        }}
+      />
+
+      <div className="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
           {/* Left: Info */}
           <div>
-            <p className="text-sm font-bold tracking-[0.3em] uppercase text-gray-400 mb-4">Contact Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1b1b1b] tracking-wide uppercase mb-6">
+            <p className="text-[10px] font-bold tracking-[0.3em] uppercase mb-4" style={{ color: "rgba(255,255,255,0.35)" }}>
+              Contact Us
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide uppercase mb-6">
               Get in Touch
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-10">
-              Whether you're interested in a test drive, want to find your nearest dealer, or simply have a question about our vehicles — we're here to help.
+            <div className="shimmer-line mb-8" />
+            <p className="text-white/40 text-sm leading-relaxed mb-12">
+              Whether you're interested in a test drive, want to find your nearest dealer, or have a question about our vehicles — we're here to help.
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#1b1b1b] flex items-center justify-center flex-shrink-0">
-                  <img src="/images/dealerIcon2.svg" alt="Dealer" className="w-6 h-6 invert" />
+            <div className="space-y-4">
+              {[
+                {
+                  icon: "/images/dealerIcon2.svg",
+                  title: "Find a Dealer",
+                  desc: "Locate your nearest BYD showroom",
+                  link: "/eu/find-store",
+                  cta: "Find Store",
+                },
+                {
+                  icon: "/images/buttonIcon.svg",
+                  title: "Book a Test Drive",
+                  desc: "Experience BYD first-hand",
+                  link: "/eu/test-drive",
+                  cta: "Book Now",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="flex items-start gap-5 p-5 rounded-[20px] group"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    backdropFilter: "blur(16px)",
+                    WebkitBackdropFilter: "blur(16px)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
+                    transition: "all 0.35s cubic-bezier(0.4,0,0.2,1)",
+                  }}
+                  onMouseEnter={(e) => {
+                    const el = e.currentTarget as HTMLElement;
+                    el.style.background = "rgba(255,255,255,0.08)";
+                    el.style.borderColor = "rgba(255,255,255,0.16)";
+                    el.style.boxShadow = "0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)";
+                    el.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    const el = e.currentTarget as HTMLElement;
+                    el.style.background = "rgba(255,255,255,0.04)";
+                    el.style.borderColor = "rgba(255,255,255,0.08)";
+                    el.style.boxShadow = "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)";
+                    el.style.transform = "translateY(0)";
+                  }}
+                >
+                  <div
+                    className="w-11 h-11 flex items-center justify-center flex-shrink-0 rounded-xl"
+                    style={{
+                      background: "rgba(255,255,255,0.08)",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                    }}
+                  >
+                    <img src={item.icon} alt={item.title} className="w-5 h-5 invert opacity-70" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-white tracking-[0.1em] uppercase mb-1">{item.title}</h4>
+                    <p className="text-white/40 text-xs mb-3">{item.desc}</p>
+                    <a
+                      href={item.link}
+                      className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white group-hover:text-white/80"
+                      style={{ transition: "color 0.2s ease" }}
+                    >
+                      {item.cta}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-[#1b1b1b] tracking-wider uppercase text-sm mb-1">Find a Dealer</h4>
-                  <p className="text-gray-500 text-sm">Locate your nearest BYD showroom</p>
-                  <a href="/eu/find-store" className="text-sm font-bold text-[#1b1b1b] underline mt-1 inline-block hover:text-gray-600 tracking-wider uppercase">
-                    Find Store →
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#1b1b1b] flex items-center justify-center flex-shrink-0">
-                  <img src="/images/buttonIcon.svg" alt="Test Drive" className="w-6 h-6 invert" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#1b1b1b] tracking-wider uppercase text-sm mb-1">Book a Test Drive</h4>
-                  <p className="text-gray-500 text-sm">Experience BYD first-hand</p>
-                  <a href="/eu/test-drive" className="text-sm font-bold text-[#1b1b1b] underline mt-1 inline-block hover:text-gray-600 tracking-wider uppercase">
-                    Book Now →
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
           {/* Right: Form */}
-          <div className="bg-white p-8 shadow-sm">
+          <div
+            className="p-8 rounded-[24px]"
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              backdropFilter: "blur(32px)",
+              WebkitBackdropFilter: "blur(32px)",
+              border: "1px solid rgba(255,255,255,0.10)",
+              boxShadow: "0 16px 64px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.07)",
+            }}
+          >
             {submitted ? (
-              <div className="text-center py-12">
-                <img src="/images/green-check-icon.png" alt="Success" className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-[#1b1b1b] mb-2">Thank you!</h3>
-                <p className="text-gray-500 text-sm">We've received your enquiry and will be in touch shortly.</p>
+              <div className="text-center py-16">
+                <div
+                  className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+                  style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.16)" }}
+                >
+                  <img src="/images/green-check-icon.png" alt="Success" className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white tracking-wide mb-3">Thank you!</h3>
+                <p className="text-white/40 text-sm leading-relaxed">We've received your enquiry and will be in touch shortly.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-bold tracking-wider uppercase text-gray-600 mb-1">First Name *</label>
-                    <input
-                      type="text"
-                      name="firstName"
-                      required
-                      value={form.firstName}
-                      onChange={handleChange}
-                      className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#1b1b1b] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold tracking-wider uppercase text-gray-600 mb-1">Last Name *</label>
-                    <input
-                      type="text"
-                      name="lastName"
-                      required
-                      value={form.lastName}
-                      onChange={handleChange}
-                      className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#1b1b1b] transition-colors"
-                    />
-                  </div>
+                  {[{ name: "firstName", label: "First Name" }, { name: "lastName", label: "Last Name" }].map((f) => (
+                    <div key={f.name}>
+                      <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>{f.label} *</label>
+                      <input
+                        type="text"
+                        name={f.name}
+                        required
+                        value={(form as Record<string, string>)[f.name]}
+                        onChange={handleChange}
+                        placeholder={f.label}
+                        className={InputClass}
+                      />
+                    </div>
+                  ))}
                 </div>
+
                 <div>
-                  <label className="block text-xs font-bold tracking-wider uppercase text-gray-600 mb-1">Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    value={form.email}
-                    onChange={handleChange}
-                    className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#1b1b1b] transition-colors"
-                  />
+                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Email *</label>
+                  <input type="email" name="email" required value={form.email} onChange={handleChange} placeholder="you@example.com" className={InputClass} />
                 </div>
+
                 <div>
-                  <label className="block text-xs font-bold tracking-wider uppercase text-gray-600 mb-1">Phone</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#1b1b1b] transition-colors"
-                  />
+                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Phone</label>
+                  <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+44 000 000 0000" className={InputClass} />
                 </div>
+
                 <div>
-                  <label className="block text-xs font-bold tracking-wider uppercase text-gray-600 mb-1">Interested In</label>
-                  <select
-                    name="interest"
-                    value={form.interest}
-                    onChange={handleChange}
-                    className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#1b1b1b] transition-colors bg-white appearance-none"
-                  >
-                    <option value="">Select a model...</option>
-                    <option>BYD ATTO 3 EVO</option>
-                    <option>BYD SEAL</option>
-                    <option>BYD SEAL U</option>
-                    <option>BYD SEALION 7</option>
-                    <option>BYD HAN</option>
-                    <option>BYD TANG</option>
-                    <option>BYD DOLPHIN</option>
-                    <option>BYD SEAL 6 DM-i</option>
-                    <option>BYD SEAL U DM-i</option>
-                    <option>BYD SEALION 5 DM-i</option>
+                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Interested In</label>
+                  <select name="interest" value={form.interest} onChange={handleChange} className={InputClass}
+                    style={{ appearance: "none", background: "rgba(255,255,255,0.05)", color: form.interest ? "#fff" : "rgba(255,255,255,0.35)" }}>
+                    <option value="" disabled>Select a model...</option>
+                    {["BYD ATTO 3 EVO","BYD SEAL","BYD SEAL U","BYD SEALION 7","BYD HAN","BYD TANG","BYD DOLPHIN","BYD SEAL 6 DM-i","BYD SEAL U DM-i","BYD SEALION 5 DM-i"].map(m => (
+                      <option key={m} value={m} style={{ background: "#111", color: "#fff" }}>{m}</option>
+                    ))}
                   </select>
                 </div>
+
                 <div>
-                  <label className="block text-xs font-bold tracking-wider uppercase text-gray-600 mb-1">Message</label>
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    rows={3}
-                    className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#1b1b1b] transition-colors resize-none"
-                  />
+                  <label className={LabelClass} style={{ color: "rgba(255,255,255,0.4)" }}>Message</label>
+                  <textarea name="message" value={form.message} onChange={handleChange} rows={3} placeholder="How can we help?" className={InputClass} style={{ resize: "none" }} />
                 </div>
-                <div className="flex items-start gap-3">
+
+                <div className="flex items-start gap-3 p-4 rounded-xl" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
                   <input
                     type="checkbox"
                     name="consent"
@@ -163,16 +197,16 @@ export default function ContactSection() {
                     checked={form.consent}
                     onChange={handleChange}
                     className="mt-0.5 flex-shrink-0"
+                    style={{ accentColor: "white" }}
                   />
-                  <label htmlFor="consent" className="text-xs text-gray-500 leading-relaxed">
+                  <label htmlFor="consent" className="text-[11px] text-white/40 leading-relaxed">
                     I agree to BYD's{" "}
-                    <a href="/eu/privacy" className="underline">Privacy Policy</a> and consent to being contacted about BYD products and services. *
+                    <a href="/eu/privacy" className="text-white/70 underline hover:text-white" style={{ transition: "color 0.2s ease" }}>Privacy Policy</a>
+                    {" "}and consent to being contacted. *
                   </label>
                 </div>
-                <button
-                  type="submit"
-                  className="w-full bg-[#1b1b1b] text-white py-3.5 text-sm font-bold tracking-widest uppercase hover:bg-[#333] transition-colors"
-                >
+
+                <button type="submit" className="btn-glass-primary w-full mt-2">
                   Submit Enquiry
                 </button>
               </form>

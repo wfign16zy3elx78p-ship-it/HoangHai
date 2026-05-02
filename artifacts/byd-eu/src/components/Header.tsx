@@ -29,7 +29,7 @@ export default function Header() {
   const [activeTab, setActiveTab] = useState<"electric" | "hybrid">("electric");
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -44,107 +44,180 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || activeMenu ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50"
+      style={{ transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)" }}
     >
-      <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between h-[72px]">
-        {/* Logo */}
-        <a href="/eu" className="flex items-center">
-          <span
-            className={`text-2xl font-bold tracking-widest ${
-              scrolled || activeMenu ? "text-[#1b1b1b]" : "text-white"
-            }`}
-          >
-            BYD
-          </span>
-        </a>
-
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {navItems.map((item) => (
-            <button
-              key={item.key}
-              onMouseEnter={() => setActiveMenu(item.key)}
-              onMouseLeave={() => setActiveMenu(null)}
-              className={`text-sm font-semibold tracking-wider uppercase transition-colors duration-200 ${
-                scrolled || activeMenu
-                  ? "text-[#1b1b1b] hover:text-[#1db954]"
-                  : "text-white hover:text-gray-200"
-              }`}
+      {/* Glass bar */}
+      <div
+        className="mx-4 mt-3 rounded-2xl overflow-visible"
+        style={{
+          background: scrolled || activeMenu
+            ? "rgba(10,10,10,0.72)"
+            : "rgba(0,0,0,0.18)",
+          backdropFilter: "blur(32px)",
+          WebkitBackdropFilter: "blur(32px)",
+          border: scrolled || activeMenu
+            ? "1px solid rgba(255,255,255,0.12)"
+            : "1px solid rgba(255,255,255,0.10)",
+          boxShadow: scrolled || activeMenu
+            ? "0 8px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.08)"
+            : "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)",
+          transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)",
+        }}
+      >
+        <div className="px-6 flex items-center justify-between h-[64px]">
+          {/* Logo */}
+          <a href="/eu" className="flex items-center group">
+            <span
+              className="text-xl font-bold tracking-[0.25em] text-white"
+              style={{ transition: "all 0.3s ease", textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
             >
-              {item.label}
-            </button>
-          ))}
-        </nav>
-
-        {/* Right Icons */}
-        <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="/eu/find-store"
-            className={`flex items-center gap-1.5 text-sm font-semibold tracking-wider transition-colors ${
-              scrolled || activeMenu ? "text-[#1b1b1b]" : "text-white"
-            }`}
-          >
-            <img
-              src={scrolled || activeMenu ? "/images/findStoreIconDark.svg" : "/images/findStoreIconDark.svg"}
-              alt="Find Store"
-              className="w-5 h-5"
-            />
-            <span>Find Store</span>
+              BYD
+            </span>
           </a>
-        </div>
 
-        {/* Mobile Hamburger */}
-        <button
-          className="lg:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          <span className={`block w-6 h-0.5 transition-colors ${scrolled ? "bg-[#1b1b1b]" : "bg-white"}`} />
-          <span className={`block w-6 h-0.5 transition-colors ${scrolled ? "bg-[#1b1b1b]" : "bg-white"}`} />
-          <span className={`block w-6 h-0.5 transition-colors ${scrolled ? "bg-[#1b1b1b]" : "bg-white"}`} />
-        </button>
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navItems.map((item) => (
+              <button
+                key={item.key}
+                onMouseEnter={() => { setActiveMenu(item.key); setActiveTab(item.key === "hybrid" ? "hybrid" : "electric"); }}
+                onMouseLeave={() => setActiveMenu(null)}
+                className="relative px-4 py-2 text-xs font-semibold tracking-[0.12em] uppercase text-white/80 rounded-xl group"
+                style={{ transition: "all 0.25s ease" }}
+              >
+                <span
+                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100"
+                  style={{
+                    background: "rgba(255,255,255,0.08)",
+                    transition: "opacity 0.25s ease",
+                  }}
+                />
+                <span className="relative z-10 group-hover:text-white" style={{ transition: "color 0.25s ease" }}>
+                  {item.label}
+                </span>
+              </button>
+            ))}
+          </nav>
+
+          {/* Right Icons */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="/eu/find-store"
+              className="flex items-center gap-2 text-xs font-semibold tracking-[0.12em] uppercase text-white/80 hover:text-white px-4 py-2 rounded-xl group"
+              style={{
+                background: "rgba(255,255,255,0.07)",
+                border: "1px solid rgba(255,255,255,0.1)",
+                transition: "all 0.25s ease",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.14)";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.22)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 16px rgba(255,255,255,0.08)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.07)";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "none";
+              }}
+            >
+              <img src="/images/findStoreIconDark.svg" alt="Find Store" className="w-4 h-4 invert opacity-70 group-hover:opacity-100" style={{ transition: "opacity 0.25s ease" }} />
+              <span>Find Store</span>
+            </a>
+          </div>
+
+          {/* Mobile Hamburger */}
+          <button
+            className="lg:hidden flex flex-col gap-[5px] p-2"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {[0, 1, 2].map((i) => (
+              <span
+                key={i}
+                className="block w-5 h-px bg-white/80"
+                style={{
+                  transition: "all 0.3s ease",
+                  transform: mobileOpen
+                    ? i === 0 ? "rotate(45deg) translate(4px, 4px)"
+                      : i === 1 ? "scaleX(0)"
+                      : "rotate(-45deg) translate(4px, -4px)"
+                    : "none",
+                }}
+              />
+            ))}
+          </button>
+        </div>
       </div>
 
-      {/* Mega Menu - Models */}
+      {/* Mega Menu */}
       {(activeMenu === "electric" || activeMenu === "hybrid") && (
         <div
-          className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 py-8"
+          className="mx-4 mt-1 rounded-2xl overflow-hidden"
+          style={{
+            background: "rgba(8,8,8,0.88)",
+            backdropFilter: "blur(40px)",
+            WebkitBackdropFilter: "blur(40px)",
+            border: "1px solid rgba(255,255,255,0.10)",
+            boxShadow: "0 24px 64px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06)",
+            animation: "fadeDown 0.25s cubic-bezier(0.4,0,0.2,1)",
+          }}
           onMouseEnter={() => setActiveMenu(activeMenu)}
           onMouseLeave={() => setActiveMenu(null)}
         >
-          <div className="max-w-[1440px] mx-auto px-6">
-            <div className="flex gap-8 mb-6">
-              <button
-                onClick={() => setActiveTab("electric")}
-                className={`text-sm font-bold uppercase tracking-wider pb-2 border-b-2 transition-colors ${
-                  activeTab === "electric" ? "border-[#1b1b1b] text-[#1b1b1b]" : "border-transparent text-gray-400"
-                }`}
-              >
-                Electric Cars
-              </button>
-              <button
-                onClick={() => setActiveTab("hybrid")}
-                className={`text-sm font-bold uppercase tracking-wider pb-2 border-b-2 transition-colors ${
-                  activeTab === "hybrid" ? "border-[#1b1b1b] text-[#1b1b1b]" : "border-transparent text-gray-400"
-                }`}
-              >
-                Hybrid Cars
-              </button>
+          <style>{`
+            @keyframes fadeDown {
+              from { opacity: 0; transform: translateY(-8px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+          `}</style>
+          <div className="p-6">
+            <div className="flex gap-2 mb-6">
+              {(["electric", "hybrid"] as const).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className="px-4 py-1.5 text-xs font-bold tracking-widest uppercase rounded-lg"
+                  style={{
+                    background: activeTab === tab ? "rgba(255,255,255,0.12)" : "transparent",
+                    border: activeTab === tab ? "1px solid rgba(255,255,255,0.2)" : "1px solid transparent",
+                    color: activeTab === tab ? "#fff" : "rgba(255,255,255,0.4)",
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  {tab === "electric" ? "Electric Cars" : "Hybrid Cars"}
+                </button>
+              ))}
             </div>
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-5 gap-3">
               {navModels[activeTab].map((model) => (
                 <a
                   key={model.name}
                   href={model.link}
-                  className="group flex flex-col items-center text-center hover:bg-gray-50 rounded-lg p-3 transition-colors"
+                  className="group flex flex-col items-center text-center p-3 rounded-xl"
+                  style={{
+                    border: "1px solid rgba(255,255,255,0.06)",
+                    transition: "all 0.25s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.07)";
+                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.16)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 20px rgba(255,255,255,0.05)";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.background = "transparent";
+                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.06)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                  }}
                 >
                   <img
                     src={model.img}
                     alt={model.name}
-                    className="w-full h-24 object-contain group-hover:scale-105 transition-transform duration-200"
+                    className="w-full h-20 object-contain group-hover:scale-105"
+                    style={{ transition: "transform 0.3s ease", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.5))" }}
                   />
-                  <span className="mt-2 text-xs font-semibold text-[#1b1b1b] tracking-wide">{model.name}</span>
+                  <span className="mt-2 text-[10px] font-bold text-white/70 tracking-wider group-hover:text-white" style={{ transition: "color 0.2s ease" }}>
+                    {model.name}
+                  </span>
                 </a>
               ))}
             </div>
@@ -154,18 +227,32 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-xl">
-          <div className="px-6 py-4 space-y-4">
+        <div
+          className="lg:hidden mx-4 mt-1 rounded-2xl overflow-hidden"
+          style={{
+            background: "rgba(8,8,8,0.92)",
+            backdropFilter: "blur(40px)",
+            WebkitBackdropFilter: "blur(40px)",
+            border: "1px solid rgba(255,255,255,0.10)",
+            boxShadow: "0 24px 64px rgba(0,0,0,0.7)",
+          }}
+        >
+          <div className="px-6 py-4 space-y-1">
             {navItems.map((item) => (
               <a
                 key={item.key}
                 href={`/eu/${item.key}`}
-                className="block text-sm font-semibold uppercase tracking-wider text-[#1b1b1b] hover:text-gray-500 py-2 border-b border-gray-100"
+                className="block text-xs font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white py-3 px-3 rounded-xl hover:bg-white/08"
+                style={{ transition: "all 0.2s ease", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
               >
                 {item.label}
               </a>
             ))}
-            <a href="/eu/find-store" className="block text-sm font-semibold uppercase tracking-wider text-[#1b1b1b] py-2">
+            <a
+              href="/eu/find-store"
+              className="block text-xs font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white py-3 px-3 rounded-xl"
+              style={{ transition: "all 0.2s ease" }}
+            >
               Find Store
             </a>
           </div>

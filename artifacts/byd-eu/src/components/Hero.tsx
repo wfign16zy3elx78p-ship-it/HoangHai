@@ -13,7 +13,7 @@ export default function Hero() {
       setTimeout(() => {
         setCurrent(index);
         setIsTransitioning(false);
-      }, 400);
+      }, 500);
     },
     [isTransitioning]
   );
@@ -22,11 +22,9 @@ export default function Hero() {
     goTo((current + 1) % heroSlides.length);
   }, [current, goTo]);
 
-  // Auto-advance: use video duration if slide has video, else 6s
   useEffect(() => {
     const vid = videoRefs.current[current];
     if (vid && heroSlides[current].video) {
-      // Wait for video to end, then advance
       const handleEnded = () => next();
       vid.addEventListener("ended", handleEnded);
       return () => vid.removeEventListener("ended", handleEnded);
@@ -36,7 +34,6 @@ export default function Hero() {
     }
   }, [current, next]);
 
-  // Play/pause videos on slide change
   useEffect(() => {
     videoRefs.current.forEach((vid, i) => {
       if (!vid) return;
@@ -58,65 +55,83 @@ export default function Hero() {
       {heroSlides.map((s, i) => (
         <div
           key={s.id}
-          className={`absolute inset-0 transition-opacity duration-700 ${
-            i === current ? "opacity-100" : "opacity-0"
-          }`}
+          className="absolute inset-0"
+          style={{
+            opacity: i === current ? 1 : 0,
+            transition: "opacity 0.8s cubic-bezier(0.4,0,0.2,1)",
+            zIndex: i === current ? 1 : 0,
+          }}
         >
-          {s.video ? (
-            <>
-              {/* Poster image shown while video loads */}
-              <img
-                src={s.imgPc}
-                alt={s.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              {/* Video background on top — covers poster once ready */}
-              <video
-                ref={(el) => { videoRefs.current[i] = el; }}
-                src={s.video}
-                poster={s.imgPc}
-                muted
-                playsInline
-                loop={false}
-                preload={i === 0 ? "auto" : "metadata"}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            </>
-          ) : (
-            <img
-              src={s.imgPc}
-              alt={s.title}
-              className="w-full h-full object-cover object-center"
+          <img
+            src={s.imgPc}
+            alt={s.title}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {s.video && (
+            <video
+              ref={(el) => { videoRefs.current[i] = el; }}
+              src={s.video}
+              poster={s.imgPc}
+              muted
+              playsInline
+              loop={false}
+              preload={i === 0 ? "auto" : "metadata"}
+              className="absolute inset-0 w-full h-full object-cover"
             />
           )}
-          {/* Dark gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+          {/* Layered gradient overlay */}
+          <div className="absolute inset-0" style={{
+            background: "linear-gradient(105deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.05) 100%)"
+          }} />
+          <div className="absolute inset-0" style={{
+            background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%)"
+          }} />
         </div>
       ))}
 
-      {/* Slide Content */}
+      {/* Content */}
       <div
-        className={`absolute inset-0 flex flex-col justify-end pb-24 px-8 md:px-16 lg:px-24 transition-opacity duration-300 ${
-          isTransitioning ? "opacity-0" : "opacity-100"
-        }`}
+        className="absolute inset-0 flex flex-col justify-end pb-28 px-8 md:px-16 lg:px-24"
+        style={{
+          opacity: isTransitioning ? 0 : 1,
+          transform: isTransitioning ? "translateY(12px)" : "translateY(0)",
+          transition: "opacity 0.45s ease, transform 0.45s ease",
+          zIndex: 10,
+        }}
       >
         <div className="max-w-[1440px] mx-auto w-full">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wider uppercase mb-3">
+          {/* Label pill */}
+          <div
+            className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase text-white/80"
+            style={{
+              background: "rgba(255,255,255,0.08)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              border: "1px solid rgba(255,255,255,0.14)",
+            }}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
+            {slide.subtitle}
+          </div>
+
+          <h1
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white uppercase mb-8"
+            style={{
+              letterSpacing: "0.04em",
+              textShadow: "0 2px 24px rgba(0,0,0,0.4)",
+              lineHeight: 1.05,
+            }}
+          >
             {slide.title}
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 font-light tracking-wide">
-            {slide.subtitle}
-          </p>
-          <div className="flex gap-4 flex-wrap">
+
+          <div className="flex gap-3 flex-wrap">
             {slide.btnList.map((btn, i) => (
               <a
                 key={i}
                 href={btn.link}
-                className={`inline-block px-8 py-3 text-sm font-bold tracking-widest uppercase transition-all duration-200 ${
-                  btn.type === 1
-                    ? "bg-white text-[#1b1b1b] hover:bg-gray-100"
-                    : "border-2 border-white text-white hover:bg-white hover:text-[#1b1b1b]"
-                }`}
+                className={btn.type === 1 ? "btn-glass-primary" : "btn-glass-secondary"}
+                style={{ display: "inline-block" }}
               >
                 {btn.text}
               </a>
@@ -125,45 +140,83 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      {/* Slide indicators */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {heroSlides.map((s, i) => (
           <button
             key={i}
             onClick={() => goTo(i)}
             title={s.title}
-            className={`transition-all duration-300 rounded-full ${
-              i === current ? "w-8 h-2 bg-white" : "w-2 h-2 bg-white/50 hover:bg-white/80"
-            }`}
+            style={{
+              width: i === current ? 32 : 8,
+              height: 8,
+              borderRadius: 9999,
+              background: i === current ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.3)",
+              border: "1px solid rgba(255,255,255,0.2)",
+              backdropFilter: "blur(4px)",
+              transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)",
+              cursor: "pointer",
+              boxShadow: i === current ? "0 0 12px rgba(255,255,255,0.4)" : "none",
+            }}
           />
         ))}
       </div>
 
-      {/* Prev Arrow */}
-      <button
-        onClick={() => goTo((current - 1 + heroSlides.length) % heroSlides.length)}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white transition-colors rounded-full"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
+      {/* Arrows */}
+      {(["prev", "next"] as const).map((dir) => (
+        <button
+          key={dir}
+          onClick={() =>
+            goTo(dir === "prev"
+              ? (current - 1 + heroSlides.length) % heroSlides.length
+              : (current + 1) % heroSlides.length)
+          }
+          className="absolute top-1/2 -translate-y-1/2 z-20 flex items-center justify-center"
+          style={{
+            [dir === "prev" ? "left" : "right"]: 20,
+            width: 44,
+            height: 44,
+            borderRadius: 999,
+            background: "rgba(255,255,255,0.08)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            border: "1px solid rgba(255,255,255,0.16)",
+            color: "white",
+            transition: "all 0.25s ease",
+            boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.18)";
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 24px rgba(255,255,255,0.12)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.08)";
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 16px rgba(0,0,0,0.3)";
+          }}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d={dir === "prev" ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"}
+            />
+          </svg>
+        </button>
+      ))}
 
-      {/* Next Arrow */}
-      <button
-        onClick={() => goTo((current + 1) % heroSlides.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white transition-colors rounded-full"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
-      {/* Video indicator badge */}
+      {/* Video badge */}
       {slide.video && (
-        <div className="absolute top-24 right-6 flex items-center gap-1.5 bg-black/40 text-white text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full">
-          <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-          VIDEO
+        <div
+          className="absolute top-24 right-8 flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-white/80 z-20"
+          style={{
+            background: "rgba(255,255,255,0.08)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            border: "1px solid rgba(255,255,255,0.14)",
+            borderRadius: 999,
+            padding: "6px 14px",
+          }}
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+          LIVE
         </div>
       )}
     </section>
