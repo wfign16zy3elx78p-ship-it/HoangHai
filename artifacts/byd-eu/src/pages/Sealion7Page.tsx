@@ -402,7 +402,7 @@ export default function Sealion7Page() {
         <Chapter
           id="v2l-chapter" label="V2L" title="Power on demand"
           body="Vehicle-to-Load (V2L) functionality empowers your adventures. Whether camping or in an emergency, the SEALION 7 supplies energy to your devices and appliances — transforming your vehicle into a reliable power station."
-          imgSrc="/images/sealion-7-v2l-01.png" imgAlt="SEALION 7 V2L"
+          imgSrc="/images/sealion-7-charging-01.png" imgAlt="SEALION 7 V2L"
         />
       </div>
 

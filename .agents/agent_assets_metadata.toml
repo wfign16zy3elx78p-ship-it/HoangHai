@@ -180,3 +180,63 @@ id = "YbBk9UXSgWQA7Fq5N6_Lk"
 uri = "file://artifacts/byd-eu/public/images/atto2-tech-01.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "JgBI5lj5f3wgZTgghAUcs"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-performance-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Pjf5MlI7E8IsHviF4L4dI"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-battery-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "FbkUKz-lpZcRfrWGaY8uE"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-tech-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "LmiBFcHuBdaQ3cmC0Wm-H"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-tech-02.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "WiXPkFEPlXqQeOjIbjQf6"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-tech-03.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "QzLw0XhhqUkgcKwvJsqns"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-itac.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "v8SjvQkWv22bpRkLd8Gei"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-innovation-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "adCjXvNE18DdcQvA3fgb-"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-innovation-02.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "g-wXp3uSzmZBShRuUqW1n"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-connectivity-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "ySEAarBMq4SS0klGpk-uX"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-connectivity-02.png"
+type = "image"
+title = "generated_image"
