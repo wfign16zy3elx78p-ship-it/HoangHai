@@ -426,3 +426,51 @@ id = "edxxkHtsinFEhXdoeD2Gk"
 uri = "file://artifacts/byd-eu/public/images/atto2-dmi-performance-01.png"
 type = "image"
 title = "atto 2 dmi city performance"
+
+[[generated]]
+id = "pmgIJDcww46DXWhdbpFXu"
+uri = "file://artifacts/byd-eu/public/images/atto3-performance-new.png"
+type = "image"
+title = "atto3 evo performance daylight"
+
+[[generated]]
+id = "FFoxoKBL0tEP3O0HjeP9v"
+uri = "file://artifacts/byd-eu/public/images/atto3-cockpit-new.png"
+type = "image"
+title = "atto3 evo sport interior cockpit"
+
+[[generated]]
+id = "-o8-ac7gkWUsVfuNoDju1"
+uri = "file://artifacts/byd-eu/public/images/dolphin-performance-new.png"
+type = "image"
+title = "dolphin city street daylight"
+
+[[generated]]
+id = "hOkQmocjQ4hsH-jBrAs6U"
+uri = "file://artifacts/byd-eu/public/images/dolphin-cockpit-new.png"
+type = "image"
+title = "dolphin ocean interior cockpit"
+
+[[generated]]
+id = "VBZ9FgNXow_UjhQVb4IUB"
+uri = "file://artifacts/byd-eu/public/images/han-performance-new.png"
+type = "image"
+title = "han executive saloon golden hour"
+
+[[generated]]
+id = "lT7XImekqDKWQPsPnmWiV"
+uri = "file://artifacts/byd-eu/public/images/han-cockpit-new.png"
+type = "image"
+title = "han luxury nappa interior"
+
+[[generated]]
+id = "_bg5VmJSWPa6Ikm9Q76Zh"
+uri = "file://artifacts/byd-eu/public/images/tang-performance-new.png"
+type = "image"
+title = "tang 7seat suv mountain road"
+
+[[generated]]
+id = "wS0cubAX6R1XB9iZbvd3s"
+uri = "file://artifacts/byd-eu/public/images/tang-cockpit-new.png"
+type = "image"
+title = "tang 7 seat family interior"

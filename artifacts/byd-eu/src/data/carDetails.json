@@ -545,14 +545,14 @@
         "title": "Executive acceleration",
         "subtitle": "0–100 km/h in 3.9 s",
         "desc": "Twin motors produce 380kW and 700Nm of torque, propelling this executive saloon with sports car urgency while retaining the composure expected at the pinnacle of the segment.",
-        "img": "/images/han-dynamic-01.png",
+        "img": "/images/han-performance-new.png",
         "imgRight": true
       },
       {
         "title": "DiLink & Dynaudio",
         "subtitle": "Luxury Tech Cockpit",
         "desc": "A 15.6-inch rotating DiLink display, Dynaudio 16-speaker premium audio, and over-the-air updates create an executive digital cockpit that evolves with you.",
-        "img": "/images/han-connect-01.png",
+        "img": "/images/han-cockpit-new.png",
         "imgRight": false
       }
     ],
@@ -707,14 +707,14 @@
         "title": "AWD performance",
         "subtitle": "0–100 km/h in 4.6 s",
         "desc": "Dual motors drive all four wheels with 380kW of combined power, delivering supercar acceleration in a 7-seat family SUV — without compromising composure or efficiency.",
-        "img": "/images/tang-dynamic-01.png",
+        "img": "/images/tang-performance-new.png",
         "imgRight": true
       },
       {
         "title": "Premium 7-seat tech",
         "subtitle": "DiLink & Panoramic Roof",
         "desc": "A 15.6-inch rotating display, captain's chairs in every row, and BYD's DiPilot driver assistance suite bring premium technology to all seven passengers.",
-        "img": "/images/tang-connect-01.png",
+        "img": "/images/tang-cockpit-new.png",
         "imgRight": false
       }
     ],
@@ -869,14 +869,14 @@
         "title": "Urban agility",
         "subtitle": "Fun to drive",
         "desc": "Nimble, responsive, and surprisingly quick — the DOLPHIN's 150kW motor delivers instant electric torque that makes every city journey feel like a joy ride.",
-        "img": "/images/dolphin-dynamic-01.png",
+        "img": "/images/dolphin-performance-new.png",
         "imgRight": true
       },
       {
         "title": "Ocean-inspired cockpit",
         "subtitle": "12.8\" Rotating DiLink",
         "desc": "The 64-colour ambient lighting, 12.8-inch rotating DiLink display, and wave-inspired dashboard design create a playful, connected interior unlike anything else in its class.",
-        "img": "/images/dolphin-connect-01.png",
+        "img": "/images/dolphin-cockpit-new.png",
         "imgRight": false
       }
     ],
@@ -1193,14 +1193,14 @@
         "title": "Sporty urban drive",
         "subtitle": "150 kW instant torque",
         "desc": "The ATTO 3 EVO's electric motor delivers instant torque for responsive city driving. With 0–100 km/h in 7.3 seconds, it brings genuine driving excitement to the compact SUV class.",
-        "img": "/images/atto3-dynamic-01.png",
+        "img": "/images/atto3-performance-new.png",
         "imgRight": true
       },
       {
         "title": "Sport & fitness interior",
         "subtitle": "Unique elastic net design",
         "desc": "Elastic net door panels, sporty steering wheel stitching, and a 12.8-inch rotating DiLink display reflect the ATTO 3 EVO's active lifestyle DNA inside and out.",
-        "img": "/images/atto3-connect-01.png",
+        "img": "/images/atto3-cockpit-new.png",
         "imgRight": false
       }
     ],
