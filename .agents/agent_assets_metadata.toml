@@ -60,3 +60,63 @@ id = "YpYKXEg9iyIl7t4ykC9cU"
 uri = "file://artifacts/byd-eu/public/images/sealion-7-charging-01.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "8DWD3WlPepSKmjRvOtcvm"
+uri = "file://artifacts/byd-eu/public/images/seal-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "fzYCPWHzWz0CJtZ8sOeq4"
+uri = "file://artifacts/byd-eu/public/images/seal-tech-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "UfpKkMIbRrFzvikxPK2yB"
+uri = "file://artifacts/byd-eu/public/images/han-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "l4OWr7EyXTdw6Fa0r7xJQ"
+uri = "file://artifacts/byd-eu/public/images/han-tech-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "vSQgovw_Zzm0fJaVSuNDD"
+uri = "file://artifacts/byd-eu/public/images/tang-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "O69AmFdq3y4JSGWjhW0JH"
+uri = "file://artifacts/byd-eu/public/images/tang-tech-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "15h20UBVgkgJ1cGjx6Z1I"
+uri = "file://artifacts/byd-eu/public/images/dolphin-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "K0Tt-rK3qovOZK9MqgZJd"
+uri = "file://artifacts/byd-eu/public/images/dolphin-surf-lifestyle-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "iY7OLSHdOqrn3omE2OOC_"
+uri = "file://artifacts/byd-eu/public/images/atto3-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "vVfJbD9oDtO0kj-d34lgd"
+uri = "file://artifacts/byd-eu/public/images/sealion5-interior-01.png"
+type = "image"
+title = "generated_image"

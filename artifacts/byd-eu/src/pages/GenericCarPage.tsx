@@ -255,21 +255,21 @@ function buildSections(car: CarData) {
     chapterLabel: "Performance",
     chapterTitle: isHybrid ? "Super DM power on demand" : "Instant electric performance",
     chapterBody: performanceBody,
-    chapterImg: f[0]?.img,
+    chapterImg: f[1]?.img ?? f[0]?.img,
     p7Cards: [
       {
         title: isHybrid ? "Super DM hybrid system" : "Instant torque",
         body: isHybrid
           ? `The fifth-generation Super DM system delivers seamless transitions between electric and petrol power, maintaining peak efficiency throughout. Total system output reaches ${power} for a responsive driving experience.`
           : `Electric motors deliver power instantaneously — no hesitation, no lag. The ${car.name}'s ${power} motor responds to every input with precision, making every drive engaging and confidence-inspiring.`,
-        img: "/images/2.webp",
+        img: f[1]?.img ?? "/images/2.webp",
       },
       {
         title: isHybrid ? `${range_} combined range` : `${range_} WLTP range`,
         body: isHybrid
           ? `With over ${battery ?? "15 kWh"} of battery capacity for pure EV driving and a petrol engine for extended journeys, the ${car.name} covers over ${range_} of total range — effectively eliminating range anxiety.`
           : `The ${battery} Blade Battery powers the ${car.name} for up to ${range_} on a single charge. Rapid DC charging at ${dcCharge} means you spend less time plugged in and more time on the road.`,
-        img: "/images/1.webp",
+        img: f[2]?.img ?? "/images/1.webp",
       },
     ],
   };
@@ -279,7 +279,7 @@ function buildSections(car: CarData) {
     chapterLabel: "Technology",
     chapterTitle: "Intelligent by design",
     chapterBody: `The ${car.name} is equipped with BYD's latest DiLink technology platform — a fully connected, continually evolving digital ecosystem that makes every journey smarter. From voice control to over-the-air updates, technology works invisibly to enhance your life.`,
-    chapterImg: "/images/2.webp",
+    chapterImg: f[2]?.img ?? f[1]?.img ?? "/images/2.webp",
     cardGrid: [
       {
         title: `${display} infotainment`,
@@ -289,14 +289,14 @@ function buildSections(car: CarData) {
       {
         title: `${dipilot} driver assistance`,
         body: `DiPilot driver assistance brings peace of mind to every journey. Adaptive cruise control, lane-keeping assistance, automatic emergency braking, and 360° cameras work together seamlessly.`,
-        img: "/images/1.webp",
+        img: f[1]?.img ?? "/images/1.webp",
       },
       {
         title: v2l && v2l !== "No" ? `V2L — ${v2l} power export` : `${sound} audio system`,
         body: v2l && v2l !== "No"
           ? `Vehicle-to-Load (V2L) capability lets the ${car.name} power external devices and appliances — from camping equipment to emergency power needs. Your car becomes a portable power station.`
           : `The premium ${sound} audio system fills the cabin with rich, detailed sound. Carefully tuned for the acoustic properties of the ${car.name}'s interior, it creates an immersive listening experience.`,
-        img: "/images/2.webp",
+        img: f[2]?.img ?? "/images/2.webp",
       },
     ],
   };

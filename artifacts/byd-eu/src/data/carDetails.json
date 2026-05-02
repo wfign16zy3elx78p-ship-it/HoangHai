@@ -93,14 +93,14 @@
         "title": "iTAC Technology",
         "subtitle": "Intelligent Traction Control",
         "desc": "BYD's patented Intelligent Torque Adaptation Control technology actively distributes torque between axles in as little as 10ms — 100x faster than traditional systems.",
-        "img": "/images/2.webp",
+        "img": "/images/seal-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Cell-to-Body",
         "subtitle": "Structural Innovation",
         "desc": "The Blade Battery is integrated directly into the vehicle's floor, forming part of the structural body. This lowers the centre of gravity, improves rigidity, and maximises cabin space.",
-        "img": "/images/1.webp",
+        "img": "/images/seal-tech-01.png",
         "imgRight": false
       }
     ],
@@ -229,14 +229,14 @@
         "title": "Supreme Comfort",
         "subtitle": "First-Class Interior",
         "desc": "Nappa leather seating, panoramic sunroof, and ambient lighting create a sanctuary on wheels. The rear executive lounge offers airline-class legroom and massage seats.",
-        "img": "/images/2.webp",
+        "img": "/images/han-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Blade Battery",
         "subtitle": "500+ km Confidence",
         "desc": "With 521km of WLTP range and 150kW DC fast charging, the HAN eliminates range anxiety entirely. Charge from 10–80% in under 35 minutes.",
-        "img": "/images/1.webp",
+        "img": "/images/han-tech-01.png",
         "imgRight": false
       }
     ],
@@ -297,14 +297,14 @@
         "title": "AWD Performance",
         "subtitle": "Dual Motor Mastery",
         "desc": "Dual electric motors deliver 380kW of combined power, launching the TANG from 0–100km/h in just 4.6 seconds while maintaining superb composure across all terrains.",
-        "img": "/images/2.webp",
+        "img": "/images/tang-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Intelligent Safety",
         "subtitle": "Five-Star Protection",
         "desc": "The TANG achieved 5-star ratings across all Euro NCAP categories. BYD's Blade Battery provides structural reinforcement while eliminating thermal runaway risk.",
-        "img": "/images/1.webp",
+        "img": "/images/tang-tech-01.png",
         "imgRight": false
       }
     ],
@@ -365,14 +365,14 @@
         "title": "Smart Efficiency",
         "subtitle": "More Range, Less Cost",
         "desc": "With up to 427km of WLTP range and low running costs, the DOLPHIN makes EV ownership effortless. 88kW DC fast charging gets you back on the road in no time.",
-        "img": "/images/2.webp",
+        "img": "/images/dolphin-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Connected Tech",
         "subtitle": "DiLink Entertainment",
         "desc": "A 12.8-inch rotating display, over-the-air updates, and the full DiLink 300 ecosystem bring smartphone-level intelligence to your everyday drive.",
-        "img": "/images/1.webp",
+        "img": "/images/BYD-DOLPIN.webp",
         "imgRight": false
       }
     ],
@@ -433,14 +433,14 @@
         "title": "Bold Design",
         "subtitle": "Stand Out",
         "desc": "The DOLPHIN SURF's expressive exterior challenges convention with its adventure-inspired silhouette, bold roof rails, and muscular wheel arches.",
-        "img": "/images/2.webp",
+        "img": "/images/dolphin-surf-lifestyle-01.png",
         "imgRight": true
       },
       {
         "title": "Smart Interior",
         "subtitle": "Practical & Connected",
         "desc": "A thoughtfully designed interior with versatile storage, a 10.1-inch infotainment display, and DiLink connectivity keeps you organised and entertained.",
-        "img": "/images/1.webp",
+        "img": "/images/BYD-DOLPHIN-SURF.webp",
         "imgRight": false
       }
     ],
@@ -501,14 +501,14 @@
         "title": "Interior Comfort",
         "subtitle": "Inspired by Sport & Fitness",
         "desc": "Unique elastic net door panels and sporty trim options create an interior like no other — ergonomically designed for the active lifestyle driver.",
-        "img": "/images/2.webp",
+        "img": "/images/atto3-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Enhanced Range",
         "subtitle": "Go Further",
         "desc": "With up to 420km WLTP range, the ATTO 3 EVO covers your daily commute and weekend escapes with ease — and charges rapidly when you need to top up.",
-        "img": "/images/1.webp",
+        "img": "/images/BYD-ATTO3-EVO.webp",
         "imgRight": false
       }
     ],
@@ -569,14 +569,14 @@
         "title": "Dual Power Modes",
         "subtitle": "EV or Hybrid",
         "desc": "Drive in pure EV mode for up to 100km, or let the intelligent hybrid system seamlessly blend petrol and electric power for extended journeys with minimal fuel consumption.",
-        "img": "/images/2.webp",
+        "img": "/images/sealion5-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Premium SUV",
         "subtitle": "Style & Space",
         "desc": "Premium exterior design with a spacious, well-equipped interior. The SEALION 5 DM-i doesn't compromise on luxury while delivering class-leading hybrid efficiency.",
-        "img": "/images/1.webp",
+        "img": "/images/BYD-SEALION5-DM-i.webp",
         "imgRight": false
       }
     ],
