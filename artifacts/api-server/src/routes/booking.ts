@@ -138,7 +138,7 @@ router.post("/booking/notify", async (req, res): Promise<void> => {
     sendTelegram(buildTelegramText(b)).then(() => {
       results.telegram = "sent";
     }).catch(err => {
-      results.telegram = `failed: ${err.message}`;
+      results.telegram = `failed: ${String(err.message)}`;
     }),
 
     sendEmail(
@@ -147,10 +147,11 @@ router.post("/booking/notify", async (req, res): Promise<void> => {
     ).then(() => {
       results.email = "sent";
     }).catch(err => {
-      results.email = `failed: ${err.message}`;
+      results.email = `failed: ${String(err.message)}`;
     }),
   ]);
 
+  req.log.info({ results }, "booking notification results");
   res.json({ ok: true, results });
 });
 
