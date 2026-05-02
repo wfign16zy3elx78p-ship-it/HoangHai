@@ -120,3 +120,63 @@ id = "vVfJbD9oDtO0kj-d34lgd"
 uri = "file://artifacts/byd-eu/public/images/sealion5-interior-01.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "0OTmqeTidEBLSPltJGADk"
+uri = "file://artifacts/byd-eu/public/images/seal-u-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Fu9JvbP0zA9-YRxxFyfpR"
+uri = "file://artifacts/byd-eu/public/images/seal-u-tech-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "LXyoCSv_D4QDZ8IGhJDIT"
+uri = "file://artifacts/byd-eu/public/images/seal-u-dmi-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "6xG0FrI8ZigDG9nMveEfV"
+uri = "file://artifacts/byd-eu/public/images/seal-u-dmi-tech-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "gJGczeytk6r1S5M-xHQbs"
+uri = "file://artifacts/byd-eu/public/images/seal-6-dmi-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "MfBa7Ga0mkiM1g8kfG3Ts"
+uri = "file://artifacts/byd-eu/public/images/seal-6-dmi-tech-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "4AQuq3zWBj3ziUaflJKV8"
+uri = "file://artifacts/byd-eu/public/images/seal-6-touring-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "QCUz1T41MLrDeKyyLF9zr"
+uri = "file://artifacts/byd-eu/public/images/seal-6-touring-tech-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "U9OLsMmqTHUMpq9shdffo"
+uri = "file://artifacts/byd-eu/public/images/atto2-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "YbBk9UXSgWQA7Fq5N6_Lk"
+uri = "file://artifacts/byd-eu/public/images/atto2-tech-01.png"
+type = "image"
+title = "generated_image"

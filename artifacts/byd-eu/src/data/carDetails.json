@@ -161,14 +161,14 @@
         "title": "Smart Driving",
         "subtitle": "DiPilot Assistance",
         "desc": "DiPilot L2+ driver assistance keeps you safe and relaxed. Adaptive cruise, lane-keeping, automatic emergency braking, and 360° camera system work together seamlessly.",
-        "img": "/images/2.webp",
+        "img": "/images/seal-u-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Blade Battery",
         "subtitle": "Long-lasting Power",
         "desc": "The 71.8 kWh Blade Battery provides exceptional range and safety. Its cell-level thermal management ensures optimal performance in all weather conditions.",
-        "img": "/images/1.webp",
+        "img": "/images/seal-u-tech-01.png",
         "imgRight": false
       }
     ],
@@ -637,14 +637,14 @@
         "title": "Family Space",
         "subtitle": "Room for Everything",
         "desc": "Generous cabin dimensions, 552L of boot space, and a panoramic glass roof make the SEAL U DM-i the ideal companion for family adventures near and far.",
-        "img": "/images/2.webp",
+        "img": "/images/seal-u-dmi-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Smart Technology",
         "subtitle": "Always Connected",
         "desc": "DiLink 100 infotainment, DiPilot driver assistance, and over-the-air updates keep the SEAL U DM-i at the cutting edge throughout your ownership.",
-        "img": "/images/1.webp",
+        "img": "/images/seal-u-dmi-tech-01.png",
         "imgRight": false
       }
     ],
@@ -705,14 +705,14 @@
         "title": "120+ km EV Range",
         "subtitle": "Electric-First Daily Driving",
         "desc": "With over 120km of pure electric range, most drivers will rarely use petrol for daily commutes. The intelligent energy management system maximises efficiency at all times.",
-        "img": "/images/2.webp",
+        "img": "/images/seal-6-dmi-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Ocean Aesthetics",
         "subtitle": "Saloon Elegance",
         "desc": "The SEAL 6's flowing saloon silhouette and premium interior appointments create a refined environment that rivals dedicated luxury marques at a fraction of the cost.",
-        "img": "/images/1.webp",
+        "img": "/images/seal-6-dmi-tech-01.png",
         "imgRight": false
       }
     ],
@@ -773,14 +773,14 @@
         "title": "Super DM System",
         "subtitle": "Effortless Performance",
         "desc": "Sharing the SEAL 6 saloon's 316kW Super DM system, the TOURING delivers performance to match its practicality — covering 0–100km/h in just 5.4 seconds.",
-        "img": "/images/2.webp",
+        "img": "/images/seal-6-touring-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Premium Interior",
         "subtitle": "Long-Journey Comfort",
         "desc": "Heated and ventilated front seats, a panoramic sunroof, and premium Dynaudio sound system transform every journey into a first-class experience.",
-        "img": "/images/1.webp",
+        "img": "/images/seal-6-touring-tech-01.png",
         "imgRight": false
       }
     ],
@@ -841,14 +841,14 @@
         "title": "Efficient Hybrid",
         "subtitle": "4.9L/100km",
         "desc": "At just 4.9L/100km in hybrid mode and 80+ km EV range, the ATTO 2 DM-i sets a new benchmark for efficiency in the compact SUV segment.",
-        "img": "/images/2.webp",
+        "img": "/images/atto2-interior-01.png",
         "imgRight": true
       },
       {
         "title": "Modern Interior",
         "subtitle": "Smart & Stylish",
         "desc": "A clean, modern interior with a large central display, wireless phone charging, and multiple connectivity options keeps you comfortable and connected.",
-        "img": "/images/1.webp",
+        "img": "/images/atto2-tech-01.png",
         "imgRight": false
       }
     ],
