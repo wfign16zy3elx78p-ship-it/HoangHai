@@ -17,6 +17,7 @@ type CarData = {
 /* ─── Placeholder / lazy image ─── */
 function Img({ src, alt, className, style }: { src?: string; alt: string; className?: string; style?: React.CSSProperties }) {
   const [err, setErr] = useState(false);
+  useEffect(() => { setErr(false); }, [src]);
   if (!src || err) {
     return (
       <div className={`flex items-center justify-center ${className ?? ""}`} style={{ background: "linear-gradient(135deg,#181818 0%,#111 100%)", ...style }}>
@@ -24,7 +25,7 @@ function Img({ src, alt, className, style }: { src?: string; alt: string; classN
       </div>
     );
   }
-  return <img src={src} alt={alt} className={className} style={style} onError={() => setErr(true)} />;
+  return <img key={src} src={src} alt={alt} className={className} style={style} onError={() => setErr(true)} />;
 }
 
 /* ─── Animated counter ─── */
@@ -269,7 +270,7 @@ function buildSections(car: CarData) {
         body: isHybrid
           ? `Với hơn ${battery ?? "15 kWh"} dung lượng pin cho chế độ thuần điện và động cơ xăng cho những hành trình dài, ${car.name} đạt phạm vi tổng hơn ${range_} — thực sự xóa bỏ lo lắng về cạn pin.`
           : `Pin Blade ${battery} cung cấp năng lượng cho ${car.name} lên đến ${range_} mỗi lần sạc đầy. Sạc DC nhanh ${dcCharge} giúp bạn tốn ít thời gian cắm sạc hơn và nhiều thời gian trên đường hơn.`,
-        img: f[1]?.img,
+        img: f[2]?.img ?? f[1]?.img,
       },
     ],
   };
@@ -296,7 +297,7 @@ function buildSections(car: CarData) {
         body: v2l && v2l !== "No"
           ? `Tính năng Vehicle-to-Load (V2L) cho phép ${car.name} cấp điện cho các thiết bị ngoài — từ thiết bị cắm trại đến nhu cầu điện khẩn cấp. Xe của bạn trở thành trạm điện di động.`
           : `Hệ thống âm thanh cao cấp ${sound} lấp đầy khoang lái bằng âm thanh phong phú và chi tiết. Được tinh chỉnh cho đặc tính âm học của nội thất ${car.name}, tạo ra trải nghiệm nghe nhạc đắm chìm.`,
-        img: car.heroImg,
+        img: f[3]?.img ?? f[0]?.img ?? car.heroImg,
       },
     ],
   };
