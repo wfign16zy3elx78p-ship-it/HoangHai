@@ -263,14 +263,14 @@ function buildSections(car: CarData) {
         body: isHybrid
           ? `Hệ thống Super DM thế hệ thứ năm chuyển đổi liền mạch giữa điện và xăng, duy trì hiệu quả tối đa suốt hành trình. Tổng công suất hệ thống đạt ${power} cho trải nghiệm lái phản hồi tức thì.`
           : `Mô-tơ điện cung cấp công suất ngay lập tức — không chần chừ, không trễ. Mô-tơ ${power} của ${car.name} phản hồi mọi thao tác với độ chính xác cao, giúp mỗi chuyến đi đều thú vị và tự tin.`,
-        img: f[3]?.img ?? f[1]?.img,
+        imgSrc: f[3]?.img ?? f[1]?.img,
       },
       {
         title: isHybrid ? `${range_} phạm vi kết hợp` : `${range_} phạm vi WLTP`,
         body: isHybrid
           ? `Với hơn ${battery ?? "15 kWh"} dung lượng pin cho chế độ thuần điện và động cơ xăng cho những hành trình dài, ${car.name} đạt phạm vi tổng hơn ${range_} — thực sự xóa bỏ lo lắng về cạn pin.`
           : `Pin Blade ${battery} cung cấp năng lượng cho ${car.name} lên đến ${range_} mỗi lần sạc đầy. Sạc DC nhanh ${dcCharge} giúp bạn tốn ít thời gian cắm sạc hơn và nhiều thời gian trên đường hơn.`,
-        img: f[2]?.img ?? f[1]?.img,
+        imgSrc: f[2]?.img ?? f[1]?.img,
       },
     ],
   };
@@ -285,19 +285,19 @@ function buildSections(car: CarData) {
       {
         title: `Màn hình giải trí ${display}`,
         body: `Màn hình ${display} đưa hệ sinh thái DiLink vào cuộc sống — phản hồi nhanh, trực quan và đầy tính năng bao gồm Android Auto, Apple CarPlay, điều khiển giọng nói và dẫn đường thời gian thực.`,
-        img: f[4]?.img ?? car.heroImg,
+        imgSrc: f[4]?.img ?? car.heroImg,
       },
       {
         title: `Hỗ trợ lái xe ${dipilot}`,
         body: `Hệ thống hỗ trợ lái xe DiPilot mang lại sự an tâm cho mọi hành trình. Kiểm soát hành trình thích ứng, hỗ trợ giữ làn đường, phanh khẩn cấp tự động và camera 360° hoạt động phối hợp liền mạch.`,
-        img: f[2]?.img ?? f[1]?.img,
+        imgSrc: f[2]?.img ?? f[1]?.img,
       },
       {
         title: v2l && v2l !== "No" ? `V2L — Xuất điện ${v2l}` : `Hệ thống âm thanh ${sound}`,
         body: v2l && v2l !== "No"
           ? `Tính năng Vehicle-to-Load (V2L) cho phép ${car.name} cấp điện cho các thiết bị ngoài — từ thiết bị cắm trại đến nhu cầu điện khẩn cấp. Xe của bạn trở thành trạm điện di động.`
           : `Hệ thống âm thanh cao cấp ${sound} lấp đầy khoang lái bằng âm thanh phong phú và chi tiết. Được tinh chỉnh cho đặc tính âm học của nội thất ${car.name}, tạo ra trải nghiệm nghe nhạc đắm chìm.`,
-        img: f[3]?.img ?? f[0]?.img ?? car.heroImg,
+        imgSrc: f[3]?.img ?? f[0]?.img ?? car.heroImg,
       },
     ],
   };
