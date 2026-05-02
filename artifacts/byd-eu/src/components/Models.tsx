@@ -1,11 +1,13 @@
 import { useState, useRef } from "react";
 import modelsData from "../data/models.json";
+import { useRouter } from "../lib/router";
 
 type TabType = "electric" | "hybrid";
 
 export default function Models() {
   const [activeTab, setActiveTab] = useState<TabType>("electric");
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { navigate } = useRouter();
 
   const models = modelsData[activeTab];
 
@@ -91,10 +93,10 @@ export default function Models() {
             className="flex gap-4 overflow-x-auto pb-4 no-scrollbar"
           >
             {models.map((model) => (
-              <a
+              <div
                 key={model.name}
-                href={model.link}
-                className="group flex-shrink-0 w-[280px] rounded-[20px] overflow-hidden"
+                onClick={() => navigate(model.link)}
+                className="group flex-shrink-0 w-[280px] rounded-[20px] overflow-hidden cursor-pointer"
                 style={{
                   background: "rgba(255,255,255,0.04)",
                   backdropFilter: "blur(16px)",
@@ -102,7 +104,6 @@ export default function Models() {
                   border: "1px solid rgba(255,255,255,0.09)",
                   boxShadow: "0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)",
                   transition: "all 0.35s cubic-bezier(0.4,0,0.2,1)",
-                  textDecoration: "none",
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLElement;
@@ -149,7 +150,7 @@ export default function Models() {
                     </svg>
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
 

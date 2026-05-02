@@ -1,24 +1,23 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "../lib/router";
 
 const navModels = {
   electric: [
-    { name: "BYD ATTO 3 EVO", img: "/images/Nav_BYD_ATTO3_EVO.png", link: "/eu/electric-cars/atto-3-evo" },
-    { name: "BYD DOLPHIN SURF", img: "/images/BYD_DOLPHIN_SURF.png", link: "/eu/electric-cars/dolphin-surf" },
-    { name: "BYD ATTO 2", img: "/images/Nav_BYD_ATTO2.png", link: "/eu/electric-cars/atto-2" },
-    { name: "BYD SEALION 7", img: "/images/NAV_BYD_SEALION_7.png", link: "/eu/electric-cars/sealion-7" },
-    { name: "BYD ATTO 3", img: "/images/Nav_BYD_ATTO3.png", link: "/eu/electric-cars/atto-3" },
-    { name: "BYD DOLPHIN", img: "/images/Nav_BYD_DOLPHIN.png", link: "/eu/electric-cars/dolphin" },
-    { name: "BYD HAN", img: "/images/Nav_BYD_HAN.png", link: "/eu/electric-cars/han" },
-    { name: "BYD SEAL", img: "/images/Nav_BYD_SEAL.png", link: "/eu/electric-cars/seal" },
-    { name: "BYD SEAL U EV", img: "/images/Nav_BYD_SEAL_U_EV.png", link: "/eu/electric-cars/seal-u" },
-    { name: "BYD TANG", img: "/images/BYD_TANG_2024.png", link: "/eu/electric-cars/tang" },
+    { name: "BYD ATTO 3 EVO", img: "/images/Nav_BYD_ATTO3_EVO.png", link: "/car/atto-3-evo" },
+    { name: "BYD DOLPHIN SURF", img: "/images/BYD_DOLPHIN_SURF.png", link: "/car/dolphin-surf" },
+    { name: "BYD SEALION 7", img: "/images/NAV_BYD_SEALION_7.png", link: "/car/sealion-7" },
+    { name: "BYD DOLPHIN", img: "/images/Nav_BYD_DOLPHIN.png", link: "/car/dolphin" },
+    { name: "BYD HAN", img: "/images/Nav_BYD_HAN.png", link: "/car/han" },
+    { name: "BYD SEAL", img: "/images/Nav_BYD_SEAL.png", link: "/car/seal" },
+    { name: "BYD SEAL U", img: "/images/Nav_BYD_SEAL_U_EV.png", link: "/car/seal-u" },
+    { name: "BYD TANG", img: "/images/BYD_TANG_2024.png", link: "/car/tang" },
   ],
   hybrid: [
-    { name: "BYD SEALION 5 DM-i", img: "/images/BYD-SEALION5-DM-i.png", link: "/eu/hybrid-cars/sealion-5-dm-i" },
-    { name: "BYD SEAL U DM-i", img: "/images/Nav_BYD_SEAL_U_DMI.png", link: "/eu/hybrid-cars/seal-u-dm-i" },
-    { name: "BYD SEAL 6 DM-i", img: "/images/BYD-SEAL-6-DM-i.png", link: "/eu/hybrid-cars/seal-6-dm-i" },
-    { name: "BYD SEAL 6 DM-i TOURING", img: "/images/BYD-SEAL-6-DM-i-TOURING.png", link: "/eu/hybrid-cars/seal-6-dm-i-touring" },
-    { name: "BYD ATTO 2 DM-i", img: "/images/Atto2dmi.webp", link: "/eu/hybrid-cars/atto-2-dm-i" },
+    { name: "BYD SEALION 5 DM-i", img: "/images/BYD-SEALION5-DM-i.png", link: "/car/sealion-5-dm-i" },
+    { name: "BYD SEAL U DM-i", img: "/images/Nav_BYD_SEAL_U_DMI.png", link: "/car/seal-u-dm-i" },
+    { name: "BYD SEAL 6 DM-i", img: "/images/BYD-SEAL-6-DM-i.png", link: "/car/seal-6-dm-i" },
+    { name: "BYD SEAL 6 DM-i TOURING", img: "/images/BYD-SEAL-6-DM-i-TOURING.png", link: "/car/seal-6-dm-i-touring" },
+    { name: "BYD ATTO 2 DM-i", img: "/images/Atto2dmi.webp", link: "/car/atto-2-dm-i" },
   ],
 };
 
@@ -27,6 +26,7 @@ export default function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"electric" | "hybrid">("electric");
+  const { navigate } = useRouter();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -190,10 +190,10 @@ export default function Header() {
             </div>
             <div className="grid grid-cols-5 gap-3">
               {navModels[activeTab].map((model) => (
-                <a
+                <div
                   key={model.name}
-                  href={model.link}
-                  className="group flex flex-col items-center text-center p-3 rounded-xl"
+                  onClick={() => { navigate(model.link); setActiveMenu(null); }}
+                  className="group flex flex-col items-center text-center p-3 rounded-xl cursor-pointer"
                   style={{
                     border: "1px solid rgba(255,255,255,0.06)",
                     transition: "all 0.25s ease",
@@ -218,7 +218,7 @@ export default function Header() {
                   <span className="mt-2 text-[10px] font-bold text-white/70 tracking-wider group-hover:text-white" style={{ transition: "color 0.2s ease" }}>
                     {model.name}
                   </span>
-                </a>
+                </div>
               ))}
             </div>
           </div>

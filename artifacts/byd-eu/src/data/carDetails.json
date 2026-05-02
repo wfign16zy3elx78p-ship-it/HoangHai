@@ -1,0 +1,886 @@
+{
+  "sealion-7": {
+    "slug": "sealion-7",
+    "name": "BYD SEALION 7",
+    "tagline": "All-Electric Performance SUV",
+    "description": "The SEALION 7 combines exceptional performance with advanced electric technology, offering a thrilling driving experience without compromise.",
+    "heroImg": "/images/BYD-SEALION-7.webp",
+    "heroVideo": null,
+    "color": "#1a4f9e",
+    "stats": [
+      { "label": "Range", "value": 456, "unit": "km", "suffix": "" },
+      { "label": "0–100 km/h", "value": 4.5, "unit": "s", "suffix": "" },
+      { "label": "Max Power", "value": 390, "unit": "kW", "suffix": "" },
+      { "label": "Battery", "value": 82.56, "unit": "kWh", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Blade Battery",
+        "subtitle": "Revolutionary Safety",
+        "desc": "BYD's Blade Battery technology redefines safety standards. Engineered to pass the nail penetration test without combustion or explosion, it delivers unmatched structural integrity alongside long-lasting performance.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      },
+      {
+        "title": "e-Platform 3.0",
+        "subtitle": "Pure Intelligence",
+        "desc": "Built on BYD's next-generation e-Platform 3.0, the SEALION 7 integrates 8-in-1 electric powertrain technology, ultra-fast charging, and vehicle-to-load capability for a truly intelligent driving experience.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "DiLink Smart System",
+        "subtitle": "Connected Living",
+        "desc": "The 15.6-inch rotating touchscreen powered by DiLink 100 puts control at your fingertips. Real-time OTA updates, voice control, and a full app ecosystem keep you seamlessly connected.",
+        "img": "/images/3.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "Drive Type", "value": "AWD" },
+        { "label": "Motor Output", "value": "390 kW" },
+        { "label": "Max Torque", "value": "620 Nm" },
+        { "label": "0–100 km/h", "value": "4.5 s" },
+        { "label": "Top Speed", "value": "215 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "WLTP Range", "value": "456 km" },
+        { "label": "Battery Capacity", "value": "82.56 kWh" },
+        { "label": "DC Fast Charge", "value": "150 kW" },
+        { "label": "Charge 10–80%", "value": "< 30 min" },
+        { "label": "AC Charging", "value": "11 kW" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,830 mm" },
+        { "label": "Width", "value": "1,925 mm" },
+        { "label": "Height", "value": "1,620 mm" },
+        { "label": "Wheelbase", "value": "2,930 mm" },
+        { "label": "Boot Space", "value": "520 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "15.6\" Rotating" },
+        { "label": "DiPilot", "value": "L2+ ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "3.3 kW" },
+        { "label": "Sound System", "value": "Dynaudio 12-spk" }
+      ]
+    }
+  },
+  "seal": {
+    "slug": "seal",
+    "name": "BYD SEAL",
+    "tagline": "All-Electric Performance Saloon",
+    "description": "A bold expression of BYD's Ocean Aesthetics design philosophy — where performance meets elegance in a stunning electric saloon.",
+    "heroImg": "/images/BYD-SEAL.webp",
+    "heroVideo": null,
+    "color": "#0f3460",
+    "stats": [
+      { "label": "Range", "value": 570, "unit": "km", "suffix": "" },
+      { "label": "0–100 km/h", "value": 3.8, "unit": "s", "suffix": "" },
+      { "label": "Max Power", "value": 390, "unit": "kW", "suffix": "" },
+      { "label": "Battery", "value": 82.56, "unit": "kWh", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Ocean Aesthetics",
+        "subtitle": "Design Inspired by the Sea",
+        "desc": "The SEAL's flowing lines draw inspiration from the ocean, embodying fluidity and grace. Every curve is sculpted with purpose, achieving a drag coefficient of just 0.219 Cd.",
+        "img": "/images/seal.webp",
+        "imgRight": false
+      },
+      {
+        "title": "iTAC Technology",
+        "subtitle": "Intelligent Traction Control",
+        "desc": "BYD's patented Intelligent Torque Adaptation Control technology actively distributes torque between axles in as little as 10ms — 100x faster than traditional systems.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Cell-to-Body",
+        "subtitle": "Structural Innovation",
+        "desc": "The Blade Battery is integrated directly into the vehicle's floor, forming part of the structural body. This lowers the centre of gravity, improves rigidity, and maximises cabin space.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "Drive Type", "value": "AWD" },
+        { "label": "Motor Output", "value": "390 kW" },
+        { "label": "Max Torque", "value": "670 Nm" },
+        { "label": "0–100 km/h", "value": "3.8 s" },
+        { "label": "Top Speed", "value": "180 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "WLTP Range", "value": "570 km" },
+        { "label": "Battery Capacity", "value": "82.56 kWh" },
+        { "label": "DC Fast Charge", "value": "150 kW" },
+        { "label": "Charge 10–80%", "value": "< 30 min" },
+        { "label": "AC Charging", "value": "11 kW" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,800 mm" },
+        { "label": "Width", "value": "1,875 mm" },
+        { "label": "Height", "value": "1,460 mm" },
+        { "label": "Wheelbase", "value": "2,920 mm" },
+        { "label": "Boot Space", "value": "400 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "15.6\" Rotating" },
+        { "label": "DiPilot", "value": "L2+ ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "3.3 kW" },
+        { "label": "Sound System", "value": "Dynaudio 12-spk" }
+      ]
+    }
+  },
+  "seal-u": {
+    "slug": "seal-u",
+    "name": "BYD SEAL U",
+    "tagline": "All-Electric Versatile SUV",
+    "description": "Spacious, capable, and technologically advanced — the SEAL U delivers everything a modern family needs in a premium electric SUV.",
+    "heroImg": "/images/BYD-SEAL-U.webp",
+    "heroVideo": null,
+    "color": "#16213e",
+    "stats": [
+      { "label": "Range", "value": 420, "unit": "km", "suffix": "" },
+      { "label": "0–100 km/h", "value": 6.9, "unit": "s", "suffix": "" },
+      { "label": "Max Power", "value": 160, "unit": "kW", "suffix": "" },
+      { "label": "Battery", "value": 71.8, "unit": "kWh", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Family Space",
+        "subtitle": "Generous & Versatile",
+        "desc": "With 552L of boot space expandable to 1,440L with rear seats folded, the SEAL U adapts to every adventure. Thoughtful storage solutions are integrated throughout the cabin.",
+        "img": "/images/sealu.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Smart Driving",
+        "subtitle": "DiPilot Assistance",
+        "desc": "DiPilot L2+ driver assistance keeps you safe and relaxed. Adaptive cruise, lane-keeping, automatic emergency braking, and 360° camera system work together seamlessly.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Blade Battery",
+        "subtitle": "Long-lasting Power",
+        "desc": "The 71.8 kWh Blade Battery provides exceptional range and safety. Its cell-level thermal management ensures optimal performance in all weather conditions.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "Drive Type", "value": "FWD" },
+        { "label": "Motor Output", "value": "160 kW" },
+        { "label": "Max Torque", "value": "310 Nm" },
+        { "label": "0–100 km/h", "value": "6.9 s" },
+        { "label": "Top Speed", "value": "175 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "WLTP Range", "value": "420 km" },
+        { "label": "Battery Capacity", "value": "71.8 kWh" },
+        { "label": "DC Fast Charge", "value": "100 kW" },
+        { "label": "Charge 10–80%", "value": "< 36 min" },
+        { "label": "AC Charging", "value": "11 kW" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,785 mm" },
+        { "label": "Width", "value": "1,890 mm" },
+        { "label": "Height", "value": "1,668 mm" },
+        { "label": "Wheelbase", "value": "2,765 mm" },
+        { "label": "Boot Space", "value": "552 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "12.8\" Central" },
+        { "label": "DiPilot", "value": "L2 ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Available" },
+        { "label": "Sound System", "value": "8-speaker" }
+      ]
+    }
+  },
+  "han": {
+    "slug": "han",
+    "name": "BYD HAN",
+    "tagline": "The All-Electric Executive Saloon",
+    "description": "Named after China's greatest dynasty, the HAN is BYD's flagship saloon — combining breathtaking performance with refined luxury.",
+    "heroImg": "/images/BYD-HAN.webp",
+    "heroVideo": null,
+    "color": "#0a0a1a",
+    "stats": [
+      { "label": "Range", "value": 521, "unit": "km", "suffix": "" },
+      { "label": "0–100 km/h", "value": 3.9, "unit": "s", "suffix": "" },
+      { "label": "Max Power", "value": 380, "unit": "kW", "suffix": "" },
+      { "label": "Battery", "value": 85.4, "unit": "kWh", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Executive Presence",
+        "subtitle": "Dragon Face Design",
+        "desc": "The HAN's exterior is a masterclass in luxury automotive design. The iconic Dragon Face design language creates an imposing yet elegant silhouette that commands attention on every road.",
+        "img": "/images/BYD-HAN.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Supreme Comfort",
+        "subtitle": "First-Class Interior",
+        "desc": "Nappa leather seating, panoramic sunroof, and ambient lighting create a sanctuary on wheels. The rear executive lounge offers airline-class legroom and massage seats.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Blade Battery",
+        "subtitle": "500+ km Confidence",
+        "desc": "With 521km of WLTP range and 150kW DC fast charging, the HAN eliminates range anxiety entirely. Charge from 10–80% in under 35 minutes.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "Drive Type", "value": "AWD" },
+        { "label": "Motor Output", "value": "380 kW" },
+        { "label": "Max Torque", "value": "700 Nm" },
+        { "label": "0–100 km/h", "value": "3.9 s" },
+        { "label": "Top Speed", "value": "180 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "WLTP Range", "value": "521 km" },
+        { "label": "Battery Capacity", "value": "85.4 kWh" },
+        { "label": "DC Fast Charge", "value": "150 kW" },
+        { "label": "Charge 10–80%", "value": "< 35 min" },
+        { "label": "AC Charging", "value": "11 kW" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,995 mm" },
+        { "label": "Width", "value": "1,910 mm" },
+        { "label": "Height", "value": "1,495 mm" },
+        { "label": "Wheelbase", "value": "2,920 mm" },
+        { "label": "Boot Space", "value": "410 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "15.6\" Rotating" },
+        { "label": "DiPilot", "value": "L2+ ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Yes" },
+        { "label": "Sound System", "value": "Dynaudio 16-spk" }
+      ]
+    }
+  },
+  "tang": {
+    "slug": "tang",
+    "name": "BYD TANG",
+    "tagline": "The 7-Seater All-Electric Performance SUV",
+    "description": "Bold, powerful, and spacious — the TANG is engineered for those who refuse to compromise, offering 7-seat versatility and supercar acceleration.",
+    "heroImg": "/images/BYD-TANG.webp",
+    "heroVideo": null,
+    "color": "#1a0a0a",
+    "stats": [
+      { "label": "Range", "value": 400, "unit": "km", "suffix": "" },
+      { "label": "0–100 km/h", "value": 4.6, "unit": "s", "suffix": "" },
+      { "label": "Max Power", "value": 380, "unit": "kW", "suffix": "" },
+      { "label": "Seats", "value": 7, "unit": "", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "7-Seat Luxury",
+        "subtitle": "Space for Everyone",
+        "desc": "Three rows of premium seating with captain's chairs in row two and a fold-flat third row make the TANG the ultimate family SUV. Every passenger travels in first-class comfort.",
+        "img": "/images/BYD-TANG.webp",
+        "imgRight": false
+      },
+      {
+        "title": "AWD Performance",
+        "subtitle": "Dual Motor Mastery",
+        "desc": "Dual electric motors deliver 380kW of combined power, launching the TANG from 0–100km/h in just 4.6 seconds while maintaining superb composure across all terrains.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Intelligent Safety",
+        "subtitle": "Five-Star Protection",
+        "desc": "The TANG achieved 5-star ratings across all Euro NCAP categories. BYD's Blade Battery provides structural reinforcement while eliminating thermal runaway risk.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "Drive Type", "value": "AWD" },
+        { "label": "Motor Output", "value": "380 kW" },
+        { "label": "Max Torque", "value": "680 Nm" },
+        { "label": "0–100 km/h", "value": "4.6 s" },
+        { "label": "Top Speed", "value": "180 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "WLTP Range", "value": "400 km" },
+        { "label": "Battery Capacity", "value": "108.8 kWh" },
+        { "label": "DC Fast Charge", "value": "170 kW" },
+        { "label": "Charge 10–80%", "value": "< 40 min" },
+        { "label": "AC Charging", "value": "11 kW" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,970 mm" },
+        { "label": "Width", "value": "1,955 mm" },
+        { "label": "Height", "value": "1,745 mm" },
+        { "label": "Wheelbase", "value": "2,820 mm" },
+        { "label": "Seating", "value": "7 seats" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "12.8\" Central" },
+        { "label": "DiPilot", "value": "L2 ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Available" },
+        { "label": "Sound System", "value": "8-speaker" }
+      ]
+    }
+  },
+  "dolphin": {
+    "slug": "dolphin",
+    "name": "BYD DOLPHIN",
+    "tagline": "The Fun & Flexible Hatchback",
+    "description": "Smart, stylish, and surprisingly spacious — the DOLPHIN brings pure electric joy to the city and beyond at an accessible price.",
+    "heroImg": "/images/BYD-DOLPIN.webp",
+    "heroVideo": null,
+    "color": "#004e92",
+    "stats": [
+      { "label": "Range", "value": 427, "unit": "km", "suffix": "" },
+      { "label": "0–100 km/h", "value": 7.0, "unit": "s", "suffix": "" },
+      { "label": "Max Power", "value": 150, "unit": "kW", "suffix": "" },
+      { "label": "Battery", "value": 60.48, "unit": "kWh", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Ocean Interior",
+        "subtitle": "Playful by Design",
+        "desc": "The DOLPHIN's interior is a celebration of creativity — inspired by ocean waves, with flowing surfaces, ambient lighting in 64 colours, and a floating central console.",
+        "img": "/images/BYD-DOLPIN.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Smart Efficiency",
+        "subtitle": "More Range, Less Cost",
+        "desc": "With up to 427km of WLTP range and low running costs, the DOLPHIN makes EV ownership effortless. 88kW DC fast charging gets you back on the road in no time.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Connected Tech",
+        "subtitle": "DiLink Entertainment",
+        "desc": "A 12.8-inch rotating display, over-the-air updates, and the full DiLink 300 ecosystem bring smartphone-level intelligence to your everyday drive.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "Drive Type", "value": "FWD" },
+        { "label": "Motor Output", "value": "150 kW" },
+        { "label": "Max Torque", "value": "310 Nm" },
+        { "label": "0–100 km/h", "value": "7.0 s" },
+        { "label": "Top Speed", "value": "160 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "WLTP Range", "value": "427 km" },
+        { "label": "Battery Capacity", "value": "60.48 kWh" },
+        { "label": "DC Fast Charge", "value": "88 kW" },
+        { "label": "Charge 30–80%", "value": "< 30 min" },
+        { "label": "AC Charging", "value": "7.2 kW" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,290 mm" },
+        { "label": "Width", "value": "1,770 mm" },
+        { "label": "Height", "value": "1,570 mm" },
+        { "label": "Wheelbase", "value": "2,700 mm" },
+        { "label": "Boot Space", "value": "345 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "12.8\" Rotating" },
+        { "label": "DiPilot", "value": "L2 ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "No" },
+        { "label": "Sound System", "value": "6-speaker" }
+      ]
+    }
+  },
+  "dolphin-surf": {
+    "slug": "dolphin-surf",
+    "name": "BYD DOLPHIN SURF",
+    "tagline": "The New Electric Adventure Car",
+    "description": "Where urban agility meets weekend adventure — the DOLPHIN SURF brings a bold new shape to electric mobility.",
+    "heroImg": "/images/BYD-DOLPHIN-SURF.webp",
+    "heroVideo": "/images/dolphin-surf.mp4",
+    "color": "#00457c",
+    "stats": [
+      { "label": "Range", "value": 420, "unit": "km", "suffix": "" },
+      { "label": "0–100 km/h", "value": 6.9, "unit": "s", "suffix": "" },
+      { "label": "Max Power", "value": 160, "unit": "kW", "suffix": "" },
+      { "label": "Battery", "value": 60.48, "unit": "kWh", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Adventure Ready",
+        "subtitle": "Go Anywhere",
+        "desc": "Raised ride height, all-terrain capability, and robust exterior styling make the DOLPHIN SURF equally at home on city streets and weekend trails.",
+        "img": "/images/BYD-DOLPHIN-SURF.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Bold Design",
+        "subtitle": "Stand Out",
+        "desc": "The DOLPHIN SURF's expressive exterior challenges convention with its adventure-inspired silhouette, bold roof rails, and muscular wheel arches.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Smart Interior",
+        "subtitle": "Practical & Connected",
+        "desc": "A thoughtfully designed interior with versatile storage, a 10.1-inch infotainment display, and DiLink connectivity keeps you organised and entertained.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "Drive Type", "value": "FWD" },
+        { "label": "Motor Output", "value": "160 kW" },
+        { "label": "Max Torque", "value": "310 Nm" },
+        { "label": "0–100 km/h", "value": "6.9 s" },
+        { "label": "Top Speed", "value": "160 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "WLTP Range", "value": "420 km" },
+        { "label": "Battery Capacity", "value": "60.48 kWh" },
+        { "label": "DC Fast Charge", "value": "88 kW" },
+        { "label": "Charge 30–80%", "value": "< 30 min" },
+        { "label": "AC Charging", "value": "11 kW" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,150 mm" },
+        { "label": "Width", "value": "1,770 mm" },
+        { "label": "Height", "value": "1,630 mm" },
+        { "label": "Wheelbase", "value": "2,700 mm" },
+        { "label": "Boot Space", "value": "370 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "10.1\" Central" },
+        { "label": "DiPilot", "value": "L2 ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Available" },
+        { "label": "Sound System", "value": "6-speaker" }
+      ]
+    }
+  },
+  "atto-3-evo": {
+    "slug": "atto-3-evo",
+    "name": "BYD ATTO 3 EVO",
+    "tagline": "All-Electric Compact SUV — Evolved",
+    "description": "The ATTO 3 EVO refines everything you loved about the original with enhanced range, upgraded technology, and a sharper design.",
+    "heroImg": "/images/BYD-ATTO3-EVO.webp",
+    "heroVideo": null,
+    "color": "#1a3a5c",
+    "stats": [
+      { "label": "Range", "value": 420, "unit": "km", "suffix": "" },
+      { "label": "0–100 km/h", "value": 7.3, "unit": "s", "suffix": "" },
+      { "label": "Max Power", "value": 150, "unit": "kW", "suffix": "" },
+      { "label": "Battery", "value": 60.48, "unit": "kWh", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Evolved Design",
+        "subtitle": "Sharper. Bolder.",
+        "desc": "The ATTO 3 EVO's updated exterior features a redesigned front fascia, LED matrix headlights, and new alloy wheel options that bring a fresh energy to this popular SUV.",
+        "img": "/images/atto3-evo.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Interior Comfort",
+        "subtitle": "Inspired by Sport & Fitness",
+        "desc": "Unique elastic net door panels and sporty trim options create an interior like no other — ergonomically designed for the active lifestyle driver.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Enhanced Range",
+        "subtitle": "Go Further",
+        "desc": "With up to 420km WLTP range, the ATTO 3 EVO covers your daily commute and weekend escapes with ease — and charges rapidly when you need to top up.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "Drive Type", "value": "FWD" },
+        { "label": "Motor Output", "value": "150 kW" },
+        { "label": "Max Torque", "value": "310 Nm" },
+        { "label": "0–100 km/h", "value": "7.3 s" },
+        { "label": "Top Speed", "value": "160 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "WLTP Range", "value": "420 km" },
+        { "label": "Battery Capacity", "value": "60.48 kWh" },
+        { "label": "DC Fast Charge", "value": "88 kW" },
+        { "label": "Charge 30–80%", "value": "< 30 min" },
+        { "label": "AC Charging", "value": "11 kW" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,455 mm" },
+        { "label": "Width", "value": "1,875 mm" },
+        { "label": "Height", "value": "1,615 mm" },
+        { "label": "Wheelbase", "value": "2,720 mm" },
+        { "label": "Boot Space", "value": "440 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "12.8\" Rotating" },
+        { "label": "DiPilot", "value": "L2 ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Available" },
+        { "label": "Sound System", "value": "8-speaker" }
+      ]
+    }
+  },
+  "sealion-5-dm-i": {
+    "slug": "sealion-5-dm-i",
+    "name": "BYD SEALION 5 DM-i",
+    "tagline": "Super Hybrid SUV",
+    "description": "The SEALION 5 DM-i combines BYD's revolutionary Super DM technology with a premium SUV body for exceptional efficiency and performance.",
+    "heroImg": "/images/BYD-SEALION5-DM-i.webp",
+    "heroVideo": null,
+    "color": "#1a2a1a",
+    "stats": [
+      { "label": "EV Range", "value": 100, "unit": "km", "suffix": "+" },
+      { "label": "0–100 km/h", "value": 5.9, "unit": "s", "suffix": "" },
+      { "label": "Total Power", "value": 259, "unit": "kW", "suffix": "" },
+      { "label": "Fuel Cons.", "value": 5.9, "unit": "L/100km", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Super DM Technology",
+        "subtitle": "Hybrid Reinvented",
+        "desc": "BYD's fifth-generation Super DM system achieves an efficiency breakthrough — operating primarily as an electric vehicle for daily use, with the petrol engine as a seamless backup.",
+        "img": "/images/BYD-SEALION5-DM-i.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Dual Power Modes",
+        "subtitle": "EV or Hybrid",
+        "desc": "Drive in pure EV mode for up to 100km, or let the intelligent hybrid system seamlessly blend petrol and electric power for extended journeys with minimal fuel consumption.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Premium SUV",
+        "subtitle": "Style & Space",
+        "desc": "Premium exterior design with a spacious, well-equipped interior. The SEALION 5 DM-i doesn't compromise on luxury while delivering class-leading hybrid efficiency.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "System Type", "value": "PHEV" },
+        { "label": "Total Power", "value": "259 kW" },
+        { "label": "Engine", "value": "1.5L Turbo" },
+        { "label": "0–100 km/h", "value": "5.9 s" },
+        { "label": "Top Speed", "value": "185 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "EV Range (WLTP)", "value": "100+ km" },
+        { "label": "Battery Capacity", "value": "15.87 kWh" },
+        { "label": "DC Fast Charge", "value": "40 kW" },
+        { "label": "AC Charging", "value": "7.2 kW" },
+        { "label": "Fuel Consumption", "value": "5.9 L/100km" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,720 mm" },
+        { "label": "Width", "value": "1,900 mm" },
+        { "label": "Height", "value": "1,680 mm" },
+        { "label": "Wheelbase", "value": "2,765 mm" },
+        { "label": "Boot Space", "value": "450 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "15.6\" Rotating" },
+        { "label": "DiPilot", "value": "L2 ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Yes" },
+        { "label": "Sound System", "value": "8-speaker" }
+      ]
+    }
+  },
+  "seal-u-dm-i": {
+    "slug": "seal-u-dm-i",
+    "name": "BYD SEAL U DM-i",
+    "tagline": "The All-New Plug-In Hybrid SUV",
+    "description": "The SEAL U DM-i brings BYD's Super DM hybrid mastery to a spacious family SUV — impressive EV range with the reassurance of a petrol backup.",
+    "heroImg": "/images/BYD-SEAL-U-DM-i.webp",
+    "heroVideo": null,
+    "color": "#0a1a2a",
+    "stats": [
+      { "label": "EV Range", "value": 100, "unit": "km", "suffix": "+" },
+      { "label": "0–100 km/h", "value": 6.9, "unit": "s", "suffix": "" },
+      { "label": "Total Power", "value": 233, "unit": "kW", "suffix": "" },
+      { "label": "Fuel Cons.", "value": 6.5, "unit": "L/100km", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Super DM Hybrid",
+        "subtitle": "Best of Both Worlds",
+        "desc": "The fifth-generation Super DM system delivers exceptional electric-first driving with seamless hybrid operation. Over 1,000km of combined range eliminates range anxiety completely.",
+        "img": "/images/BYD-SEAL-U-DM-i.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Family Space",
+        "subtitle": "Room for Everything",
+        "desc": "Generous cabin dimensions, 552L of boot space, and a panoramic glass roof make the SEAL U DM-i the ideal companion for family adventures near and far.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Smart Technology",
+        "subtitle": "Always Connected",
+        "desc": "DiLink 100 infotainment, DiPilot driver assistance, and over-the-air updates keep the SEAL U DM-i at the cutting edge throughout your ownership.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "System Type", "value": "PHEV" },
+        { "label": "Total Power", "value": "233 kW" },
+        { "label": "Engine", "value": "1.5L NA" },
+        { "label": "0–100 km/h", "value": "6.9 s" },
+        { "label": "Top Speed", "value": "180 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "EV Range (WLTP)", "value": "100+ km" },
+        { "label": "Battery Capacity", "value": "18.3 kWh" },
+        { "label": "DC Fast Charge", "value": "No" },
+        { "label": "AC Charging", "value": "7.2 kW" },
+        { "label": "Fuel Consumption", "value": "6.5 L/100km" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,785 mm" },
+        { "label": "Width", "value": "1,890 mm" },
+        { "label": "Height", "value": "1,668 mm" },
+        { "label": "Wheelbase", "value": "2,765 mm" },
+        { "label": "Boot Space", "value": "435 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "12.8\" Central" },
+        { "label": "DiPilot", "value": "L2 ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Available" },
+        { "label": "Sound System", "value": "8-speaker" }
+      ]
+    }
+  },
+  "seal-6-dm-i": {
+    "slug": "seal-6-dm-i",
+    "name": "BYD SEAL 6 DM-i",
+    "tagline": "Plug-in Hybrid Car",
+    "description": "The SEAL 6 DM-i merges the elegant design of the SEAL saloon with BYD's Super DM hybrid technology for an extraordinary driving experience.",
+    "heroImg": "/images/BYD-SEAL-6-DMi.webp",
+    "heroVideo": "/images/bc-1-hero.mp4",
+    "color": "#1a1a0a",
+    "stats": [
+      { "label": "EV Range", "value": 120, "unit": "km", "suffix": "+" },
+      { "label": "0–100 km/h", "value": 5.4, "unit": "s", "suffix": "" },
+      { "label": "Total Power", "value": 316, "unit": "kW", "suffix": "" },
+      { "label": "Fuel Cons.", "value": 5.4, "unit": "L/100km", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Super DM Performance",
+        "subtitle": "Hybrid Power Unleashed",
+        "desc": "The Super DM system's combination of a turbocharged petrol engine and high-output electric motors delivers 316kW of total power with sub-5.4-second 0–100km/h acceleration.",
+        "img": "/images/seal6-dm-i.webp",
+        "imgRight": false
+      },
+      {
+        "title": "120+ km EV Range",
+        "subtitle": "Electric-First Daily Driving",
+        "desc": "With over 120km of pure electric range, most drivers will rarely use petrol for daily commutes. The intelligent energy management system maximises efficiency at all times.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Ocean Aesthetics",
+        "subtitle": "Saloon Elegance",
+        "desc": "The SEAL 6's flowing saloon silhouette and premium interior appointments create a refined environment that rivals dedicated luxury marques at a fraction of the cost.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "System Type", "value": "PHEV" },
+        { "label": "Total Power", "value": "316 kW" },
+        { "label": "Engine", "value": "1.5L Turbo" },
+        { "label": "0–100 km/h", "value": "5.4 s" },
+        { "label": "Top Speed", "value": "185 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "EV Range (WLTP)", "value": "120+ km" },
+        { "label": "Battery Capacity", "value": "21.4 kWh" },
+        { "label": "DC Fast Charge", "value": "50 kW" },
+        { "label": "AC Charging", "value": "11 kW" },
+        { "label": "Fuel Consumption", "value": "5.4 L/100km" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,830 mm" },
+        { "label": "Width", "value": "1,875 mm" },
+        { "label": "Height", "value": "1,460 mm" },
+        { "label": "Wheelbase", "value": "2,920 mm" },
+        { "label": "Boot Space", "value": "380 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "15.6\" Rotating" },
+        { "label": "DiPilot", "value": "L2+ ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Yes" },
+        { "label": "Sound System", "value": "Dynaudio 12-spk" }
+      ]
+    }
+  },
+  "seal-6-dm-i-touring": {
+    "slug": "seal-6-dm-i-touring",
+    "name": "BYD SEAL 6 DM-i TOURING",
+    "tagline": "Plug-in Hybrid Estate",
+    "description": "The SEAL 6 DM-i TOURING extends the acclaimed saloon's virtues into a practical and elegant estate body — perfect for those who need space without sacrificing style.",
+    "heroImg": "/images/TOURING.webp",
+    "heroVideo": null,
+    "color": "#1a1a1a",
+    "stats": [
+      { "label": "EV Range", "value": 120, "unit": "km", "suffix": "+" },
+      { "label": "0–100 km/h", "value": 5.4, "unit": "s", "suffix": "" },
+      { "label": "Total Power", "value": 316, "unit": "kW", "suffix": "" },
+      { "label": "Boot Space", "value": 570, "unit": "L", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "Estate Versatility",
+        "subtitle": "More Space. Same Power.",
+        "desc": "The TOURING's estate body adds 570L of boot space, expandable to 1,480L. Roof rails, a hands-free tailgate, and a flat load floor make it the practical choice without compromise.",
+        "img": "/images/seal6-dm-i-touring.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Super DM System",
+        "subtitle": "Effortless Performance",
+        "desc": "Sharing the SEAL 6 saloon's 316kW Super DM system, the TOURING delivers performance to match its practicality — covering 0–100km/h in just 5.4 seconds.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Premium Interior",
+        "subtitle": "Long-Journey Comfort",
+        "desc": "Heated and ventilated front seats, a panoramic sunroof, and premium Dynaudio sound system transform every journey into a first-class experience.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "System Type", "value": "PHEV" },
+        { "label": "Total Power", "value": "316 kW" },
+        { "label": "Engine", "value": "1.5L Turbo" },
+        { "label": "0–100 km/h", "value": "5.4 s" },
+        { "label": "Top Speed", "value": "185 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "EV Range (WLTP)", "value": "120+ km" },
+        { "label": "Battery Capacity", "value": "21.4 kWh" },
+        { "label": "DC Fast Charge", "value": "50 kW" },
+        { "label": "AC Charging", "value": "11 kW" },
+        { "label": "Fuel Consumption", "value": "5.4 L/100km" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,920 mm" },
+        { "label": "Width", "value": "1,875 mm" },
+        { "label": "Height", "value": "1,480 mm" },
+        { "label": "Wheelbase", "value": "2,920 mm" },
+        { "label": "Boot Space", "value": "570 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "15.6\" Rotating" },
+        { "label": "DiPilot", "value": "L2+ ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Yes" },
+        { "label": "Sound System", "value": "Dynaudio 12-spk" }
+      ]
+    }
+  },
+  "atto-2-dm-i": {
+    "slug": "atto-2-dm-i",
+    "name": "BYD ATTO 2 DM-i",
+    "tagline": "Compact Hybrid City Car",
+    "description": "The ATTO 2 DM-i brings BYD's Super DM efficiency to a compact package — ideal for city life with impressive electric range and low running costs.",
+    "heroImg": "/images/Atto2dmi.webp",
+    "heroVideo": "/images/atto2-dm-i.mp4",
+    "color": "#1a0a2a",
+    "stats": [
+      { "label": "EV Range", "value": 80, "unit": "km", "suffix": "+" },
+      { "label": "0–100 km/h", "value": 7.5, "unit": "s", "suffix": "" },
+      { "label": "Total Power", "value": 195, "unit": "kW", "suffix": "" },
+      { "label": "Fuel Cons.", "value": 4.9, "unit": "L/100km", "suffix": "" }
+    ],
+    "features": [
+      {
+        "title": "City Smart",
+        "subtitle": "Urban Excellence",
+        "desc": "The ATTO 2 DM-i's compact dimensions make it nimble in city traffic while the Super DM system ensures you spend more time driving and less time at the fuel pump.",
+        "img": "/images/Atto2dmi.webp",
+        "imgRight": false
+      },
+      {
+        "title": "Efficient Hybrid",
+        "subtitle": "4.9L/100km",
+        "desc": "At just 4.9L/100km in hybrid mode and 80+ km EV range, the ATTO 2 DM-i sets a new benchmark for efficiency in the compact SUV segment.",
+        "img": "/images/2.webp",
+        "imgRight": true
+      },
+      {
+        "title": "Modern Interior",
+        "subtitle": "Smart & Stylish",
+        "desc": "A clean, modern interior with a large central display, wireless phone charging, and multiple connectivity options keeps you comfortable and connected.",
+        "img": "/images/1.webp",
+        "imgRight": false
+      }
+    ],
+    "specs": {
+      "Performance": [
+        { "label": "System Type", "value": "PHEV" },
+        { "label": "Total Power", "value": "195 kW" },
+        { "label": "Engine", "value": "1.5L NA" },
+        { "label": "0–100 km/h", "value": "7.5 s" },
+        { "label": "Top Speed", "value": "170 km/h" }
+      ],
+      "Range & Charging": [
+        { "label": "EV Range (WLTP)", "value": "80+ km" },
+        { "label": "Battery Capacity", "value": "10.08 kWh" },
+        { "label": "DC Fast Charge", "value": "No" },
+        { "label": "AC Charging", "value": "6.6 kW" },
+        { "label": "Fuel Consumption", "value": "4.9 L/100km" }
+      ],
+      "Dimensions": [
+        { "label": "Length", "value": "4,310 mm" },
+        { "label": "Width", "value": "1,830 mm" },
+        { "label": "Height", "value": "1,625 mm" },
+        { "label": "Wheelbase", "value": "2,620 mm" },
+        { "label": "Boot Space", "value": "340 L" }
+      ],
+      "Technology": [
+        { "label": "Display", "value": "12.8\" Rotating" },
+        { "label": "DiPilot", "value": "L2 ADAS" },
+        { "label": "OTA Updates", "value": "Yes" },
+        { "label": "V2L", "value": "Available" },
+        { "label": "Sound System", "value": "6-speaker" }
+      ]
+    }
+  }
+}

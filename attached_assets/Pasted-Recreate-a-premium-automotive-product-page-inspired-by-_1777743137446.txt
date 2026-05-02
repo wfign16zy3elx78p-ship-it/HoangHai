@@ -1,0 +1,162 @@
+Recreate a premium automotive product page inspired by the BYD Sealion 7 page.
+
+---
+
+# 🎯 GOAL
+
+Build a high-end, production-quality automotive landing page with modern UI/UX and smooth interactions.
+
+---
+
+# ⚙️ FULL TECH STACK (MANDATORY)
+
+* Next.js (App Router)
+* React (Functional Components + Hooks)
+* TailwindCSS
+* GSAP (for animations)
+* Framer Motion (micro-interactions)
+* Three.js (for 3D car viewer if possible)
+* React Three Fiber (optional for 3D integration)
+* next/image (for optimization)
+
+---
+
+# 🧱 PAGE STRUCTURE
+
+## 1. HEADER (floating)
+
+* Transparent → becomes solid on scroll
+* Logo left
+* Navigation center
+* CTA right
+
+---
+
+## 2. HERO SECTION
+
+* Fullscreen
+* Background: car image or video
+* Large title (SEALION 7)
+* Subtitle
+* CTA buttons
+* Smooth fade-in animation (GSAP)
+
+---
+
+## 3. VEHICLE OVERVIEW
+
+* Big car image
+* Key stats:
+
+  * Range
+  * Acceleration
+  * Battery
+* Animated counters
+
+---
+
+## 4. FEATURE SECTIONS
+
+* Alternating layout:
+
+  * Image left / text right
+  * Then reverse
+* Scroll-triggered animations
+
+---
+
+## 5. SPECIFICATIONS
+
+* Grid layout
+* Tabs or categories
+* Clean typography
+
+---
+
+## 6. 3D VIEWER (ADVANCED)
+
+* Interactive car model
+* Rotate with mouse
+* Change color (state-based)
+
+---
+
+## 7. CTA / NEWSLETTER
+
+---
+
+## 8. FOOTER
+
+---
+
+# 🎬 ANIMATION (IMPORTANT)
+
+* GSAP ScrollTrigger
+* Fade-in + translateY
+* Smooth scroll (optional)
+* Hover effects with Framer Motion
+
+---
+
+# 🎨 DESIGN SYSTEM
+
+* Black premium theme (#000)
+* Glassmorphism:
+  backdrop-blur + transparency
+* Rounded corners (16–24px)
+* Soft glow on hover
+* High contrast typography
+
+---
+
+# ⚡ PERFORMANCE
+
+* Lazy load images
+* Use next/image
+* Avoid heavy JS blocking
+
+---
+
+# 🧠 STATE MANAGEMENT
+
+* useState (UI interactions)
+* useEffect (animations)
+* Optional: Zustand for global state
+
+---
+
+# 📂 STRUCTURE
+
+/app
+/components
+Header.tsx
+Hero.tsx
+Overview.tsx
+Features.tsx
+Specs.tsx
+Viewer3D.tsx
+Footer.tsx
+
+/public/images
+
+---
+
+# ⚠️ STRICT RULES
+
+* DO NOT use Vue
+* DO NOT use CMS
+* DO NOT copy raw HTML
+* Rebuild everything using React
+
+---
+
+# ✅ OUTPUT
+
+* Full working Next.js project
+* Clean reusable components
+* Smooth animations
+* Premium UI similar to Tesla / Apple level
+
+---
+
+Return full working code.
