@@ -1,5 +1,4 @@
 import { Router, type IRouter } from "express";
-import nodemailer from "nodemailer";
 
 const router: IRouter = Router();
 
@@ -10,8 +9,7 @@ async function sendTelegram(text: string) {
   const chatId = process.env["TELEGRAM_CHAT_ID"];
   if (!token || !chatId) return;
 
-  const url = `https://api.telegram.org/bot${token}/sendMessage`;
-  const res = await fetch(url, {
+  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML" }),
@@ -20,27 +18,21 @@ async function sendTelegram(text: string) {
 }
 
 async function sendEmail(subject: string, html: string) {
-  const host = process.env["SMTP_HOST"];
-  const port = Number(process.env["SMTP_PORT"] ?? 587);
-  const user = process.env["SMTP_USER"];
-  const pass = process.env["SMTP_PASS"];
-  const to   = process.env["NOTIFY_EMAIL"];
+  const apiKey = process.env["RESEND_API_KEY"];
+  const to     = process.env["NOTIFY_EMAIL"];
+  const from   = process.env["NOTIFY_FROM"] ?? "BYD Showroom <onboarding@resend.dev>";
 
-  if (!host || !user || !pass || !to) return;
+  if (!apiKey || !to) return;
 
-  const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({ from, to, subject, html }),
   });
-
-  await transporter.sendMail({
-    from: `"BYD Showroom" <${user}>`,
-    to,
-    subject,
-    html,
-  });
+  if (!res.ok) throw new Error(`Resend error: ${await res.text()}`);
 }
 
 /* ── booking email template ─────────────────────────── */
