@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import heroSlides from "../data/heroSlides.json";
+import { useRouter } from "../lib/router";
 
 export default function Hero() {
+  const { navigate } = useRouter();
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -127,14 +129,13 @@ export default function Hero() {
 
           <div className="flex gap-3 flex-wrap">
             {slide.btnList.map((btn, i) => (
-              <a
+              <button
                 key={i}
-                href={btn.link}
+                onClick={() => btn.link.startsWith("/car/") ? navigate(btn.link) : undefined}
                 className={btn.type === 1 ? "btn-glass-primary" : "btn-glass-secondary"}
-                style={{ display: "inline-block" }}
               >
                 {btn.text}
-              </a>
+              </button>
             ))}
           </div>
         </div>

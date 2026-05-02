@@ -1,12 +1,23 @@
 [
   {
+    "id": 0,
+    "imgPc": "/images/BYD-SEALION-7.webp",
+    "video": "",
+    "title": "BYD SEALION 7",
+    "subtitle": "All-Electric Performance SUV",
+    "btnList": [
+      { "text": "EXPLORE MORE", "link": "/car/sealion-7", "type": 1 },
+      { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
+    ]
+  },
+  {
     "id": 1,
     "imgPc": "/images/seal6-dm-i.webp",
     "video": "/images/bc-1-hero.mp4",
     "title": "BYD SEAL 6 DM-i",
     "subtitle": "Plug-in Hybrid Car",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/eu/hybrid-cars/seal-6-dm-i", "type": 1 },
+      { "text": "EXPLORE MORE", "link": "/car/seal-6-dm-i", "type": 1 },
       { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
     ]
   },
@@ -17,7 +28,7 @@
     "title": "BYD SEAL 6 DM-i TOURING",
     "subtitle": "Plug-in Hybrid Estate",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/eu/hybrid-cars/seal-6-dm-i-touring", "type": 1 },
+      { "text": "EXPLORE MORE", "link": "/car/seal-6-dm-i-touring", "type": 1 },
       { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
     ]
   },
@@ -28,7 +39,7 @@
     "title": "BYD DOLPHIN SURF",
     "subtitle": "The New Electric Adventure Car",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/eu/electric-cars/dolphin-surf", "type": 1 },
+      { "text": "EXPLORE MORE", "link": "/car/dolphin-surf", "type": 1 },
       { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
     ]
   },
@@ -39,7 +50,7 @@
     "title": "BYD ATTO 2 DM-i",
     "subtitle": "Compact Hybrid City Car",
     "btnList": [
-      { "text": "EXPLORE MORE", "link": "/eu/hybrid-cars/atto-2-dm-i", "type": 1 },
+      { "text": "EXPLORE MORE", "link": "/car/atto-2-dm-i", "type": 1 },
       { "text": "TEST DRIVE", "link": "/eu/test-drive", "type": 2 }
     ]
   }
