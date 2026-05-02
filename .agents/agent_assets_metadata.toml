@@ -342,3 +342,33 @@ id = "WDvdWbe2x7vlvAWUM42Lg"
 uri = "file://artifacts/byd-eu/public/images/seal-dilink-01.png"
 type = "image"
 title = "BYD SEAL DiLink touchscreen"
+
+[[generated]]
+id = "Yg1uMQ_8hkPs0-EQXPVY8"
+uri = "file://artifacts/byd-eu/public/images/seal-torque-01.png"
+type = "image"
+title = "BYD SEAL instant torque acceleration"
+
+[[generated]]
+id = "O-dc5PJR-Ab5F9fIrhHUI"
+uri = "file://artifacts/byd-eu/public/images/seal-range-01.png"
+type = "image"
+title = "BYD SEAL 570km range highway"
+
+[[generated]]
+id = "-PUrJI33KweEPybWhaEax"
+uri = "file://artifacts/byd-eu/public/images/seal-screen-01.png"
+type = "image"
+title = "BYD SEAL 15.6 rotating screen"
+
+[[generated]]
+id = "toFUF5yEUAjt31n6SGuNk"
+uri = "file://artifacts/byd-eu/public/images/seal-adas-01.png"
+type = "image"
+title = "BYD SEAL L2 ADAS driving assist"
+
+[[generated]]
+id = "lAVPWKMG5ddmO64DThVwk"
+uri = "file://artifacts/byd-eu/public/images/seal-v2l-01.png"
+type = "image"
+title = "BYD SEAL V2L vehicle to load"
