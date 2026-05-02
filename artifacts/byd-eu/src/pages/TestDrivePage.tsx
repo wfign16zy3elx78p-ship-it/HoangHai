@@ -3,43 +3,29 @@ import { useRouter } from "@/lib/router";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+/* ── Cập nhật thông tin showroom của bạn tại đây ── */
+const SHOWROOM = {
+  name: "BYD Showroom",
+  address: "123 Showroom Street",
+  city: "Your City",
+  hours: "Mon – Sat: 8:00 AM – 6:00 PM",
+  phone: "+XX XXX XXX XXXX",
+};
+
 const ALL_MODELS = [
   { slug: "sealion-7", name: "BYD SEALION 7" },
-  { slug: "seal", name: "BYD SEAL" },
-  { slug: "seal-u", name: "BYD SEAL U" },
-  { slug: "han", name: "BYD HAN" },
-  { slug: "tang", name: "BYD TANG" },
-  { slug: "dolphin", name: "BYD DOLPHIN" },
-  { slug: "dolphin-surf", name: "BYD DOLPHIN SURF" },
-  { slug: "atto-3-evo", name: "BYD ATTO 3 EVO" },
-  { slug: "sealion-5-dm-i", name: "BYD SEALION 5 DM-i" },
-  { slug: "seal-u-dm-i", name: "BYD SEAL U DM-i" },
-  { slug: "seal-6-dm-i", name: "BYD SEAL 6 DM-i" },
-  { slug: "seal-6-dm-i-touring", name: "BYD SEAL 6 DM-i TOURING" },
-  { slug: "atto-2-dm-i", name: "BYD ATTO 2 DM-i" },
-];
-
-const DEALERS = [
-  { city: "London", country: "United Kingdom" },
-  { city: "Birmingham", country: "United Kingdom" },
-  { city: "Manchester", country: "United Kingdom" },
-  { city: "Edinburgh", country: "United Kingdom" },
-  { city: "Paris", country: "France" },
-  { city: "Lyon", country: "France" },
-  { city: "Amsterdam", country: "Netherlands" },
-  { city: "Rotterdam", country: "Netherlands" },
-  { city: "Berlin", country: "Germany" },
-  { city: "Munich", country: "Germany" },
-  { city: "Hamburg", country: "Germany" },
-  { city: "Madrid", country: "Spain" },
-  { city: "Barcelona", country: "Spain" },
-  { city: "Milan", country: "Italy" },
-  { city: "Rome", country: "Italy" },
-  { city: "Oslo", country: "Norway" },
-  { city: "Stockholm", country: "Sweden" },
-  { city: "Copenhagen", country: "Denmark" },
-  { city: "Brussels", country: "Belgium" },
-  { city: "Zurich", country: "Switzerland" },
+  { slug: "seal",      name: "BYD SEAL" },
+  { slug: "seal-u",    name: "BYD SEAL U" },
+  { slug: "han",       name: "BYD HAN" },
+  { slug: "tang",      name: "BYD TANG" },
+  { slug: "dolphin",   name: "BYD DOLPHIN" },
+  { slug: "dolphin-surf",       name: "BYD DOLPHIN SURF" },
+  { slug: "atto-3-evo",         name: "BYD ATTO 3 EVO" },
+  { slug: "sealion-5-dm-i",     name: "BYD SEALION 5 DM-i" },
+  { slug: "seal-u-dm-i",        name: "BYD SEAL U DM-i" },
+  { slug: "seal-6-dm-i",        name: "BYD SEAL 6 DM-i" },
+  { slug: "seal-6-dm-i-touring",name: "BYD SEAL 6 DM-i TOURING" },
+  { slug: "atto-2-dm-i",        name: "BYD ATTO 2 DM-i" },
 ];
 
 const TIME_SLOTS = [
@@ -71,7 +57,6 @@ function formatDate(dateStr: string) {
 
 interface FormData {
   model: string;
-  dealer: string;
   firstName: string;
   lastName: string;
   email: string;
@@ -83,7 +68,6 @@ interface FormData {
 
 const EMPTY_FORM: FormData = {
   model: "",
-  dealer: "",
   firstName: "",
   lastName: "",
   email: "",
@@ -97,7 +81,7 @@ const EMPTY_FORM: FormData = {
 function StepIndicator({ step }: { step: number }) {
   const steps = ["Your Car", "Your Details", "Confirmation"];
   return (
-    <div className="flex items-center justify-center gap-0 mb-12 md:mb-16">
+    <div className="flex items-center justify-center mb-12 md:mb-16">
       {steps.map((label, i) => {
         const idx = i + 1;
         const done = step > idx;
@@ -108,9 +92,9 @@ function StepIndicator({ step }: { step: number }) {
               <div
                 className="w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-bold tracking-wide transition-all duration-500"
                 style={{
-                  background: done ? "#fff" : active ? "#fff" : "rgba(255,255,255,0.08)",
+                  background: done || active ? "#fff" : "rgba(255,255,255,0.08)",
                   color: done || active ? "#000" : "rgba(255,255,255,0.3)",
-                  border: active ? "none" : done ? "none" : "1px solid rgba(255,255,255,0.12)",
+                  border: done || active ? "none" : "1px solid rgba(255,255,255,0.12)",
                 }}
               >
                 {done ? (
@@ -139,7 +123,7 @@ function StepIndicator({ step }: { step: number }) {
   );
 }
 
-/* ─────────────────────── Field components ─────────────────────── */
+/* ─────────────────────── Shared field ─────────────────────── */
 function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-1.5">
@@ -155,80 +139,96 @@ const inputCls =
 
 const selectCls = inputCls + " cursor-pointer";
 
+/* ─────────────────────── Showroom card ─────────────────────── */
+function ShowroomCard() {
+  return (
+    <div
+      className="flex flex-col sm:flex-row sm:items-center gap-5 p-5 border border-white/[0.07]"
+      style={{ background: "rgba(255,255,255,0.025)" }}
+    >
+      <div
+        className="w-12 h-12 flex-shrink-0 flex items-center justify-center"
+        style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+          <circle cx="12" cy="9" r="2.5" />
+        </svg>
+      </div>
+      <div className="flex-1">
+        <p className="text-sm font-bold tracking-wide text-white">{SHOWROOM.name}</p>
+        <p className="text-[11px] text-white/40 mt-0.5">{SHOWROOM.address}, {SHOWROOM.city}</p>
+      </div>
+      <div className="flex flex-col gap-1 sm:text-right">
+        <p className="text-[10px] text-white/30 font-medium">{SHOWROOM.hours}</p>
+        <p className="text-[10px] text-white/30">{SHOWROOM.phone}</p>
+      </div>
+    </div>
+  );
+}
+
 /* ─────────────────────── Step 1 ─────────────────────── */
 function Step1({
   form, setForm, errors, onNext,
-}: { form: FormData; setForm: (f: FormData) => void; errors: Partial<FormData>; onNext: () => void }) {
+}: { form: FormData; setForm: (f: FormData) => void; errors: Partial<Record<keyof FormData, string>>; onNext: () => void }) {
+  const selected = ALL_MODELS.find(m => m.slug === form.model);
+  const isHybrid = selected?.slug.includes("dm-i");
+
   return (
     <div className="flex flex-col gap-8">
       <div>
         <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-2">Step 1 of 2</p>
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Choose your car</h2>
-        <p className="text-sm text-white/40">Select the model you'd like to experience and your nearest BYD dealer.</p>
+        <p className="text-sm text-white/40">Select the model you'd like to experience at our showroom.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <Field label="Model" error={errors.model}>
-          <select
-            className={selectCls}
-            value={form.model}
-            onChange={e => setForm({ ...form, model: e.target.value })}
-            style={{ WebkitAppearance: "none", background: "rgba(255,255,255,0.04)" }}
-          >
-            <option value="" disabled style={{ background: "#111" }}>Select a model</option>
-            <optgroup label="Electric Cars" style={{ background: "#111" }}>
-              {ALL_MODELS.filter(m => !m.slug.includes("dm-i")).map(m => (
-                <option key={m.slug} value={m.slug} style={{ background: "#111" }}>{m.name}</option>
-              ))}
-            </optgroup>
-            <optgroup label="Hybrid Cars" style={{ background: "#111" }}>
-              {ALL_MODELS.filter(m => m.slug.includes("dm-i")).map(m => (
-                <option key={m.slug} value={m.slug} style={{ background: "#111" }}>{m.name}</option>
-              ))}
-            </optgroup>
-          </select>
-        </Field>
-
-        <Field label="Nearest BYD Dealer" error={errors.dealer}>
-          <select
-            className={selectCls}
-            value={form.dealer}
-            onChange={e => setForm({ ...form, dealer: e.target.value })}
-            style={{ WebkitAppearance: "none", background: "rgba(255,255,255,0.04)" }}
-          >
-            <option value="" disabled style={{ background: "#111" }}>Select a dealer</option>
-            {DEALERS.map(d => (
-              <option key={d.city} value={`${d.city}, ${d.country}`} style={{ background: "#111" }}>
-                {d.city} — {d.country}
-              </option>
+      <Field label="Model" error={errors.model}>
+        <select
+          className={selectCls}
+          value={form.model}
+          onChange={e => setForm({ ...form, model: e.target.value })}
+          style={{ WebkitAppearance: "none", background: "rgba(255,255,255,0.04)" }}
+        >
+          <option value="" disabled style={{ background: "#111" }}>Select a model</option>
+          <optgroup label="Electric Cars" style={{ background: "#111" }}>
+            {ALL_MODELS.filter(m => !m.slug.includes("dm-i")).map(m => (
+              <option key={m.slug} value={m.slug} style={{ background: "#111" }}>{m.name}</option>
             ))}
-          </select>
-        </Field>
-      </div>
+          </optgroup>
+          <optgroup label="Hybrid Cars" style={{ background: "#111" }}>
+            {ALL_MODELS.filter(m => m.slug.includes("dm-i")).map(m => (
+              <option key={m.slug} value={m.slug} style={{ background: "#111" }}>{m.name}</option>
+            ))}
+          </optgroup>
+        </select>
+      </Field>
 
-      {/* Model preview card */}
-      {form.model && (() => {
-        const m = ALL_MODELS.find(x => x.slug === form.model);
-        if (!m) return null;
-        const isHybrid = m.slug.includes("dm-i");
-        return (
+      {/* Selected model preview */}
+      {selected && (
+        <div
+          className="flex items-center gap-4 p-5 border border-white/[0.07]"
+          style={{ background: "rgba(255,255,255,0.03)" }}
+        >
           <div
-            className="flex items-center gap-4 p-5 border border-white/8"
-            style={{ background: "rgba(255,255,255,0.03)" }}
+            className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full text-lg"
+            style={{ background: isHybrid ? "rgba(34,197,94,0.12)" : "rgba(255,255,255,0.07)" }}
           >
-            <div
-              className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full"
-              style={{ background: isHybrid ? "rgba(34,197,94,0.15)" : "rgba(255,255,255,0.08)" }}
-            >
-              <span className="text-xl">{isHybrid ? "⚡🔋" : "⚡"}</span>
-            </div>
-            <div>
-              <p className="font-bold text-sm tracking-wide">{m.name}</p>
-              <p className="text-[11px] text-white/35 mt-0.5">{isHybrid ? "Plug-in Hybrid" : "All-Electric"} · Test drive available at {form.dealer || "selected dealer"}</p>
-            </div>
+            {isHybrid ? "🔋" : "⚡"}
           </div>
-        );
-      })()}
+          <div>
+            <p className="font-bold text-sm tracking-wide">{selected.name}</p>
+            <p className="text-[11px] text-white/35 mt-0.5">
+              {isHybrid ? "Plug-in Hybrid" : "All-Electric"} · 45-minute test drive
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Showroom info */}
+      <div>
+        <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/25 mb-3">Location</p>
+        <ShowroomCard />
+      </div>
 
       <div className="flex justify-end pt-2">
         <button
@@ -251,7 +251,7 @@ function Step2({
       <div>
         <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-2">Step 2 of 2</p>
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Your details</h2>
-        <p className="text-sm text-white/40">We'll confirm your test drive appointment by email.</p>
+        <p className="text-sm text-white/40">We'll confirm your test drive appointment by email or phone.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -259,7 +259,7 @@ function Step2({
           <input
             className={inputCls}
             type="text"
-            placeholder="e.g. James"
+            placeholder="First name"
             value={form.firstName}
             onChange={e => setForm({ ...form, firstName: e.target.value })}
           />
@@ -268,7 +268,7 @@ function Step2({
           <input
             className={inputCls}
             type="text"
-            placeholder="e.g. Wilson"
+            placeholder="Last name"
             value={form.lastName}
             onChange={e => setForm({ ...form, lastName: e.target.value })}
           />
@@ -286,7 +286,7 @@ function Step2({
           <input
             className={inputCls}
             type="tel"
-            placeholder="+44 7700 900000"
+            placeholder="+XX XXX XXX XXXX"
             value={form.phone}
             onChange={e => setForm({ ...form, phone: e.target.value })}
           />
@@ -320,11 +320,11 @@ function Step2({
         </Field>
       </div>
 
-      <Field label="Additional Notes (Optional)">
+      <Field label="Notes (Optional)">
         <textarea
           className={inputCls + " resize-none"}
           rows={3}
-          placeholder="Any specific requirements or questions for the dealer..."
+          placeholder="Any specific requirements or questions for our team..."
           value={form.notes}
           onChange={e => setForm({ ...form, notes: e.target.value })}
         />
@@ -341,7 +341,7 @@ function Step2({
           onClick={onNext}
           className="px-10 py-4 bg-white text-black text-[11px] font-bold tracking-[0.18em] uppercase transition-colors hover:bg-white/90 cursor-pointer border-none"
         >
-          Book Test Drive
+          Confirm Booking
         </button>
       </div>
     </div>
@@ -360,7 +360,7 @@ function Step3({ form, bookingRef, onDone }: { form: FormData; bookingRef: strin
           className="w-24 h-24 rounded-full flex items-center justify-center"
           style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
         >
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="animate-[check_0.4s_ease_forwards]">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
             <path d="M8 20L16 28L32 12" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
@@ -372,13 +372,13 @@ function Step3({ form, bookingRef, onDone }: { form: FormData; bookingRef: strin
 
       <div>
         <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-3">Booking Confirmed</p>
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">See you at the dealer</h2>
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">See you at our showroom</h2>
         <p className="text-sm text-white/45 max-w-sm mx-auto">
-          We've sent a confirmation to <span className="text-white/70">{form.email}</span>. Your dealer will contact you within 24 hours.
+          We'll be in touch at <span className="text-white/70">{form.email}</span> or <span className="text-white/70">{form.phone}</span> to confirm the details.
         </p>
       </div>
 
-      {/* Booking summary card */}
+      {/* Booking summary */}
       <div
         className="w-full max-w-md text-left border border-white/8 divide-y divide-white/6"
         style={{ background: "rgba(255,255,255,0.03)" }}
@@ -388,11 +388,11 @@ function Step3({ form, bookingRef, onDone }: { form: FormData; bookingRef: strin
           <span className="text-sm font-bold tracking-wider text-white">{bookingRef}</span>
         </div>
         {[
-          { label: "Name", value: `${form.firstName} ${form.lastName}` },
-          { label: "Model", value: modelName },
-          { label: "Dealer", value: form.dealer },
-          { label: "Date", value: formatDate(form.date) },
-          { label: "Time", value: form.timeSlot },
+          { label: "Name",     value: `${form.firstName} ${form.lastName}` },
+          { label: "Model",    value: modelName },
+          { label: "Location", value: `${SHOWROOM.name}, ${SHOWROOM.city}` },
+          { label: "Date",     value: formatDate(form.date) },
+          { label: "Time",     value: form.timeSlot },
         ].map(row => (
           <div key={row.label} className="px-6 py-3.5 flex items-center justify-between gap-4">
             <span className="text-[10px] font-bold tracking-[0.16em] uppercase text-white/25 flex-shrink-0">{row.label}</span>
@@ -427,7 +427,6 @@ export default function TestDrivePage() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
 
   const preselect = new URLSearchParams(window.location.search).get("model") ?? "";
-
   const [form, setForm] = useState<FormData>({ ...EMPTY_FORM, model: preselect });
 
   useEffect(() => {
@@ -437,7 +436,6 @@ export default function TestDrivePage() {
   function validateStep1() {
     const e: Partial<Record<keyof FormData, string>> = {};
     if (!form.model) e.model = "Please select a model";
-    if (!form.dealer) e.dealer = "Please select a dealer";
     setErrors(e);
     return Object.keys(e).length === 0;
   }
@@ -454,74 +452,74 @@ export default function TestDrivePage() {
     return Object.keys(e).length === 0;
   }
 
-  function handleNext1() {
-    if (validateStep1()) setStep(2);
-  }
-
   function handleNext2() {
     if (!validateStep2()) return;
     const ref = generateRef();
     setBookingRef(ref);
-    // Save to localStorage
     const bookings = JSON.parse(localStorage.getItem("byd-bookings") || "[]");
-    bookings.push({ ...form, ref, createdAt: new Date().toISOString() });
+    bookings.push({ ...form, ref, showroom: SHOWROOM.name, createdAt: new Date().toISOString() });
     localStorage.setItem("byd-bookings", JSON.stringify(bookings));
     setStep(3);
-  }
-
-  function handleDone() {
-    navigate("/");
-    window.scrollTo(0, 0);
   }
 
   return (
     <div className="byd-app" style={{ background: "#050505", minHeight: "100vh" }}>
       <Header />
 
-      <main className="pt-28 pb-24 px-4 sm:px-6 md:px-12 lg:px-20 max-w-4xl mx-auto">
-        {/* Page heading */}
+      <main className="pt-28 pb-24 px-4 sm:px-6 md:px-12 lg:px-20 max-w-3xl mx-auto">
         {step < 3 && (
           <div className="text-center mb-14">
-            <p className="text-[10px] font-bold tracking-[0.32em] uppercase text-white/25 mb-4">BYD Europe</p>
+            <p className="text-[10px] font-bold tracking-[0.32em] uppercase text-white/25 mb-4">{SHOWROOM.name}</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
               Book a Test Drive
             </h1>
-            <p className="text-sm text-white/40 max-w-sm mx-auto">
-              Experience the future of driving at your nearest BYD dealer — completely free.
+            <p className="text-sm text-white/40 max-w-xs mx-auto">
+              Experience the future of driving — completely free, no obligation.
             </p>
           </div>
         )}
 
         <StepIndicator step={step} />
 
-        {/* Form card */}
         <div
           className="border border-white/[0.07] p-6 sm:p-10 md:p-14"
           style={{ background: "rgba(255,255,255,0.02)" }}
         >
           {step === 1 && (
-            <Step1 form={form} setForm={f => { setErrors({}); setForm(f); }} errors={errors} onNext={handleNext1} />
+            <Step1
+              form={form}
+              setForm={f => { setErrors({}); setForm(f); }}
+              errors={errors}
+              onNext={() => { if (validateStep1()) setStep(2); }}
+            />
           )}
           {step === 2 && (
-            <Step2 form={form} setForm={f => { setErrors({}); setForm(f); }} errors={errors} onBack={() => setStep(1)} onNext={handleNext2} />
+            <Step2
+              form={form}
+              setForm={f => { setErrors({}); setForm(f); }}
+              errors={errors}
+              onBack={() => setStep(1)}
+              onNext={handleNext2}
+            />
           )}
           {step === 3 && (
-            <Step3 form={form} bookingRef={bookingRef} onDone={handleDone} />
+            <Step3 form={form} bookingRef={bookingRef} onDone={() => navigate("/")} />
           )}
         </div>
 
-        {/* Trust badges */}
         {step < 3 && (
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 mt-12">
             {[
-              { icon: "✓", text: "Free of charge" },
-              { icon: "✓", text: "No obligation" },
-              { icon: "✓", text: "Confirmed in 24h" },
-              { icon: "✓", text: "Cancel anytime" },
-            ].map(b => (
-              <div key={b.text} className="flex items-center gap-2">
-                <span className="text-white/40 text-xs">{b.icon}</span>
-                <span className="text-[11px] font-medium tracking-wide text-white/30">{b.text}</span>
+              "Free of charge",
+              "No obligation",
+              "45-min session",
+              "Cancel anytime",
+            ].map(t => (
+              <div key={t} className="flex items-center gap-2">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M1.5 5L3.8 7.5L8.5 2.5" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span className="text-[11px] font-medium tracking-wide text-white/30">{t}</span>
               </div>
             ))}
           </div>
