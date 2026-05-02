@@ -1,17 +1,23 @@
 import { useState, useEffect } from "react";
 
+const NAV_EVENT = "byd-spa-navigate";
+
 export function useRouter() {
   const [path, setPath] = useState(() => window.location.pathname);
 
   useEffect(() => {
-    const onPop = () => setPath(window.location.pathname);
-    window.addEventListener("popstate", onPop);
-    return () => window.removeEventListener("popstate", onPop);
+    const sync = () => setPath(window.location.pathname);
+    window.addEventListener("popstate", sync);
+    window.addEventListener(NAV_EVENT, sync);
+    return () => {
+      window.removeEventListener("popstate", sync);
+      window.removeEventListener(NAV_EVENT, sync);
+    };
   }, []);
 
   const navigate = (to: string) => {
     window.history.pushState(null, "", to);
-    setPath(to);
+    window.dispatchEvent(new Event(NAV_EVENT));
     window.scrollTo(0, 0);
   };
 
