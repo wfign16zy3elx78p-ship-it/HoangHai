@@ -452,13 +452,33 @@ export default function TestDrivePage() {
     return Object.keys(e).length === 0;
   }
 
-  function handleNext2() {
+  async function handleNext2() {
     if (!validateStep2()) return;
     const ref = generateRef();
     setBookingRef(ref);
+
+    const modelName = ALL_MODELS.find(m => m.slug === form.model)?.name ?? form.model;
+    const payload = {
+      ...form,
+      ref,
+      modelName,
+      showroom: SHOWROOM.name,
+    };
+
     const bookings = JSON.parse(localStorage.getItem("byd-bookings") || "[]");
-    bookings.push({ ...form, ref, showroom: SHOWROOM.name, createdAt: new Date().toISOString() });
+    bookings.push({ ...payload, createdAt: new Date().toISOString() });
     localStorage.setItem("byd-bookings", JSON.stringify(bookings));
+
+    try {
+      await fetch("/api/booking/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch {
+      // notification failure is non-blocking
+    }
+
     setStep(3);
   }
 
