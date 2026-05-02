@@ -372,3 +372,57 @@ id = "lAVPWKMG5ddmO64DThVwk"
 uri = "file://artifacts/byd-eu/public/images/seal-v2l-01.png"
 type = "image"
 title = "BYD SEAL V2L vehicle to load"
+
+[[generated]]
+id = "C2zGUbWFYLeaMZ52Ixv0q"
+uri = "file://artifacts/byd-eu/public/images/seal-u-performance-01.png"
+type = "image"
+title = "seal u electric performance"
+
+[[generated]]
+id = "Pqlhom4iyGIELU0XaUKDU"
+uri = "file://artifacts/byd-eu/public/images/seal-u-range-01.png"
+type = "image"
+title = "seal u charging range"
+
+[[generated]]
+id = "SJre3UPFl_rT-kM7pLdho"
+uri = "file://artifacts/byd-eu/public/images/dolphin-surf-performance-01.png"
+type = "image"
+title = "dolphin surf adventure performance"
+
+[[generated]]
+id = "KKBEpF5r21n4XBxTNYlQA"
+uri = "file://artifacts/byd-eu/public/images/sealion5-performance-01.png"
+type = "image"
+title = "sealion 5 dmi hybrid performance"
+
+[[generated]]
+id = "hNpvTRzMFtFqLYhssA0GP"
+uri = "file://artifacts/byd-eu/public/images/sealion5-tech-01.png"
+type = "image"
+title = "sealion 5 hybrid tech cockpit"
+
+[[generated]]
+id = "_Wo8Movk9zRkwXsycUfY0"
+uri = "file://artifacts/byd-eu/public/images/seal-u-dmi-performance-01.png"
+type = "image"
+title = "seal u dmi family hybrid"
+
+[[generated]]
+id = "vCU2sxLc3Ek_BwiE5r-Db"
+uri = "file://artifacts/byd-eu/public/images/seal6-dmi-performance-01.png"
+type = "image"
+title = "seal 6 dmi saloon performance"
+
+[[generated]]
+id = "f1VXD0LoOR2bQq8hPPMJx"
+uri = "file://artifacts/byd-eu/public/images/seal6-touring-performance-01.png"
+type = "image"
+title = "seal 6 touring estate performance"
+
+[[generated]]
+id = "edxxkHtsinFEhXdoeD2Gk"
+uri = "file://artifacts/byd-eu/public/images/atto2-dmi-performance-01.png"
+type = "image"
+title = "atto 2 dmi city performance"

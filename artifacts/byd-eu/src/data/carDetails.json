@@ -35,24 +35,38 @@
     ],
     "features": [
       {
-        "title": "Blade Battery",
-        "subtitle": "Revolutionary Safety",
-        "desc": "BYD's Blade Battery technology redefines safety standards. Engineered to pass the nail penetration test without combustion or explosion, it delivers unmatched structural integrity alongside long-lasting performance.",
-        "img": "/images/1.webp",
+        "title": "Dynamic SUV Design",
+        "subtitle": "Sculpted for Performance",
+        "desc": "The SEALION 7's bold exterior draws its energy from BYD's Ocean Aesthetics philosophy — sweeping lines, a sleek roofline, and muscular wheel arches create a presence that commands attention on every road.",
+        "img": "/images/sealion-7-exterior-01.png",
         "imgRight": false
       },
       {
-        "title": "e-Platform 3.0",
-        "subtitle": "Pure Intelligence",
-        "desc": "Built on BYD's next-generation e-Platform 3.0, the SEALION 7 integrates 8-in-1 electric powertrain technology, ultra-fast charging, and vehicle-to-load capability for a truly intelligent driving experience.",
-        "img": "/images/2.webp",
+        "title": "Premium Interior",
+        "subtitle": "First-Class Cabin",
+        "desc": "Step inside the SEALION 7 and discover a thoughtfully crafted environment — panoramic sunroof, premium materials, and generous space for five passengers with 520L of boot space ready for adventure.",
+        "img": "/images/sealion-7-interior-01.png",
         "imgRight": true
       },
       {
-        "title": "DiLink Smart System",
-        "subtitle": "Connected Living",
-        "desc": "The 15.6-inch rotating touchscreen powered by DiLink 100 puts control at your fingertips. Real-time OTA updates, voice control, and a full app ecosystem keep you seamlessly connected.",
-        "img": "/images/3.webp",
+        "title": "Blade Battery",
+        "subtitle": "Long-Range Confidence",
+        "desc": "BYD's 82.56 kWh Blade Battery is engineered for the long haul. Its cell-to-body integration lowers the centre of gravity and provides structural reinforcement while delivering up to 456 km of WLTP range.",
+        "img": "/images/sealion-7-battery-01.png",
+        "imgRight": false
+      },
+      {
+        "title": "Instant AWD Performance",
+        "subtitle": "0–100 km/h in 4.5 s",
+        "desc": "Twin motors deliver 390 kW across all four wheels, launching the SEALION 7 from 0–100 km/h in just 4.5 seconds. BYD's iTAC torque vectoring responds in 10 ms — keeping you planted and in control.",
+        "img": "/images/sealion-7-performance-01.png",
+        "imgRight": true
+      },
+      {
+        "title": "DiLink & iTAC Technology",
+        "subtitle": "Intelligent at Every Level",
+        "desc": "The 15.6-inch rotating DiLink display and iTAC intelligent traction control system form the centrepiece of the SEALION 7's technology suite — connected, responsive, and constantly evolving via OTA updates.",
+        "img": "/images/sealion-7-tech-01.png",
         "imgRight": false
       }
     ],
@@ -369,14 +383,14 @@
         "title": "Confident family driving",
         "subtitle": "160 kW electric power",
         "desc": "The SEAL U's 160kW electric motor and precise DiPilot assistance deliver confident, refined performance for family journeys — with instant torque always on demand.",
-        "img": "/images/seal-u-interior-01.png",
+        "img": "/images/seal-u-performance-01.png",
         "imgRight": true
       },
       {
         "title": "Smart family cockpit",
         "subtitle": "DiLink & Panoramic Roof",
         "desc": "A large touchscreen, panoramic roof, and BYD's DiLink ecosystem create a connected, spacious environment for every family member — whether commuting or exploring.",
-        "img": "/images/seal-u-tech-01.png",
+        "img": "/images/seal-u-range-01.png",
         "imgRight": false
       }
     ],
@@ -1017,7 +1031,7 @@
         "title": "Adventure agility",
         "subtitle": "160 kW all-terrain electric",
         "desc": "Raised ride height and 160kW of instant electric torque give the DOLPHIN SURF the confidence to tackle weekend trails as effortlessly as city streets.",
-        "img": "/images/dolphin-surf-lifestyle-01.png",
+        "img": "/images/dolphin-surf-performance-01.png",
         "imgRight": true
       },
       {
@@ -1341,14 +1355,14 @@
         "title": "Super DM performance",
         "subtitle": "0–100 km/h in 5.9 s",
         "desc": "259kW of combined system power launches the SEALION 5 DM-i with authority. The intelligent Super DM system seamlessly manages power delivery for thrilling yet efficient progress.",
-        "img": "/images/sealion5-interior-01.png",
+        "img": "/images/sealion5-performance-01.png",
         "imgRight": true
       },
       {
         "title": "Hybrid intelligence",
         "subtitle": "EV-first driving",
         "desc": "The DiLink cockpit displays real-time energy flow between battery and engine, while DiPilot driver assistance keeps every journey safe and stress-free.",
-        "img": "/images/BYD-SEALION5-DM-i.png",
+        "img": "/images/sealion5-tech-01.png",
         "imgRight": false
       }
     ],
@@ -1503,7 +1517,7 @@
         "title": "Hybrid family performance",
         "subtitle": "1,000+ km combined range",
         "desc": "With 233kW of system power and over 1,000km of total range, the SEAL U DM-i handles school runs and long-distance road trips equally — without a second thought.",
-        "img": "/images/seal-u-dmi-interior-01.png",
+        "img": "/images/seal-u-dmi-performance-01.png",
         "imgRight": true
       },
       {
@@ -1665,7 +1679,7 @@
         "title": "Executive hybrid thrust",
         "subtitle": "0–100 km/h in 5.4 s",
         "desc": "316kW of combined power from the Super DM system propels this premium saloon with executive authority — fast enough to excite, refined enough to impress.",
-        "img": "/images/seal-6-dmi-interior-01.png",
+        "img": "/images/seal6-dmi-performance-01.png",
         "imgRight": true
       },
       {
@@ -1827,7 +1841,7 @@
         "title": "Estate hybrid performance",
         "subtitle": "0–100 km/h in 5.4 s",
         "desc": "316kW of Super DM power in a practical estate body — the SEAL 6 DM-i TOURING proves that family practicality and thrilling performance are not mutually exclusive.",
-        "img": "/images/seal-6-touring-interior-01.png",
+        "img": "/images/seal6-touring-performance-01.png",
         "imgRight": true
       },
       {
@@ -1989,7 +2003,7 @@
         "title": "Compact hybrid agility",
         "subtitle": "195 kW Super DM power",
         "desc": "195kW of combined system power gives the ATTO 2 DM-i surprising punch for a compact city car — pulling away from traffic with confident, instant electric torque.",
-        "img": "/images/atto2-interior-01.png",
+        "img": "/images/atto2-dmi-performance-01.png",
         "imgRight": true
       },
       {
