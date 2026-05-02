@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "u-y1o2oMMwDkq2qjYQtIG"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-exterior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "NpxMfc3A9lHWKDFkGEamU"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-exterior-03.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "BX7jSTw3Tplg3-vubLHCi"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-exterior-04.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "_a3HJ32p0fcVQPJvMqqex"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-interior-01.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "kvBeFQYF9HgS3zVxvqDk9"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-interior-02.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "XQY0WEID-rOqu2Du_euan"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-interior-03.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "SYNvBQH26RcA5xTdYg7IE"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-interior-04.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "st4CoMq1s1F1SgbjzvO4m"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-interior-08.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "vXIEv2jQD4iP8Y5g_HA9D"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-interior-09.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "YpYKXEg9iyIl7t4ykC9cU"
+uri = "file://artifacts/byd-eu/public/images/sealion-7-charging-01.png"
+type = "image"
+title = "generated_image"

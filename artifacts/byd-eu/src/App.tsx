@@ -5,7 +5,7 @@ import Models from "@/components/Models";
 import Technology from "@/components/Technology";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import CarDetailPage from "@/pages/CarDetailPage";
+import GenericCarPage from "@/pages/GenericCarPage";
 import Sealion7Page from "@/pages/Sealion7Page";
 
 function HomePage() {
@@ -29,7 +29,7 @@ function App() {
   const carMatch = matchPath("/car/:slug", path);
   if (carMatch) {
     if (carMatch.slug === "sealion-7") return <Sealion7Page />;
-    return <CarDetailPage slug={carMatch.slug} />;
+    return <GenericCarPage slug={carMatch.slug} />;
   }
 
   return <HomePage />;

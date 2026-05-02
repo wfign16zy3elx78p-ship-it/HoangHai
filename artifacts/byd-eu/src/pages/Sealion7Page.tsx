@@ -301,17 +301,17 @@ export default function Sealion7Page() {
         <Chapter
           id="exterior-chapter" label="Exterior" title="Ocean aesthetics with a dynamic edge"
           body="Designed by BYD's Global Design Director, Wolfgang Egger, the BYD SEALION 7 is more than just an SUV — it's a lifestyle statement. Its sleek, flowing lines and aerodynamic profile give the SEALION 7 a sporty, futuristic look that turns heads wherever you go."
-          imgSrc="/images/sealion-7-exterior-01.jpg" imgAlt="SEALION 7 Exterior"
+          imgSrc="/images/sealion-7-exterior-01.png" imgAlt="SEALION 7 Exterior"
         />
         <FeatureRow
           title="Dynamic water drop tail lamps"
           body="The SEALION 7's futuristic tail lamps combine sleek linear light strips with water-drop-shaped dots, creating a sense of movement and energy that stands out on the road."
-          imgSrc="/images/sealion-7-exterior-03.jpg" imgAlt="Tail Lamps"
+          imgSrc="/images/sealion-7-exterior-03.png" imgAlt="Tail Lamps"
         />
         <FeatureRow
           title="Intelligent and effortless tailgate"
           body="With an electric tailgate that opens with just a simple foot gesture, loading and unloading is seamless. The intelligent anti-pinch system and customisable stopping positions enhance both safety and convenience."
-          imgSrc="/images/sealion-7-exterior-04.jpg" imgAlt="Electric Tailgate" reverse
+          imgSrc="/images/sealion-7-exterior-04.png" imgAlt="Electric Tailgate" reverse
         />
       </div>
 
@@ -320,22 +320,22 @@ export default function Sealion7Page() {
         <Chapter
           id="interior-chapter" label="Interior" title="Reinventing the senses"
           body="Inspired by the dynamic flow and speed of sailboat racing, the BYD SEALION 7's interior embodies movement, suspension, and volume — creating a cohesive atmosphere where every element feels like it's floating in harmony with the waves."
-          imgSrc="/images/sealion-7-interior-01.jpg" imgAlt="SEALION 7 Interior"
+          imgSrc="/images/sealion-7-interior-01.png" imgAlt="SEALION 7 Interior"
         />
         <FeatureRow
           title={`15.6" rotating centre screen`}
           body={`A 15.6" rotating touchscreen adapts to your every need. Whether navigating through a city or winding down with your favourite playlist, this screen keeps you always connected and in control.`}
-          imgSrc="/images/sealion-7-interior-02.jpg" imgAlt="Rotating Screen"
+          imgSrc="/images/sealion-7-interior-02.png" imgAlt="Rotating Screen"
         />
         <FeatureRow
           title="Unmatched comfort"
           body="Sink into premium quilted Nappa leather seats, surrounded by soft vegan leather covering over 80% of the interior — a tactile experience that elevates every journey."
-          imgSrc="/images/sealion-7-interior-03.jpg" imgAlt="Interior Seats" reverse
+          imgSrc="/images/sealion-7-interior-03.png" imgAlt="Interior Seats" reverse
         />
         <CardGrid items={[
-          { title: "Adaptive ambience", imgSrc: "/images/sealion-7-interior-04.jpg", body: "128-colour ambient lighting creates the perfect environment — calming after a long day or energising for an early commute." },
-          { title: "Head-up display", imgSrc: "/images/sealion-7-interior-08.jpg", body: "Essential driving information projected directly onto the windshield, keeping your eyes on the road at all times." },
-          { title: "Panoramic sunroof", imgSrc: "/images/sealion-7-interior-09.jpg", body: "The panoramic sunroof fills the cabin with natural light — an electric sunshade provides shade and comfort without compromise." },
+          { title: "Adaptive ambience", imgSrc: "/images/sealion-7-interior-04.png", body: "128-colour ambient lighting creates the perfect environment — calming after a long day or energising for an early commute." },
+          { title: "Head-up display", imgSrc: "/images/sealion-7-interior-08.png", body: "Essential driving information projected directly onto the windshield, keeping your eyes on the road at all times." },
+          { title: "Panoramic sunroof", imgSrc: "/images/sealion-7-interior-09.png", body: "The panoramic sunroof fills the cabin with natural light — an electric sunshade provides shade and comfort without compromise." },
         ]} />
       </div>
 
@@ -344,7 +344,7 @@ export default function Sealion7Page() {
         <Chapter
           id="charging-chapter" label="Charging" title="Fast and efficient charging"
           body="Stay on the go with rapid DC charging up to 230 kW — the SEALION 7 Excellence AWD charges from 10% to 80% in just 24 minutes. Spend less time waiting and more time living."
-          imgSrc="/images/sealion-7-charging-01.jpg" imgAlt="SEALION 7 Charging"
+          imgSrc="/images/sealion-7-charging-01.png" imgAlt="SEALION 7 Charging"
         />
       </div>
 
@@ -353,7 +353,7 @@ export default function Sealion7Page() {
         <Chapter
           id="performance-chapter" label="Performance" title="Drive with purpose"
           body="Feel the thrill of high-performance driving with an electric motor reaching 23,000 RPM. The AWD version sprints from 0–100 km/h in just 4.5 seconds with a top speed of 215 km/h."
-          imgSrc="/images/sealion-7-performance-01.jpg" imgAlt="SEALION 7 Performance"
+          imgSrc="/images/sealion-7-performance-01.png" imgAlt="SEALION 7 Performance"
         />
       </div>
 
@@ -362,7 +362,7 @@ export default function Sealion7Page() {
         <Chapter
           id="technology-chapter" label="Technology" title="BYD Blade Battery"
           body="BYD has been a pioneering name in the battery industry for more than 29 years. Our latest game-changing Blade Battery has passed a series of extreme tests in rigorous conditions — making it one of the world's safest batteries."
-          imgSrc="/images/sealion-7-battery-01.jpg" imgAlt="BYD Blade Battery"
+          imgSrc="/images/sealion-7-battery-01.png" imgAlt="BYD Blade Battery"
           extra={
             <a href="#" className="inline-block px-6 py-3 text-[10px] font-bold tracking-[0.18em] uppercase text-white border border-white/30 transition-all duration-200 hover:bg-white/10">
               Learn More
@@ -370,9 +370,9 @@ export default function Sealion7Page() {
           }
         />
         <CardGrid items={[
-          { title: "CTB Cell-to-Body Technology", imgSrc: "/images/sealion-7-tech-02.jpg", body: "BYD's innovative CTB technology integrates the Blade Battery directly into the vehicle's structure, providing unparalleled strength and rigidity." },
-          { title: "World's first 8-in-1 powertrain", imgSrc: "/images/sealion-7-tech-03.jpg", body: "BYD integrates 8 key components into the world's first mass-produced 8-in-1 electric powertrain, optimising space and energy efficiency." },
-          { title: "High efficiency heat pump", imgSrc: "/images/sealion-7-tech-01.jpg", body: "Advanced energy-saving heat pump reliably operates in a broad range of temperatures, enhancing efficiency and increasing driving range in cold weather." },
+          { title: "CTB Cell-to-Body Technology", imgSrc: "/images/sealion-7-tech-02.png", body: "BYD's innovative CTB technology integrates the Blade Battery directly into the vehicle's structure, providing unparalleled strength and rigidity." },
+          { title: "World's first 8-in-1 powertrain", imgSrc: "/images/sealion-7-tech-03.png", body: "BYD integrates 8 key components into the world's first mass-produced 8-in-1 electric powertrain, optimising space and energy efficiency." },
+          { title: "High efficiency heat pump", imgSrc: "/images/sealion-7-tech-01.png", body: "Advanced energy-saving heat pump reliably operates in a broad range of temperatures, enhancing efficiency and increasing driving range in cold weather." },
         ]} />
       </div>
 
@@ -381,19 +381,19 @@ export default function Sealion7Page() {
         <Chapter
           id="safety-chapter" label="Safety" title="iTAC — intelligence Torque Adaption Control"
           body="Rather than simply reducing power, iTAC intelligently allocates drive torque, efficiently minimises or eliminates skidding, and elevates handling comfort for a smooth and secure driving experience in all conditions."
-          imgSrc="/images/sealion-7-itac.jpg" imgAlt="iTAC System"
+          imgSrc="/images/sealion-7-itac.png" imgAlt="iTAC System"
         />
         <P7Cards items={[
-          { title: "Advanced suspension system", imgSrc: "/images/sealion-7-innovation-01.jpg", body: "Front double-wishbone and rear multi-link suspension with FSD shock absorbers adjust in real-time to deliver a smooth, stable ride across all road conditions." },
-          { title: "Intelligent driving assistance", imgSrc: "/images/sealion-7-innovation-02.jpg", body: "BYD's state-of-the-art ADAS and 360° panoramic cameras monitor surroundings continuously, making every drive a stress-free experience." },
+          { title: "Advanced suspension system", imgSrc: "/images/sealion-7-innovation-01.png", body: "Front double-wishbone and rear multi-link suspension with FSD shock absorbers adjust in real-time to deliver a smooth, stable ride across all road conditions." },
+          { title: "Intelligent driving assistance", imgSrc: "/images/sealion-7-innovation-02.png", body: "BYD's state-of-the-art ADAS and 360° panoramic cameras monitor surroundings continuously, making every drive a stress-free experience." },
         ]} />
       </div>
 
       {/* ═══ CONNECTIVITY ═══ */}
       <div id="connectivity">
         <P7Cards items={[
-          { title: "Connectivity that keeps you ahead", imgSrc: "/images/sealion-7-connectivity-01.jpg", body: "From four-zone voice control to Android Auto and Apple CarPlay integration, every feature keeps you effortlessly connected. OTA updates ensure your vehicle always runs the latest software." },
-          { title: "Total control, anywhere", imgSrc: "/images/sealion-7-connectivity-02.jpg", body: "NFC card or BYD app lets you unlock your car with a tap. Remote A/C and scheduled charging from your smartphone — the SEALION 7 is always ready when you are." },
+          { title: "Connectivity that keeps you ahead", imgSrc: "/images/sealion-7-connectivity-01.png", body: "From four-zone voice control to Android Auto and Apple CarPlay integration, every feature keeps you effortlessly connected. OTA updates ensure your vehicle always runs the latest software." },
+          { title: "Total control, anywhere", imgSrc: "/images/sealion-7-connectivity-02.png", body: "NFC card or BYD app lets you unlock your car with a tap. Remote A/C and scheduled charging from your smartphone — the SEALION 7 is always ready when you are." },
         ]} />
       </div>
 
@@ -402,7 +402,7 @@ export default function Sealion7Page() {
         <Chapter
           id="v2l-chapter" label="V2L" title="Power on demand"
           body="Vehicle-to-Load (V2L) functionality empowers your adventures. Whether camping or in an emergency, the SEALION 7 supplies energy to your devices and appliances — transforming your vehicle into a reliable power station."
-          imgSrc="/images/sealion-7-v2l-01.jpg" imgAlt="SEALION 7 V2L"
+          imgSrc="/images/sealion-7-v2l-01.png" imgAlt="SEALION 7 V2L"
         />
       </div>
 
