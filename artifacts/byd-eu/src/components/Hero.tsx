@@ -1,9 +1,13 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import heroSlides from "../data/heroSlides.json";
-import { useRouter } from "../lib/router";
+
+const spaNavigate = (to: string) => {
+  window.history.pushState(null, "", to);
+  window.dispatchEvent(new Event("byd-spa-navigate"));
+  window.scrollTo(0, 0);
+};
 
 export default function Hero() {
-  const { navigate } = useRouter();
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -50,6 +54,7 @@ export default function Hero() {
   }, [current]);
 
   const slide = heroSlides[current];
+  if (!slide) return null;
 
   return (
     <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black">
@@ -131,7 +136,7 @@ export default function Hero() {
             {slide.btnList.map((btn, i) => (
               <button
                 key={i}
-                onClick={() => btn.link.startsWith("/car/") ? navigate(btn.link) : undefined}
+                onClick={() => btn.link.startsWith("/car/") ? spaNavigate(btn.link) : undefined}
                 className={btn.type === 1 ? "btn-glass-primary" : "btn-glass-secondary"}
               >
                 {btn.text}
