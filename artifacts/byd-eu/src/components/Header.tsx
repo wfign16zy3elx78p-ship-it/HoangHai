@@ -67,7 +67,7 @@ export default function Header() {
       >
         <div className="px-6 flex items-center justify-between h-[64px]">
           {/* Logo */}
-          <a href="/eu" className="flex items-center group">
+          <a href="/" onClick={e => { e.preventDefault(); navigate("/"); }} className="flex items-center group">
             <span
               className="text-xl font-bold tracking-[0.25em] text-white"
               style={{ transition: "all 0.3s ease", textShadow: "0 0 20px rgba(255,255,255,0.3)" }}
@@ -103,7 +103,8 @@ export default function Header() {
           {/* Right Icons */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="/eu/find-store"
+              href="/"
+              onClick={e => { e.preventDefault(); navigate("/"); }}
               className="flex items-center gap-2 text-xs font-semibold tracking-[0.12em] uppercase text-white/80 hover:text-white px-4 py-2 rounded-xl group"
               style={{
                 background: "rgba(255,255,255,0.07)",
@@ -241,7 +242,8 @@ export default function Header() {
             {navItems.map((item) => (
               <a
                 key={item.key}
-                href={`/eu/${item.key}`}
+                href="/"
+                onClick={e => { e.preventDefault(); setMobileOpen(false); navigate("/"); }}
                 className="block text-xs font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white py-3 px-3 rounded-xl hover:bg-white/08"
                 style={{ transition: "all 0.2s ease", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
               >
@@ -249,7 +251,8 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="/eu/find-store"
+              href="/"
+              onClick={e => { e.preventDefault(); setMobileOpen(false); navigate("/"); }}
               className="block text-xs font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white py-3 px-3 rounded-xl"
               style={{ transition: "all 0.2s ease" }}
             >
