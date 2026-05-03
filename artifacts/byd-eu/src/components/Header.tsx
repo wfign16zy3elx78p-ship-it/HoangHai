@@ -246,13 +246,18 @@ export default function Header() {
                 onClick={e => {
                   e.preventDefault();
                   setMobileOpen(false);
+                  const scrollTarget = (item.key === "hybrid" || item.key === "electric") ? "electric" : item.key;
+                  const doScroll = () => {
+                    document.getElementById(scrollTarget)?.scrollIntoView({ behavior: "smooth" });
+                    if (item.key === "hybrid") {
+                      window.dispatchEvent(new CustomEvent("byd-models-tab", { detail: "hybrid" }));
+                    }
+                  };
                   if (window.location.pathname !== "/") {
                     navigate("/");
-                    setTimeout(() => {
-                      document.getElementById(item.key)?.scrollIntoView({ behavior: "smooth" });
-                    }, 300);
+                    setTimeout(doScroll, 300);
                   } else {
-                    document.getElementById(item.key)?.scrollIntoView({ behavior: "smooth" });
+                    doScroll();
                   }
                 }}
                 className="block text-xs font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white py-3 px-3 rounded-xl hover:bg-white/08"
