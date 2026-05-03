@@ -20,5 +20,5 @@
     "skipLibCheck": true,
     "target": "es2022"
   },
-  "include": ["src", "api"]
+  "include": ["api"]
 }
