@@ -2,6 +2,25 @@ import { Router, type IRouter } from "express";
 
 const router: IRouter = Router();
 
+/* ── in-memory store (persists while server is alive) ── */
+
+interface BookingPayload {
+  ref: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  model: string;
+  modelName: string;
+  date: string;
+  timeSlot: string;
+  showroom: string;
+  notes?: string;
+  createdAt?: string;
+}
+
+const bookingStore: BookingPayload[] = [];
+
 /* ── helpers ────────────────────────────────────────── */
 
 async function sendTelegram(text: string) {
@@ -35,8 +54,6 @@ async function sendEmail(subject: string, html: string) {
   if (!httpRes.ok) throw new Error(`Resend error: ${await httpRes.text()}`);
 }
 
-/* ── booking email template ─────────────────────────── */
-
 function buildEmailHtml(b: BookingPayload): string {
   return `
 <!DOCTYPE html>
@@ -67,9 +84,7 @@ function buildEmailHtml(b: BookingPayload): string {
       <p>Booking notification</p>
     </div>
     <div class="body">
-      <div class="ref">
-        Booking reference: <strong>${b.ref}</strong>
-      </div>
+      <div class="ref">Booking reference: <strong>${b.ref}</strong></div>
       <table>
         <tr><td>Customer</td><td>${b.firstName} ${b.lastName}</td></tr>
         <tr><td>Email</td><td>${b.email}</td></tr>
@@ -84,11 +99,8 @@ function buildEmailHtml(b: BookingPayload): string {
     <div class="footer">BYD Showroom Booking System</div>
   </div>
 </body>
-</html>
-  `.trim();
+</html>`.trim();
 }
-
-/* ── Telegram message ───────────────────────────────── */
 
 function buildTelegramText(b: BookingPayload): string {
   return [
@@ -106,23 +118,7 @@ function buildTelegramText(b: BookingPayload): string {
   ].filter(Boolean).join("\n");
 }
 
-/* ── types ──────────────────────────────────────────── */
-
-interface BookingPayload {
-  ref: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  model: string;
-  modelName: string;
-  date: string;
-  timeSlot: string;
-  showroom: string;
-  notes?: string;
-}
-
-/* ── route ──────────────────────────────────────────── */
+/* ── POST /api/booking/notify ───────────────────────── */
 
 router.post("/booking/notify", async (req, res): Promise<void> => {
   const b = req.body as BookingPayload;
@@ -132,6 +128,10 @@ router.post("/booking/notify", async (req, res): Promise<void> => {
     return;
   }
 
+  const record: BookingPayload = { ...b, createdAt: new Date().toISOString() };
+  bookingStore.unshift(record);
+  if (bookingStore.length > 500) bookingStore.pop();
+
   const results: { telegram?: string; email?: string } = {};
 
   await Promise.allSettled([
@@ -140,7 +140,6 @@ router.post("/booking/notify", async (req, res): Promise<void> => {
     }).catch(err => {
       results.telegram = `failed: ${String(err.message)}`;
     }),
-
     sendEmail(
       `🚗 New Test Drive — ${b.modelName} — ${b.firstName} ${b.lastName}`,
       buildEmailHtml(b)
@@ -153,6 +152,21 @@ router.post("/booking/notify", async (req, res): Promise<void> => {
 
   console.log("[booking]", JSON.stringify(results));
   res.json({ ok: true, results });
+});
+
+/* ── GET /api/admin/bookings ────────────────────────── */
+
+router.get("/admin/bookings", (req, res): void => {
+  const adminPass = process.env["ADMIN_PASSWORD"] ?? "byd-admin-2024";
+  const authHeader = req.headers["authorization"] ?? "";
+  const token = authHeader.replace("Bearer ", "").trim();
+
+  if (token !== adminPass) {
+    res.status(401).json({ error: "Unauthorized" });
+    return;
+  }
+
+  res.json({ ok: true, total: bookingStore.length, bookings: bookingStore });
 });
 
 export default router;
