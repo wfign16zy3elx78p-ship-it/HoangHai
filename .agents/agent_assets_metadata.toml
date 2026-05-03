@@ -504,3 +504,33 @@ id = "7GbMlO4ebs4GrgQCB1Y_A"
 uri = "file://artifacts/byd-eu/public/images/atto3-evo-cockpit-v2.png"
 type = "image"
 title = "atto3 evo sport cockpit dilink display"
+
+[[generated]]
+id = "w2QQ8EYOAI_vZXrDYgZfW"
+uri = "file://artifacts/byd-eu/public/images/han-design-v2.png"
+type = "image"
+title = "BYD HAN luxury sedan exterior black"
+
+[[generated]]
+id = "5dpL01reHH0H5GYwssjLW"
+uri = "file://artifacts/byd-eu/public/images/han-interior-v2.png"
+type = "image"
+title = "BYD HAN luxury interior nappa leather"
+
+[[generated]]
+id = "um7VNsvDDvR_UI_obwO4C"
+uri = "file://artifacts/byd-eu/public/images/han-battery-v2.png"
+type = "image"
+title = "BYD Blade Battery technology visualization"
+
+[[generated]]
+id = "pKGO-MnJj-Tt3Ll1xD5ah"
+uri = "file://artifacts/byd-eu/public/images/han-performance-v2.png"
+type = "image"
+title = "BYD HAN highway performance golden hour"
+
+[[generated]]
+id = "EwNxU6UBdmWeejNY0-oPf"
+uri = "file://artifacts/byd-eu/public/images/han-cockpit-v2.png"
+type = "image"
+title = "BYD HAN DiLink cockpit Dynaudio luxury"

@@ -524,35 +524,35 @@
         "title": "Executive Presence",
         "subtitle": "Dragon Face Design",
         "desc": "The HAN's exterior is a masterclass in luxury automotive design. The iconic Dragon Face design language creates an imposing yet elegant silhouette that commands attention on every road.",
-        "img": "/images/BYD-HAN.webp",
+        "img": "/images/han-design-v2.png",
         "imgRight": false
       },
       {
         "title": "Supreme Comfort",
         "subtitle": "First-Class Interior",
         "desc": "Nappa leather seating, panoramic sunroof, and ambient lighting create a sanctuary on wheels. The rear executive lounge offers airline-class legroom and massage seats.",
-        "img": "/images/han-interior-01.png",
+        "img": "/images/han-interior-v2.png",
         "imgRight": true
       },
       {
         "title": "Blade Battery",
         "subtitle": "500+ km Confidence",
         "desc": "With 521km of WLTP range and 150kW DC fast charging, the HAN eliminates range anxiety entirely. Charge from 10–80% in under 35 minutes.",
-        "img": "/images/han-tech-01.png",
+        "img": "/images/han-battery-v2.png",
         "imgRight": false
       },
       {
         "title": "Executive acceleration",
         "subtitle": "0–100 km/h in 3.9 s",
         "desc": "Twin motors produce 380kW and 700Nm of torque, propelling this executive saloon with sports car urgency while retaining the composure expected at the pinnacle of the segment.",
-        "img": "/images/han-performance-new.png",
+        "img": "/images/han-performance-v2.png",
         "imgRight": true
       },
       {
         "title": "DiLink & Dynaudio",
         "subtitle": "Luxury Tech Cockpit",
         "desc": "A 15.6-inch rotating DiLink display, Dynaudio 16-speaker premium audio, and over-the-air updates create an executive digital cockpit that evolves with you.",
-        "img": "/images/han-cockpit-new.png",
+        "img": "/images/han-cockpit-v2.png",
         "imgRight": false
       }
     ],
