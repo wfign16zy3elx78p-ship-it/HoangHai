@@ -136,7 +136,7 @@ export default function Hero() {
             {slide.btnList.map((btn, i) => (
               <button
                 key={i}
-                onClick={() => btn.link.startsWith("/car/") ? spaNavigate(btn.link) : undefined}
+                onClick={() => spaNavigate(btn.link)}
                 className={btn.type === 1 ? "btn-glass-primary" : "btn-glass-secondary"}
               >
                 {btn.text}
