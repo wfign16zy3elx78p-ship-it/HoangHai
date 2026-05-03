@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "../lib/router";
 
 const navModels = {
@@ -27,6 +27,21 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"electric" | "hybrid">("electric");
   const { navigate } = useRouter();
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMenu = (key: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveMenu(key);
+    setActiveTab(key === "hybrid" ? "hybrid" : "electric");
+  };
+
+  const scheduleClose = () => {
+    closeTimer.current = setTimeout(() => setActiveMenu(null), 120);
+  };
+
+  const cancelClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -81,8 +96,8 @@ export default function Header() {
             {navItems.map((item) => (
               <button
                 key={item.key}
-                onMouseEnter={() => { setActiveMenu(item.key); setActiveTab(item.key === "hybrid" ? "hybrid" : "electric"); }}
-                onMouseLeave={() => setActiveMenu(null)}
+                onMouseEnter={() => openMenu(item.key)}
+                onMouseLeave={scheduleClose}
                 className="relative px-4 py-2 text-xs font-semibold tracking-[0.12em] uppercase text-white/80 rounded-xl group"
                 style={{ transition: "all 0.25s ease" }}
               >
@@ -162,8 +177,8 @@ export default function Header() {
             boxShadow: "0 24px 64px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06)",
             animation: "fadeDown 0.25s cubic-bezier(0.4,0,0.2,1)",
           }}
-          onMouseEnter={() => setActiveMenu(activeMenu)}
-          onMouseLeave={() => setActiveMenu(null)}
+          onMouseEnter={cancelClose}
+          onMouseLeave={scheduleClose}
         >
           <style>{`
             @keyframes fadeDown {
