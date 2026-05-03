@@ -7,7 +7,7 @@
     "subtitle": "Xe Hybrid Sạc Điện",
     "btnList": [
       { "text": "KHÁM PHÁ", "link": "/car/seal-6-dm-i", "type": 1 },
-      { "text": "LÁI THỬ", "link": "/eu/test-drive", "type": 2 }
+      { "text": "LÁI THỬ", "link": "/test-drive", "type": 2 }
     ]
   },
   {
@@ -18,7 +18,7 @@
     "subtitle": "SUV Hiệu Suất Cao Thuần Điện",
     "btnList": [
       { "text": "KHÁM PHÁ", "link": "/car/sealion-7", "type": 1 },
-      { "text": "LÁI THỬ", "link": "/eu/test-drive", "type": 2 }
+      { "text": "LÁI THỬ", "link": "/test-drive", "type": 2 }
     ]
   },
   {
@@ -29,7 +29,7 @@
     "subtitle": "Xe Điện Phiêu Lưu Mới",
     "btnList": [
       { "text": "KHÁM PHÁ", "link": "/car/dolphin-surf", "type": 1 },
-      { "text": "LÁI THỬ", "link": "/eu/test-drive", "type": 2 }
+      { "text": "LÁI THỬ", "link": "/test-drive", "type": 2 }
     ]
   },
   {
@@ -40,7 +40,7 @@
     "subtitle": "Xe Hybrid Thành Thị Cỡ Nhỏ",
     "btnList": [
       { "text": "KHÁM PHÁ", "link": "/car/atto-2-dm-i", "type": 1 },
-      { "text": "LÁI THỬ", "link": "/eu/test-drive", "type": 2 }
+      { "text": "LÁI THỬ", "link": "/test-drive", "type": 2 }
     ]
   }
 ]
