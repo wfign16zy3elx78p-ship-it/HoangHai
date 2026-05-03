@@ -17,7 +17,7 @@ export default function Models() {
   };
 
   return (
-    <section className="py-24" style={{ background: "linear-gradient(180deg, #080808 0%, #0d0d0d 100%)" }}>
+    <section id="electric" className="py-24" style={{ background: "linear-gradient(180deg, #080808 0%, #0d0d0d 100%)" }}>
       <div className="max-w-[1440px] mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
