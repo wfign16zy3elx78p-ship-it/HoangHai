@@ -470,7 +470,8 @@ export default function TestDrivePage() {
     localStorage.setItem("byd-bookings", JSON.stringify(bookings));
 
     try {
-      await fetch("/api/booking/notify", {
+      const apiBase = import.meta.env.VITE_API_URL ?? "https://jimmy-tebm.onrender.com";
+      await fetch(`${apiBase}/api/booking/notify`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
