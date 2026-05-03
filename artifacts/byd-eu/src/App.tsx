@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import GenericCarPage from "@/pages/GenericCarPage";
 import Sealion7Page from "@/pages/Sealion7Page";
 import TestDrivePage from "@/pages/TestDrivePage";
+import AdminPanelPage from "@/pages/AdminPanelPage";
 
 function HomePage() {
   return (
@@ -28,6 +29,7 @@ function App() {
   const { path } = useRouter();
 
   if (path === "/test-drive") return <TestDrivePage />;
+  if (path === "/adminpanel") return <AdminPanelPage />;
 
   const carMatch = matchPath("/car/:slug", path);
   if (carMatch) {
