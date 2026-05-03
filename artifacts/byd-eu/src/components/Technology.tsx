@@ -6,7 +6,7 @@ export default function Technology() {
   const tech = techData[active];
 
   return (
-    <section className="py-24 relative overflow-hidden" style={{ background: "#050505" }}>
+    <section id="technology" className="py-24 relative overflow-hidden" style={{ background: "#050505" }}>
       {/* Ambient glow */}
       <div
         className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full pointer-events-none"
