@@ -474,3 +474,33 @@ id = "wS0cubAX6R1XB9iZbvd3s"
 uri = "file://artifacts/byd-eu/public/images/tang-cockpit-new.png"
 type = "image"
 title = "tang 7 seat family interior"
+
+[[generated]]
+id = "mq5zpNWiJKr8cXiEeIAiI"
+uri = "file://artifacts/byd-eu/public/images/atto3-evo-design-v2.png"
+type = "image"
+title = "atto3 evo exterior design studio"
+
+[[generated]]
+id = "sT13dErnx8sbjI3dn_g3Q"
+uri = "file://artifacts/byd-eu/public/images/atto3-evo-interior-v2.png"
+type = "image"
+title = "atto3 evo sport interior red ambient"
+
+[[generated]]
+id = "7CcTzPhn9B9d0QZ02CSGA"
+uri = "file://artifacts/byd-eu/public/images/atto3-evo-range-v2.png"
+type = "image"
+title = "atto3 evo night charging station"
+
+[[generated]]
+id = "DYeZmOZR4DpaB8zRL8wB6"
+uri = "file://artifacts/byd-eu/public/images/atto3-evo-performance-v2.png"
+type = "image"
+title = "atto3 evo urban performance motion"
+
+[[generated]]
+id = "7GbMlO4ebs4GrgQCB1Y_A"
+uri = "file://artifacts/byd-eu/public/images/atto3-evo-cockpit-v2.png"
+type = "image"
+title = "atto3 evo sport cockpit dilink display"

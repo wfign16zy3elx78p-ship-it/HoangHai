@@ -1172,35 +1172,35 @@
         "title": "Evolved Design",
         "subtitle": "Sharper. Bolder.",
         "desc": "The ATTO 3 EVO's updated exterior features a redesigned front fascia, LED matrix headlights, and new alloy wheel options that bring a fresh energy to this popular SUV.",
-        "img": "/images/atto3-evo.webp",
+        "img": "/images/atto3-evo-design-v2.png",
         "imgRight": false
       },
       {
         "title": "Interior Comfort",
         "subtitle": "Inspired by Sport & Fitness",
         "desc": "Unique elastic net door panels and sporty trim options create an interior like no other — ergonomically designed for the active lifestyle driver.",
-        "img": "/images/atto3-interior-01.png",
+        "img": "/images/atto3-evo-interior-v2.png",
         "imgRight": true
       },
       {
         "title": "Enhanced Range",
         "subtitle": "Go Further",
         "desc": "With up to 420km WLTP range, the ATTO 3 EVO covers your daily commute and weekend escapes with ease — and charges rapidly when you need to top up.",
-        "img": "/images/BYD-ATTO3-EVO.webp",
+        "img": "/images/atto3-evo-range-v2.png",
         "imgRight": false
       },
       {
         "title": "Sporty urban drive",
         "subtitle": "150 kW instant torque",
         "desc": "The ATTO 3 EVO's electric motor delivers instant torque for responsive city driving. With 0–100 km/h in 7.3 seconds, it brings genuine driving excitement to the compact SUV class.",
-        "img": "/images/atto3-performance-new.png",
+        "img": "/images/atto3-evo-performance-v2.png",
         "imgRight": true
       },
       {
         "title": "Sport & fitness interior",
         "subtitle": "Unique elastic net design",
         "desc": "Elastic net door panels, sporty steering wheel stitching, and a 12.8-inch rotating DiLink display reflect the ATTO 3 EVO's active lifestyle DNA inside and out.",
-        "img": "/images/atto3-cockpit-new.png",
+        "img": "/images/atto3-evo-cockpit-v2.png",
         "imgRight": false
       }
     ],
