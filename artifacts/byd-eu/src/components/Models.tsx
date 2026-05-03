@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import modelsData from "../data/models.json";
 import { useRouter } from "../lib/router";
 
@@ -8,6 +8,15 @@ export default function Models() {
   const [activeTab, setActiveTab] = useState<TabType>("electric");
   const scrollRef = useRef<HTMLDivElement>(null);
   const { navigate } = useRouter();
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const tab = (e as CustomEvent).detail as TabType;
+      if (tab === "electric" || tab === "hybrid") setActiveTab(tab);
+    };
+    window.addEventListener("byd-models-tab", handler);
+    return () => window.removeEventListener("byd-models-tab", handler);
+  }, []);
 
   const models = modelsData[activeTab];
 
