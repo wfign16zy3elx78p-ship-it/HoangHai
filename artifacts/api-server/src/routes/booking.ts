@@ -151,7 +151,7 @@ router.post("/booking/notify", async (req, res): Promise<void> => {
     }),
   ]);
 
-  req.log.info({ results }, "booking notification results");
+  console.log("[booking]", JSON.stringify(results));
   res.json({ ok: true, results });
 });
 
