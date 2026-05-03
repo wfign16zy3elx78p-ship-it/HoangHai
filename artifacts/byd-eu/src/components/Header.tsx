@@ -243,7 +243,18 @@ export default function Header() {
               <a
                 key={item.key}
                 href="/"
-                onClick={e => { e.preventDefault(); setMobileOpen(false); navigate("/"); }}
+                onClick={e => {
+                  e.preventDefault();
+                  setMobileOpen(false);
+                  if (window.location.pathname !== "/") {
+                    navigate("/");
+                    setTimeout(() => {
+                      document.getElementById(item.key)?.scrollIntoView({ behavior: "smooth" });
+                    }, 300);
+                  } else {
+                    document.getElementById(item.key)?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="block text-xs font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white py-3 px-3 rounded-xl hover:bg-white/08"
                 style={{ transition: "all 0.2s ease", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
               >
@@ -251,12 +262,12 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="/"
-              onClick={e => { e.preventDefault(); setMobileOpen(false); navigate("/"); }}
+              href="/test-drive"
+              onClick={e => { e.preventDefault(); setMobileOpen(false); navigate("/test-drive"); }}
               className="block text-xs font-semibold uppercase tracking-[0.12em] text-white/70 hover:text-white py-3 px-3 rounded-xl"
               style={{ transition: "all 0.2s ease" }}
             >
-              Tìm Showroom
+              Đặt Lịch Lái Thử
             </a>
           </div>
         </div>
