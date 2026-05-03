@@ -83,3 +83,12 @@ Bạn chỉ cần upload ảnh mới vào `artifacts/byd-eu/public/images/` trù
 - **SPA Routing**: Đã được cấu hình qua `vercel.json` để không lỗi khi reload trang con.
 - **Auto-Update**: Mọi thay đổi khi `push` lên GitHub sẽ được Vercel tự động cập nhật sau 1-2 phút.
 - **API**: Serverless Function đảm nhận việc gửi thông báo, không tốn chi phí duy trì server.
+
+📋 Điền vào Vercel — Environment Variables
+Key	Value	Ghi chú
+TELEGRAM_BOT_TOKEN	(lấy từ Replit secrets)	Bắt buộc — nhận thông báo booking
+TELEGRAM_CHAT_ID	(lấy từ Replit secrets)	Bắt buộc — ID group/chat nhận tin
+RESEND_API_KEY	(lấy từ Replit secrets)	Bắt buộc — gửi email xác nhận
+NOTIFY_EMAIL	(email nhận thông báo)	Bắt buộc — vd: yourname@gmail.com
+NOTIFY_FROM	BYD Showroom <onboarding@resend.dev>	Tuỳ chọn — để trống cũng được
+NODE_ENV	production	B
