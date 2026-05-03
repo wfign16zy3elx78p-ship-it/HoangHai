@@ -9,12 +9,12 @@ async function sendTelegram(text: string) {
   const chatId = process.env["TELEGRAM_CHAT_ID"];
   if (!token || !chatId) return;
 
-  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+  const httpRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML" }),
   });
-  if (!res.ok) throw new Error(`Telegram error: ${await res.text()}`);
+  if (!httpRes.ok) throw new Error(`Telegram error: ${await httpRes.text()}`);
 }
 
 async function sendEmail(subject: string, html: string) {
@@ -24,7 +24,7 @@ async function sendEmail(subject: string, html: string) {
 
   if (!apiKey || !to) return;
 
-  const res = await fetch("https://api.resend.com/emails", {
+  const httpRes = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -32,7 +32,7 @@ async function sendEmail(subject: string, html: string) {
     },
     body: JSON.stringify({ from, to, subject, html }),
   });
-  if (!res.ok) throw new Error(`Resend error: ${await res.text()}`);
+  if (!httpRes.ok) throw new Error(`Resend error: ${await httpRes.text()}`);
 }
 
 /* ── booking email template ─────────────────────────── */
