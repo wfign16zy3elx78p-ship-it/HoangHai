@@ -1,4 +1,0 @@
-{
-  "buildCommand": "pnpm install",
-  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }]
-}
