@@ -42,7 +42,7 @@ Website showroom ô tô BYD phong cách Apple dark UI, viết hoàn toàn bằng
 1. Vào **[github.com](https://github.com)** → Đăng ký tài khoản miễn phí (nếu chưa có)
 2. Sau khi đăng nhập, vào link repo gốc:
    ```
-   https://github.com/wfign16zy3elx78p-ship-it/Jimmy
+   https://github.com/wfign16zy3elx78p-ship-it/HoangHai
    ```
 3. Nhấn nút **"Fork"** (góc trên bên phải)
 4. Chọn tài khoản của bạn làm owner → Nhấn **"Create fork"**
