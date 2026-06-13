@@ -48,7 +48,7 @@ Website showroom ô tô BYD phong cách Apple dark UI, viết hoàn toàn bằng
 4. Chọn tài khoản của bạn làm owner → Nhấn **"Create fork"**
 5. Chờ vài giây → bạn sẽ có repo riêng tại:
    ```
-   https://github.com/TEN_GITHUB_CUA_BAN/Jimmy
+   https://github.com/TEN_GITHUB_CUA_BAN/HoangHai
    ```
 
 > ✅ Từ đây về sau, mọi thay đổi bạn làm đều nằm trong repo của bạn, không ảnh hưởng bản gốc.
