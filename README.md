@@ -689,7 +689,7 @@ pnpm --filter @workspace/api-server run build
 |---------|-----|
 |  Frontend | https://tophbeifong.pages.dev |
 |  Backend API | https://jimmy-tebm.onrender.com |
-|  GitHub Repo | https://github.com/wfign16zy3elx78p-ship-it/Jimmy |
+|  GitHub Repo | https://github.com/wfign16zy3elx78p-ship-it/HoangHai |
 
 ### Checklist khi bàn giao
 
