@@ -531,16 +531,6 @@ BYD-AB12-5678
 
 ---
 
-<p align="center">
- <a href="https://www.star-history.com/x1xhlol/system-prompts-and-models-of-ai-tools">
-  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=x1xhlol/system-prompts-and-models-of-ai-tools&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=x1xhlol/system-prompts-and-models-of-ai-tools" />
-   <img alt="Star History Rank" src="https://api.star-history.com/badge?repo=x1xhlol/system-prompts-and-models-of-ai-tools" />
-  </picture>
- </a>
-</p>
-
 ## 8. Tuỳ chỉnh nội dung chi tiết
 
 ### Đổi thông tin showroom
@@ -713,5 +703,15 @@ pnpm --filter @workspace/api-server run build
 - [ ] Đổi thông tin showroom trong `TestDrivePage.tsx`
 
 ---
+## Star History
 
+<a href="https://www.star-history.com/?repos=wfign16zy3elx78p-ship-it%2FHoangHai&type=date&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=wfign16zy3elx78p-ship-it/HoangHai&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=wfign16zy3elx78p-ship-it/HoangHai&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=wfign16zy3elx78p-ship-it/HoangHai&type=date&legend=top-left" />
+ </picture>
+</a>
 *Cập nhật lần cuối: Tháng 6, 2025*
+
+
