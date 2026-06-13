@@ -3,6 +3,7 @@
 # ============================================================================
 #
 # This setting requires that any npm package version must have been published
+# This setting requires that any npm package version must have been published
 # for at least 1 day (1440 minutes) before pnpm will allow installing it.
 # This is a critical defense against supply-chain attacks. In most cases,
 # malicious npm releases are discovered and pulled within hours, so a 1-day
