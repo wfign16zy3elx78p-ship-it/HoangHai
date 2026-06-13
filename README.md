@@ -51,7 +51,7 @@ Website showroom ô tô BYD phong cách Apple dark UI, viết hoàn toàn bằng
    https://github.com/TEN_GITHUB_CUA_BAN/HoangHai
    ```
 
-> ✅ Từ đây về sau, mọi thay đổi bạn làm đều nằm trong repo của bạn, không ảnh hưởng bản gốc.
+> Từ đây về sau, mọi thay đổi bạn làm đều nằm trong repo của bạn, không ảnh hưởng bản gốc.
 
 ---
 
@@ -204,7 +204,7 @@ Frontend là giao diện website mà người dùng thấy.
    https://ten-project-ban-dat.pages.dev
    ```
 
-> ✅ Mỗi lần bạn push code lên GitHub, Cloudflare sẽ tự động build và deploy lại. **Hoàn toàn miễn phí, không giới hạn số lần build.**
+>  Mỗi lần bạn push code lên GitHub, Cloudflare sẽ tự động build và deploy lại. **Hoàn toàn miễn phí, không giới hạn số lần build.**
 
 #### Gắn domain riêng (tuỳ chọn)
 
@@ -220,14 +220,14 @@ Nếu bạn có domain riêng (vd: `byd.vn`):
 
 Sau khi deploy xong, kiểm tra từng phần:
 
-#### ✅ Kiểm tra website
+####  Kiểm tra website
 
 1. Mở URL Cloudflare Pages của bạn
 2. Xác nhận trang chủ hiển thị đúng
 3. Click vào một xe → xem trang chi tiết
 4. Click "LÁI THỬ" từ hero → xem form đặt lịch
 
-#### ✅ Kiểm tra booking + thông báo
+####  Kiểm tra booking + thông báo
 
 1. Vào trang `/test-drive` trên website của bạn
 2. Điền đầy đủ form với thông tin test (dùng email/SĐT giả)
@@ -235,13 +235,13 @@ Sau khi deploy xong, kiểm tra từng phần:
 4. Nếu Telegram đã cấu hình → kiểm tra bot có nhắn tin không
 5. Nếu Resend đã cấu hình → kiểm tra email trong hộp thư
 
-#### ✅ Kiểm tra trang Admin
+#### Kiểm tra trang Admin
 
 1. Vào `https://website-cua-ban.pages.dev/admin`
 2. Nhập mật khẩu đã đặt ở `ADMIN_PASSWORD`
 3. Xác nhận thấy booking vừa test
 
-#### ❌ Xử lý khi gặp lỗi
+####  Xử lý khi gặp lỗi
 
 | Triệu chứng | Nguyên nhân | Giải pháp |
 |-------------|-------------|-----------|
@@ -531,6 +531,16 @@ BYD-AB12-5678
 
 ---
 
+<p align="center">
+ <a href="https://www.star-history.com/x1xhlol/system-prompts-and-models-of-ai-tools">
+  <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=x1xhlol/system-prompts-and-models-of-ai-tools&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=x1xhlol/system-prompts-and-models-of-ai-tools" />
+   <img alt="Star History Rank" src="https://api.star-history.com/badge?repo=x1xhlol/system-prompts-and-models-of-ai-tools" />
+  </picture>
+ </a>
+</p>
+
 ## 8. Tuỳ chỉnh nội dung chi tiết
 
 ### Đổi thông tin showroom
@@ -687,9 +697,9 @@ pnpm --filter @workspace/api-server run build
 
 | Dịch vụ | URL |
 |---------|-----|
-| 🌐 Frontend | https://tophbeifong.pages.dev |
-| ⚙️ Backend API | https://jimmy-tebm.onrender.com |
-| 📦 GitHub Repo | https://github.com/wfign16zy3elx78p-ship-it/Jimmy |
+|  Frontend | https://tophbeifong.pages.dev |
+|  Backend API | https://jimmy-tebm.onrender.com |
+|  GitHub Repo | https://github.com/wfign16zy3elx78p-ship-it/Jimmy |
 
 ### Checklist khi bàn giao
 
