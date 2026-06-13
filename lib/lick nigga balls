@@ -1,0 +1,4 @@
+<!--
+  This file is the entry for ALL routes, including /preview/* canvas iframes.
+  Fonts are loaded here as non-blocking <link> tags (not CSS @import, which is render-blocking).
+-->
