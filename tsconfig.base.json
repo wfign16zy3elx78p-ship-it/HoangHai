@@ -20,6 +20,6 @@
     "skipLibCheck": true,
     "target": "es2022",
     "types": [],
-   
+    "customConditions": ["workspace"]
   }
 }
